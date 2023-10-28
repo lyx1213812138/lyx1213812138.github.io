@@ -7,14 +7,14 @@ function randomInt(max){
 }
 
 function initial() {
-    const pieceNum = 300;
+    const pieceNum = 100;
     const color = ["#EA4335", "#34A853", "#FBBC04", "#4285F4"];
     for (let i = 0; i < pieceNum; i++) {
         let piece = document.createElement("div");
         piece.classList.add("piece");
         piece.style.backgroundColor = color[randomInt(color.length)];
-        piece.style.width = randomInt(35) + "px";
-        piece.style.height = randomInt(35) + "px";
+        piece.style.width = randomInt(75) + "px";
+        piece.style.height = randomInt(75) + "px";
         piece.style.top = -randomInt(700)-100 + "px"
         piece.style.left = randomInt(bodyRec.width) + "px";
         piece.style.transform = "rotate(" + randomInt(360) + "deg) ";
@@ -28,7 +28,7 @@ function initial() {
             x: parseInt(pieces[i].style.left), 
             y: parseInt(pieces[i].style.top), 
             dx: randomInt(300), 
-            dy: Math.random()*4 + 5,
+            dy: Math.random()*3 + 8,
             dt: randomInt(1000)
         });
     }
@@ -65,10 +65,10 @@ function next() {
         flag2 = 1;
         let a = 0;
         let interval = setInterval(() => {
-            a+=0.5;
+            a+=3;
             face.style.transform = "scale(" + a + "%," + a + "%) ";
             if(a >= 290) clearInterval(interval), flag2 = -1, nextnext();
-        },4);
+        },34);
     } else if (flag2 === -1) {
         document.body.innerHTML = "后面没有时间做了，明年再说";
     }
