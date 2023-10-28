@@ -1,0 +1,44 @@
+#background1{
+    width: 100%;
+    top:5%;
+    position: fixed;
+}
+.piece{
+    /* display: none; */
+    position: fixed;
+    z-index: 3;
+}
+#startFirework{
+    border-radius: 50%;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 100px;
+    z-index: 2;
+}
+#next{
+    border-radius: 50%;
+    position: fixed;
+    top: 20px;
+    right: 140px;
+    width: 100px;
+    z-index: 2;
+}
+#face{
+    width: 100%;
+    z-index: 1;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    transform: scale(0,0);
+}
+#text{
+    width: 200%;
+    z-index: -1;
+    position: fixed;
+    top: 20%;
+    left: 10%;
+}
+body{
+    font-size: 100px;
+}
