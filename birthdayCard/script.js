@@ -7,7 +7,7 @@ function randomInt(max){
 }
 
 function initial() {
-    const pieceNum = 100;
+    const pieceNum = 300;
     const color = ["#EA4335", "#34A853", "#FBBC04", "#4285F4"];
     for (let i = 0; i < pieceNum; i++) {
         let piece = document.createElement("div");
@@ -28,7 +28,7 @@ function initial() {
             x: parseInt(pieces[i].style.left), 
             y: parseInt(pieces[i].style.top), 
             dx: randomInt(300), 
-            dy: Math.random()*3 + 8,
+            dy: Math.random()*5 + 4,
             dt: randomInt(1000)
         });
     }
@@ -50,11 +50,11 @@ function firework() {
             pieces[i].style.top = dp[i].y + dp[i].dy * time + "px";
             // if(parseInt(pieces[i].style.top) >= bodyRec.height + 100) passNum++;
         }
-        //console.log(time);
-        if(time >= 2800) clearInterval(interval), console.log(time), flag = 0;
+        console.log(time);
+        if(time >= 700) clearInterval(interval), console.log(time), flag = 0;
     }, 15);
 }
-// setTimeout(firework(), 10);
+setTimeout(firework(), 10);
 
 let flag2 = 0;
 const face = document.getElementById("face");
