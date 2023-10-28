@@ -52,7 +52,7 @@ function firework() {
         }
         //console.log(time);
         if(time >= 2800) clearInterval(interval), console.log(time), flag = 0;
-    }, 5);
+    }, 3);
 }
 // setTimeout(firework(), 10);
 
@@ -68,7 +68,7 @@ function next() {
             a+=0.5;
             face.style.transform = "scale(" + a + "%," + a + "%) ";
             if(a >= 290) clearInterval(interval), flag2 = -1, nextnext();
-        },5);
+        },4);
     } else if (flag2 === -1) {
         document.body.innerHTML = "后面没有时间做了，明年再说";
     }
