@@ -27,9 +27,9 @@ function initial() {
         dp.push({
             x: parseInt(pieces[i].style.left), 
             y: parseInt(pieces[i].style.top), 
-            dx: randomInt(200), 
-            dy: Math.random()*3 + 1,
-            dt: randomInt(500)
+            dx: randomInt(300), 
+            dy: Math.random()*4 + 5,
+            dt: randomInt(1000)
         });
     }
 }
@@ -52,7 +52,7 @@ function firework() {
         }
         //console.log(time);
         if(time >= 2800) clearInterval(interval), console.log(time), flag = 0;
-    }, 3);
+    }, 15);
 }
 // setTimeout(firework(), 10);
 
