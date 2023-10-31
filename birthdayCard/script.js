@@ -35,15 +35,25 @@ function initial() {
 }
 initial();
 
-let trueDate = [11, 3];
+let trueDate1 = [11, 3], trueDate2 = [11, 8];
 function checkdate() {
   let date = new Date();
   console.log(date.getMonth(), date.getDate());
-  if (date.getMonth() === trueDate[0] - 1 && date.getDate() === trueDate[1]) {
-    document.getElementById("cover").style.display = "none";
-    setTimeout(firework(), 10);
-  } else {
-    
+  if (date.getMonth() <= trueDate1[0] - 1 || date.getDate() <= trueDate1[1]) {
+    if (date.getMonth() === trueDate1[0] - 1 && date.getDate() === trueDate1[1]) {
+      document.getElementById("cover").style.display = "none";
+      setTimeout(firework(), 10);
+    }
+    console.log("jyh");
+    document.title = "姜於含的生日";
+  } else if (date.getMonth() <= trueDate2[0] - 1 || date.getDate() <= trueDate2[1]) {
+    if (date.getMonth() === trueDate2[0] - 1 && date.getDate() === trueDate2[1]) {
+      document.getElementById("cover").style.display = "none";
+      document.getElementById("face").src = "birthdayCard/face2.jpg";
+      document.getElementById("text").src = "birthdayCard/text2.gif";
+      setTimeout(firework(), 10);
+    }
+    document.title = "高艺洋的生日";
     // const inputcover = document.getElementById("inputcover");
     // console.log(inputcover);
     // if (inputcover.value === "lyx12138") {
