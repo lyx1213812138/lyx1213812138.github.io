@@ -1,0 +1,168 @@
+body {
+  background-color: #FAFCFF;
+}
+
+/* 页面选项 */
+.table {
+  display: flex;
+}
+.option {
+  width: 81px;
+  height: 36px;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 35.16px;
+  color: rgba(3, 43, 119, 1);
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+.option:hover, .optionClicked {
+  background-color: #c1cad7;
+}
+#proverb {
+  width: 100vw;
+  color: rgb(3, 107, 119);
+}
+#proverb:hover {
+  background-color: rgba(0, 0, 0, 0);
+}
+.countDown {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 35.16px;
+  color: rgba(3, 43, 119, 1);
+}
+
+/* 页面 */
+.page {
+  display: absolute;
+  width: 90vw;
+  height: 80vh;
+  display: none;
+}
+
+.tasks {
+  top: 80px;
+  width: 500px;
+  height: 100%;
+  overflow: auto;
+}
+.task {
+  /* left: 10px; */
+  margin: 10px;
+  /* height: 50px; */
+  width: 90%;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 1);
+  border: solid rgb(203, 225, 247);
+  position: relative;
+}
+.nowTask {
+  background: rgb(156, 205, 245);
+}
+.content {
+  /* position: absolute; */
+  /* left: 17px;
+  top: 13px; */
+  margin: 13px 17px;
+  font-size: 18px;
+  font-weight: 500;
+  color: rgba(3, 43, 119, 1);
+  white-space: pre-wrap;
+}
+
+.delete {
+  position: absolute;
+  right: 20px;
+  top: 13px;
+  color: rgb(201, 136, 136);
+  z-index: -1;
+}
+
+.delete:hover {
+  color: rgb(210, 108, 108);
+  cursor: pointer;
+}
+
+.task:hover .delete {
+  z-index: 0;
+}
+
+.time {
+  position: absolute;
+  right: 17px;
+  top: 13px;
+  font-size: 18px;
+  font-weight: 500;
+  color: rgba(3, 43, 119, 0.6);
+}
+.right {
+  position: absolute;
+  top: 80px;
+  right: 10px;
+  width: 40vw;
+}
+
+.input {
+  margin: 5px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 1);
+  border: solid rgb(217, 237, 223);
+  resize: none;
+  padding: 20px;
+  box-sizing: border-box;
+  font-size: 18px;
+  font-weight: 500;
+  color: rgba(3, 43, 119, 0.6);
+}
+.input:focus {
+  outline: none;
+  border: solid rgb(185, 241, 202);
+}
+
+#pageInput {
+  flex-direction: column;
+}
+#timeInput {
+  height: 40px;
+  width: 200px;
+  padding: 10px;
+  overflow: hidden;
+}
+#textInput {
+  height: 400px;
+}
+.submit {
+  width: 214px;
+  height: 25px;
+  opacity: 1;
+  border-radius: 7px;
+  background: rgba(171, 183, 208, 1);
+  margin: 2px 5px;
+  font-size: 18px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 1);
+  display: flex;
+  justify-content: center;
+  padding: 2px;
+  cursor: pointer;
+}
+.submit:hover {
+  background-color: rgb(143, 159, 196);
+}
+.submit:active {
+  background-color: rgb(127, 148, 197);
+}
+
+#logInput {
+  width: 400px;
+  height: 200px;
+}
+
+@media screen and (width<700px) {
+  #pageLog {
+    flex-direction: column;
+  }
+}
