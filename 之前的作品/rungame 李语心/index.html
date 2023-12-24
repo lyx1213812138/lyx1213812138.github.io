@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>ball runing</title>
+    <style type="text/css">
+    </style>
+</head>
+<body>
+    <canvas id="myCanvas" width="1050" height="650" style="border:1px solid #d3d3d3;">
+        您的浏览器不支持 HTML5 canvas 标签。
+    </canvas>
+    <script>    
+        var c=document.getElementById("myCanvas");
+        var ctx=c.getContext("2d");
+
+        var ballImg=new Image();
+        ballImg.src="img/smileball.png";
+
+        var WIDTH=1050,HEIGHT=650;
+        var Ginterval=500;
+        var Grange=200;
+
+        function Obj(){
+            var r=40;
+            var start_y=HEIGHT-2*r;
+            this.y=start_y;
+            this.a=0;
+            this.v=0;//只记录纵坐标状态
+            this.ifjumping=0;
+            this.move=function(){
+                this.v+=this.a;
+                this.y+=this.v;
+                if(this.y>=start_y){
+                    this.y=start_y;
+                    this.a=0;
+                    this.v=0;
+                    this.ifjumping=0;
+                }
+            	ctx.fillText("YOUR SCORE:"+Gscore,150,HEIGHT/2+50);
+                ctx.drawImage(ballImg,0,this.y);
+            }
+            this.crash=function(rect){
+                var nx=rect.x,ny=HEIGHT-rect.h,nx_right=rect.x+rect.width;
+                var mx=r,my=this.y+r;
+                if(ny<=my&&nx<=mx+r)return true;//the left eage
+                if(mx>=nx&&mx<=nx_right&&ny+rect.h<=my)return true;
+                if((nx-mx)*(nx-mx)+(ny-my)*(ny-my)<=r*r)return true;//the top left corner
+                if((nx_right-mx)*(nx_right-mx)+(ny-my)*(ny-my)<=r*r)return true;//the top right corner
+                return false;
+            }
+        }
+
+        function Block(){
+            this.x=WIDTH;
+            this.h=Math.random()*100+50;
+            this.width=20;
+            this.interval=Ginterval+Math.random()*2*Grange-Grange;
+            this.move=function(){
+                this.x-=Gspeed;
+                ctx.fillRect(this.x,HEIGHT-this.h,this.width,this.h);
+            }
+        }
+
+        function create(){
+            if(blocks.length>0&&blocks[0].x<-blocks[0].width){
+                blocks.splice(0,1);
+                Gscore++;
+            }
+            if(blocks.length==0||blocks[blocks.length-1].x<WIDTH-blocks[blocks.length-1].interval){
+                blocks[blocks.length]=new Block();
+            }
+        }
+            
+        var ifplaying=0;
+        var Gspeed,tottime,blocks,tottime,time,Gscore;
+        function initial(){
+            Gscore=0;
+            Gspeed=5;
+            ifplaying=0;
+            blocks=new Array();
+            ball=new Obj();
+            ifplaying=1; 
+            time=setInterval(workall,10);
+        }
+
+        function workall(){
+            ctx.clearRect(0,0,WIDTH,HEIGHT);
+            ball.move();
+            create();
+            for(var i=0;i<blocks.length;i++){
+                blocks[i].move();
+                if(ball.crash(blocks[i])){
+                    console.log(ball.y+' '+blocks[i].x+' '+blocks[i].h);
+                    gameover();
+                }
+            }
+            ctx.font="30px Arial";
+            if(ifplaying)ctx.fillText("score:"+Gscore,20,40);
+            Gspeed+=0.001;
+        }
+
+        function gameover(){
+            clearInterval(time);
+            ctx.font="100px Arial";
+            ctx.fillText("GAME OVER",200,HEIGHT/2-50);
+            ctx.fillText("YOUR SCORE:"+Gscore,150,HEIGHT/2+50);
+            ifplaying=0;
+        } 
+
+        ctx.font="100px Arial";
+        ctx.fillText("RUNING BALL",200,HEIGHT/2);
+        window.onkeydown=function(){
+            if(event.keyCode==32){
+                if(ifplaying==0){
+                    initial();
+                }else if(ball.ifjumping==0){
+                    ball.v=-20,ball.a=0.7,ball.ifjumping=1;
+                }
+            }
+                
+        }
+
+
+
+    </script> 
+</body>
+</html>

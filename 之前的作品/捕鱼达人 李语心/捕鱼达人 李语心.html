@@ -1,0 +1,174 @@
+﻿ <!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>捕鱼达人</title>
+	</head>
+
+	<body>
+		<div id="container">
+			<div id="main"  >
+				<div id="stage" style="margin: 0 auto; width: 800px; height: 480px;  text-align: center; vertical-align: middle" >
+					<canvas id="canvas"  width="800" height="480">
+						不支持画板对象时能看到
+					</canvas>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			var canvas = document.getElementById("canvas");
+			var ctx = canvas.getContext('2d');
+
+			var bg = new Image();
+			bg.src = "images/bg.jpg";
+			
+			
+			
+			var gScore = 0;
+			var number = 30;
+			var RUNNING = 1;
+			
+			var allFish =[];
+			var allFishImage = [];
+			for(var i=0;i<11;i++){
+				allFishImage[i]=[];
+				for(var j=0;j<10;j++){
+					allFishImage[i][j] = new Image();
+					allFishImage[i][j].src = "images/fish"+(i+1)+"_"+j+'.png';
+				}
+			}
+			//console.log(allFishImage);
+			function Fish(){
+				this.x = 800;
+				this.y = Math.random()*380;
+				this.type = parseInt(Math.random()*11);
+				this.index = 0;
+				this.score = this.type+1;
+				this.frames = allFishImage[this.type];								
+				this.frame = this.frames[0];
+				var lastTime = 0;
+				var interval =70;
+				function timeOut() {
+					var current = new Date().getTime();
+					var t = current - lastTime;
+					if (t >= interval) {
+						lastTime = current;
+						return true;
+					}
+					return false;
+				}
+			    var lastTime = 0;
+				
+				this.paint = function(ctx){
+					ctx.drawImage(this.frame, this.x, this.y);
+				}
+				this.step = function(){
+					if(timeOut()){
+						this.x-=2+level/10000;
+						this.index++;
+						this.frame = this.frames[this.index%10];
+					}
+				}
+				
+			}
+			
+			function Net(){//网
+				var NET = new Image();
+			    NET.src = "images/net.png";
+				this.x=400;
+				this.y=200;
+				this.paint = function(ctx){
+					ctx.drawImage(NET,this.x,this.y);
+				}				
+			}
+			var net = new Net();
+			
+			canvas.onmousemove = function(e){//事件
+				var bbox = canvas.getBoundingClientRect();
+				net.x = e.x-bbox.left-80;
+				net.y = e.y-bbox.top-80;				
+			}
+			canvas.onclick = function(){
+				if(RUNNING == 2){
+					number--;
+					for(var i=0;i<allFish.length;i++){
+						if((allFish[i].x>(net.x-50)&&allFish[i].x<(net.x+160))&&
+						   (allFish[i].y>(net.y-48)&&allFish[i].y<(net.y+160))){
+							var p=parseInt(Math.random()*allFish[i].type*5);
+							if(p==0){
+								gScore+=allFish[i].score;
+								allFish.splice(i,1);
+							}
+						}
+					}
+					if(number<=0){
+						number=30;
+						gScore=0;
+						allFish =[];
+						RUNNING = 3;
+					}
+				}else{
+					RUNNING = 2;	
+				}
+				
+			}
+			
+			var gInterval = 1500;
+			var level = 0;
+			var lastTime1 = 0;
+			ctx.font = "40px 微软雅黑";
+			ctx.fillStyle = "white";
+			
+			function fRun(){
+				ctx.drawImage(bg, 0, 0);
+				
+				for(var i=0;i<allFish.length;i++){//画鱼，让鱼动
+					allFish[i].paint(ctx);
+					allFish[i].step();
+					level++;
+					if(allFish[i].x<-320){
+						allFish.splice(i,1);
+					}
+				}
+				
+				//生成鱼
+				var gInterval = Math.random()*2000+500;
+				var current = new Date().getTime();
+				var t = current - lastTime1;
+				if (t >= gInterval) {
+					lastTime1 = current;
+					allFish[allFish.length]=new Fish();
+					allFish.push(new Fish());
+				}
+				
+				
+				//画网
+				net.paint(ctx);
+				
+				//字
+				ctx.font = "20px 微软雅黑";
+				ctx.fillText("SCORE:"+gScore,20,30);
+				ctx.fillText("NUMBER:"+number,650,30);
+			}
+
+			setInterval(function() {				
+				if(RUNNING == 1){
+					ctx.drawImage(bg, 0, 0);
+					ctx.fillText("开始游戏",320,220);
+				}else if(RUNNING == 2){
+					fRun();
+				}else{
+					ctx.font = "40px 微软雅黑";
+					ctx.drawImage(bg, 0, 0);
+					ctx.fillText("重新开始",320,220);
+				}
+				
+													
+			}, 10);
+
+			                                                     
+			
+		</script>
+	</body>
+</html>
+

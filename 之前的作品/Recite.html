@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recite</title>
+  <style>
+    .content {
+      padding: 10px;
+      font-size: 20px;
+      border: 2px grey solid;
+      border-bottom: 0px;
+      height: 20px;
+    }
+
+    body {
+      background-color: rgb(185, 209, 244);
+    }
+  </style>
+</head>
+<body>
+  <script>
+    const a = [], b = [], n = 25;
+    for (let i = 1; i <= 40; i++) {
+      a[i] = n - i + 1;
+      b[i] = [];
+      for (let j of [1, 2, 4, 7, 15]) {
+        if (i - j >= 1 && i - j <= n) 
+          b[i].push(a[i - j]);
+      }
+    }
+    for (let i = 35; i <= 40; i++) b[30 + i % 4].push(b[i]);
+    const startDate = new Date();
+    startDate.setMonth(11, 13);
+    for (let i = 1; i <= 34; i++) {
+      const div = document.createElement('div');
+      const nowDate = new Date();
+      nowDate.setTime(startDate.getTime() + i * 24 * 60 * 60 * 1000);
+      div.textContent = (nowDate.getMonth() + 1) + '.' + nowDate.getDate() + ': ' + b[i];
+      div.classList.add('content');
+      document.body.appendChild(div);
+    }
+  </script>
+</body>
+</html>
