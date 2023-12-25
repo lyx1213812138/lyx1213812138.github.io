@@ -88,8 +88,8 @@ body {
 }
 
 .enterLine {
-  opacity: 80;
-  filter: blur(1px);
+  opacity: 70;
+  filter: blur(0.5px);
 }
 
 
