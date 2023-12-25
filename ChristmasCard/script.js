@@ -57,7 +57,7 @@ firework();
 
 const initialLines = (linesStr,numLines) => {  
   // console.log(getLines());
-  const linesArr = linesStr.split('\n');
+  const linesArr = linesStr.split(/\r?\n/);
   const linesContainer = document.querySelector('#linesContainer');
   for (let i = 0; i < numLines; i++) {
     const line = document.createElement('div');
