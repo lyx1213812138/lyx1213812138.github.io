@@ -49,6 +49,12 @@ body {
   height: 100%;
   overflow: auto;
 }
+
+#pageLog .tasks {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
 .task {
   /* left: 10px; */
   margin: 10px;
@@ -156,7 +162,7 @@ body {
   background-color: rgb(127, 148, 197);
 }
 
-#logInput {
+#logInput, #todoInput {
   width: 400px;
   height: 200px;
 }

@@ -79,7 +79,7 @@ const changePages = (optionArr) => {
   });
 };
 
-changePages(['Tasks', 'Input', 'Log', 'Proverb']);
+changePages(['Tasks', 'Input', 'Log', 'Proverb', 'Todo']);
 
 const setStorage = (input) => {
   const inputNode = gets('#' + input);
@@ -92,10 +92,11 @@ const setStorage = (input) => {
 setStorage('timeInput');
 setStorage('textInput');
 setStorage('logInput');
+setStorage('todoInput');
 
 //log
 
-const appendLog = (text) => {
+const appendLog = (text, faStr) => {
   const nowLog = document.createElement('div');
   nowLog.classList.add('task');
 
@@ -109,33 +110,43 @@ const appendLog = (text) => {
   deleteNode.textContent = 'x';
   nowLog.appendChild(deleteNode);
 
+  const faStr2 = faStr.charAt(0).toUpperCase() + faStr.slice(1);
   deleteNode.addEventListener('click', () => {
-    gets('#pageLog .tasks').removeChild(nowLog);
-    const textArr = localStorage.getItem('log').split(divisionStr);
+    gets(`#page${faStr2} .tasks`).removeChild(nowLog);
+    const textArr = localStorage.getItem(faStr).split(divisionStr);
     textArr.splice(textArr.indexOf(text), 1);
-    localStorage.setItem('log', textArr.join(divisionStr));
+    localStorage.setItem(faStr, textArr.join(divisionStr));
   });
 
-  gets('#pageLog .tasks').appendChild(nowLog);
+  gets(`#page${faStr2} .tasks`).appendChild(nowLog);
 };
 
 gets('#pageLog .submit').addEventListener('click', () => {
   const text = gets('#logInput').value;
   gets('#logInput').value = '';
   localStorage.setItem('logInputValue', '');
-  if (text) appendLog(text);
+  if (text) appendLog(text, 'log');
   localStorage.setItem('log', (localStorage.getItem('log') || '') + divisionStr + text);
 });
 
-const setLogStorage = () => {
-  const tmp = localStorage.getItem('log');
+gets('#pageTodo .submit').addEventListener('click', () => {
+  const text = gets('#todoInput').value;
+  gets('#todoInput').value = '';
+  localStorage.setItem('todoInputValue', '');
+  if (text) appendLog(text, 'todo');
+  localStorage.setItem('todo', (localStorage.getItem('todo') || '') + divisionStr + text);
+});
+
+const setLogStorage = (str) => {
+  const tmp = localStorage.getItem(str);
   if (!tmp) return;
-  const textArr = localStorage.getItem('log').split(divisionStr);
+  const textArr = localStorage.getItem(str).split(divisionStr);
   textArr.forEach((text) => {
-    if (text) appendLog(text);
+    if (text) appendLog(text, str);
   });
 };
-setLogStorage();
+setLogStorage('log');
+setLogStorage('todo');
 
 const proverb = [
   "做好眼前，不问将来"
