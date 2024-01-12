@@ -1,14 +1,17 @@
 import { watch } from 'vue';
 export default async function f(nowProverb, footerStyle) {
-  // console.log(__dirname);
-
   fetch('/src/assets/proverb.txt')
-    .then(response => response.text())
+    .then(response => {
+      if (!response.ok) return 
+      return response.text();
+    })
     .then(fileContent => {
+      if(fileContent.indexOf('<') != -1)
+        return new Promise((_, rej) => rej(fileContent));
       const proverbs = fileContent.split(/\r?\n/).filter(val => val);
       const randomNum = Math.floor(Math.random() * proverbs.length);
       nowProverb.value = proverbs[randomNum];
-      console.log(proverbs);
+      console.log(fileContent);
     })
     .catch(error => {
       console.error('cannot fetch proverbs:', error);
