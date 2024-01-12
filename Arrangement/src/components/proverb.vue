@@ -1,3 +1,4 @@
+<!-- 弃用 改为 changeProverb抓取txt文件 -->
 <script setup>
 import { reactive } from 'vue';
 import saveAllTime from './saveAllTime';
