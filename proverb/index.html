@@ -66,10 +66,12 @@ document.addEventListener("pjax:complete", reset);reset()})</script><meta name="
   <script>
     const node = document.querySelector('h1');
     console.log(node);
-    fetch('proverb.txt')
+    fetch('/proverb/proverb.txt')
       .then(response => response.text())
       .then(text => {
         const proverbs = text.split('/\r?\n/');
+        if (!proverbs.length || !text) 
+          throw 'no proverb in the file';
         console.log(proverbs);
         const index = parseInt(Math.random() * proverbs.length);
         node.textContent = proverbs[index];
