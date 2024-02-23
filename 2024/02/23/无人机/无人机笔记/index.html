@@ -1,0 +1,118 @@
+<!DOCTYPE html><html lang="en" theme-mode="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>无人机笔记 | lyx12138的博客</title><link rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="preload" as="font" crossorigin="anonymous" href="/font/Bender.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/BenderLight.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/JetBrainsMono-Regular.woff2"><link rel="stylesheet" href="/css/arknights.css"><style>@font-face {
+  font-family: Bender;
+  src: local('Bender'), url("/font/Bender.ttf"), url("/font/Bender.otf");
+}
+@font-face {
+  font-family: BenderLight;
+  src: local('BenderLight'), url("/font/BenderLight.ttf");
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}
+</style><script>var config = {"root":"/","search":{"preload":false,"activeHolder":"Enter here","blurHolder":"Search","noResult":"Data \"$0\" not found"},"code":{"codeInfo":"$0 - $1 lines","copy":"copy"}}</script><link type="text/css" rel="stylesheet" href="/lib/encrypt/hbe.style.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lightgallery.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-zoom.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-thumbnail.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/css/all.min.css"><script>if (window.localStorage.getItem('theme-mode') === 'light')
+ document.documentElement.setAttribute('theme-mode', 'light')
+if (window.localStorage.getItem('theme-mode') === 'dark')
+ document.documentElement.setAttribute('theme-mode', 'dark')</script><style>:root {
+ --dark-background: url('https://ak.hypergryph.com/assets/index/images/ak/pc/bk.jpg');
+ --light-background: url('/img/bk.jpg');
+ --theme-encrypt-confirm: 'confirm'
+}</style><script defer src="/js/arknights.js"></script><script defer src="/js/search.js"></script><script defer type="module">import mermaid from '//unpkg.com/mermaid@10.5.0/dist/mermaid.esm.mjs';
+window.mermaid = mermaid;
+code.paintMermaid();
+</script><script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.1/MathJax.js"></script><script>MathJax.Hub.Config({
+  menuSettings: {
+    zoom: "None"
+  },
+  showMathMenu: false,
+  jax: ["input/TeX","output/CommonHTML"],
+  extensions: ["tex2jax.js"],
+  TeX: {
+    extensions: ["AMSmath.js","AMSsymbols.js"],
+    equationNumbers: {
+      autoNumber: "AMS"
+    }
+  },
+  tex2jax: {
+    inlineMath: [["\\(", "\\)"]],
+    displayMath: [["\\[", "\\]"]]
+  }
+});
+</script><script async src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script async src="/lib/encrypt/hbe.js"></script><script async src="/js/pjax.js"></script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js','data-pjax','.busuanzi'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><nav><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="Search" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup" tabindex="0"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">Home</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">Archives</span></a></li><li class="navItem"><a class="navBlock" href="/Proverb/"><span class="navItemTitle">Proverb</span></a></li></ol></nav></header><article><div id="post-bg"><div id="post-title"><h1>无人机笔记</h1><div id="post-info"><span>First Post: <div class="control"><time datetime="2024-02-22T16:00:00.000Z" id="date"> 2024-02-23</time></div></span><br><span>Last Update: <div class="control"><time datetime="2024-02-23T07:19:01.343Z" id="updated"> 2024-02-23</time></div></span></div></div><hr><div id="post-content"><h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2>
+<ul>
+<li><p><code>void rotation_yaw(float yaw_angle, float input[2], float output[2]);</code></p>
+<p>坐标系旋转函数- 机体系到enu系</p>
+<p>input是机体系,output是惯性系，yaw_angle是当前偏航角</p></li>
+<li><p><code>void collision_avoidance(float target_x, float target_y)</code></p>
+<p>避障的同时到(target_x, target_y)</p></li>
+</ul>
+<h2 id="雷达"><a href="#雷达" class="headerlink" title="雷达"></a>雷达</h2>
+<ul>
+<li><code>Laser.ranges[i]</code> ：range_min到range_max的距离</li>
+<li>distance_c，angle_c：最小距离和所对角</li>
+</ul>
+<h2 id="位置"><a href="#位置" class="headerlink" title="位置"></a>位置</h2>
+<ul>
+<li><p>pos_drone.pose.position.x或y</p></li>
+<li><p>Euler_fcu：欧拉角（Euler
+angles）是一种用于描述物体在三维空间中旋转的方法。它由三个角
+度组成，通常表示为 α、β 和
+γ，也被称为滚转（roll）、俯仰（pitch）和偏航（yaw）。</p>
+<ul>
+<li>滚转角（Roll）表示物体绕其自身坐标系的 X 轴旋转的角度。</li>
+<li>俯仰角（Pitch）表示物体绕其自身坐标系的 Y 轴旋转的角度。
+<ul>
+<li>偏航角（Yaw）表示物体绕其自身坐标系的 Z 轴旋转的角度。</li>
+</ul></li>
+</ul></li>
+</ul>
+<h2 id="命令出口"><a href="#命令出口" class="headerlink" title="命令出口"></a>命令（出口）</h2>
+<p>command_pub ### 悬停</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">5</span>; i++)<br>&#123;<br>    Command_now.command = Hold;<br>    Command_now.sub_mode = <span class="hljs-number">0x00</span>;<br>    command_pub.<span class="hljs-built_in">publish</span>(Command_now);<br>    rate.<span class="hljs-built_in">sleep</span>();<br>&#125;<br></code></pre></td></tr></table></figure>
+<h3 id="移动"><a href="#移动" class="headerlink" title="移动"></a>移动</h3>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs cpp">Command_now.command = Move_ENU; <span class="hljs-comment">// 机体系下移动</span><br>Command_now.comid = comid;<br>comid++;<br>Command_now.sub_mode = <span class="hljs-number">2</span>; <span class="hljs-comment">// xy 速度控制模式 z 位置控制模式</span><br>Command_now.vel_sp[<span class="hljs-number">0</span>] = vel_sp_ENU[<span class="hljs-number">0</span>]; <span class="hljs-comment">// collision_avoidance()里设置的</span><br>Command_now.vel_sp[<span class="hljs-number">1</span>] = vel_sp_ENU[<span class="hljs-number">1</span>]; <span class="hljs-comment">// ENU frame</span><br>Command_now.pos_sp[<span class="hljs-number">2</span>] = fly_height;<br>Command_now.yaw_sp = <span class="hljs-number">0</span>;<br>command_pub.<span class="hljs-built_in">publish</span>(Command_now);<br></code></pre></td></tr></table></figure>
+<h2 id="视觉"><a href="#视觉" class="headerlink" title="视觉"></a>视觉</h2>
+<ul>
+<li><p>来使 <code>darknet_boxes</code> 存储各个图片的信息，用
+<code>detect_num</code> 存储相机共检测到的图片数目</p></li>
+<li><p><code>darknet_boxes.bounding_boxes[i]</code>的类型是
+<code>darknet_ros_msgs</code> 中的 <code>BoundingBox</code>
+消息类型中，通常包含以下字段：</p></li>
+<li><p><code>header</code>：消息头，包含了时间戳和坐标系信息。</p></li>
+<li><p><code>Class</code>：检测到的目标的类别或标签。</p></li>
+<li><p><code>xmin</code>：边界框的左上角 x 坐标。</p></li>
+<li><p><code>ymin</code>：边界框的左上角 y 坐标。</p></li>
+<li><p><code>xmax</code>：边界框的右下角 x 坐标。</p></li>
+<li><p><code>ymax</code>：边界框的右下角 y 坐标。</p></li>
+<li><p><code>probability</code>：目标的检测置信度或概率。</p></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs cpp">darknet_ros_msgs::BoundingBox fire_box = darknet_boxes.bounding_boxes[i];<br><span class="hljs-keyword">if</span> (fire_box.Class != <span class="hljs-string">&quot;person&quot;</span>)<br>    <span class="hljs-keyword">continue</span>;<br><span class="hljs-type">float</span> dx = Laser.ranges[<span class="hljs-number">0</span>] * <span class="hljs-built_in">cos</span>(Euler_fcu[<span class="hljs-number">2</span>]);<br><span class="hljs-type">float</span> dy = -dx * ((fire_box.xmin + fire_box.xmax) / <span class="hljs-number">2</span> - cx) / fx;<br><span class="hljs-type">float</span> fire_center_x = pos_drone.pose.position.x + dx;<br><span class="hljs-type">float</span> fire_center_y = pos_drone.pose.position.y + dy;<br></code></pre></td></tr></table></figure>
+<p>​</p>
+<h2 id="杂记"><a href="#杂记" class="headerlink" title="杂记"></a>杂记</h2>
+<ul>
+<li>NED系（North-East-Down）ENU：East-North-Up</li>
+</ul>
+<h2 id="需要优化的地方"><a href="#需要优化的地方" class="headerlink" title="需要优化的地方"></a>需要优化的地方</h2>
+<ul>
+<li>darknet_box_cb 中不应该直接覆盖（取平均？）</li>
+<li>避障</li>
+<li>找门（找直线？）（直着走）</li>
+<li>如果看不到目标，如何前进；如果没找到门，如何前进</li>
+</ul>
+<div id="paginator"></div></div><div id="post-footer"><div id="pages"><div class="footer-link" style="width: 50%;text-align:right;border-right:1px #fe2 solid"><a href="/2024/02/23/%E6%97%A0%E4%BA%BA%E6%9C%BA/%E6%97%A0%E4%BA%BA%E6%9C%BA%E7%90%86%E8%AE%BA%E7%9F%A5%E8%AF%86%EF%BC%88%E5%85%83%E5%90%AF%E5%8F%91%E5%BC%8F%EF%BC%89/">← Next 无人机理论知识（元启发式）</a></div><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/2024/02/02/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%A6%E4%B9%8B%E7%BE%8E%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">数学之美学习笔记 Prev →</a></div></div></div></div><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="To Top" style="opacity: 0; display: none;">∧ </a><a class="i-index" id="to-index" href="#toc-div" title="To Catalog">≡</a><a class="i-color" id="color-mode" onClick="colorMode.change()" title="Change Theme"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="https://cdn.luogu.com.cn/upload/image_hosting/8cc2fgam.png" alt="Logo"></a><h1 id="Dr"><a href="/">lyx12138</a></h1><div id="description"><p></p></div></div><div id="aside-block"><div id="toc-div"><h1>Catalog</h1><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%BD%E6%95%B0"><span class="toc-number">1.</span> <span class="toc-text">函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9B%B7%E8%BE%BE"><span class="toc-number">2.</span> <span class="toc-text">雷达</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%8D%E7%BD%AE"><span class="toc-number">3.</span> <span class="toc-text">位置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%91%BD%E4%BB%A4%E5%87%BA%E5%8F%A3"><span class="toc-number">4.</span> <span class="toc-text">命令（出口）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A7%BB%E5%8A%A8"><span class="toc-number">4.1.</span> <span class="toc-text">移动</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%86%E8%A7%89"><span class="toc-number">5.</span> <span class="toc-text">视觉</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9D%82%E8%AE%B0"><span class="toc-number">6.</span> <span class="toc-text">杂记</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9C%80%E8%A6%81%E4%BC%98%E5%8C%96%E7%9A%84%E5%9C%B0%E6%96%B9"><span class="toc-number">7.</span> <span class="toc-text">需要优化的地方</span></a></li></ol></div></div><footer><nobr>Published with <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> Theme <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr> by <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside></main><canvas id="canvas-dust"></canvas></body></html>

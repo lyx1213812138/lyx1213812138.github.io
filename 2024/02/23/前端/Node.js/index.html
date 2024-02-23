@@ -1,0 +1,146 @@
+<!DOCTYPE html><html lang="en" theme-mode="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Node.js | lyx12138的博客</title><link rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="preload" as="font" crossorigin="anonymous" href="/font/Bender.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/BenderLight.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/JetBrainsMono-Regular.woff2"><link rel="stylesheet" href="/css/arknights.css"><style>@font-face {
+  font-family: Bender;
+  src: local('Bender'), url("/font/Bender.ttf"), url("/font/Bender.otf");
+}
+@font-face {
+  font-family: BenderLight;
+  src: local('BenderLight'), url("/font/BenderLight.ttf");
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}
+</style><script>var config = {"root":"/","search":{"preload":false,"activeHolder":"Enter here","blurHolder":"Search","noResult":"Data \"$0\" not found"},"code":{"codeInfo":"$0 - $1 lines","copy":"copy"}}</script><link type="text/css" rel="stylesheet" href="/lib/encrypt/hbe.style.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lightgallery.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-zoom.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-thumbnail.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/css/all.min.css"><script>if (window.localStorage.getItem('theme-mode') === 'light')
+ document.documentElement.setAttribute('theme-mode', 'light')
+if (window.localStorage.getItem('theme-mode') === 'dark')
+ document.documentElement.setAttribute('theme-mode', 'dark')</script><style>:root {
+ --dark-background: url('https://ak.hypergryph.com/assets/index/images/ak/pc/bk.jpg');
+ --light-background: url('/img/bk.jpg');
+ --theme-encrypt-confirm: 'confirm'
+}</style><script defer src="/js/arknights.js"></script><script defer src="/js/search.js"></script><script defer type="module">import mermaid from '//unpkg.com/mermaid@10.5.0/dist/mermaid.esm.mjs';
+window.mermaid = mermaid;
+code.paintMermaid();
+</script><script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.1/MathJax.js"></script><script>MathJax.Hub.Config({
+  menuSettings: {
+    zoom: "None"
+  },
+  showMathMenu: false,
+  jax: ["input/TeX","output/CommonHTML"],
+  extensions: ["tex2jax.js"],
+  TeX: {
+    extensions: ["AMSmath.js","AMSsymbols.js"],
+    equationNumbers: {
+      autoNumber: "AMS"
+    }
+  },
+  tex2jax: {
+    inlineMath: [["\\(", "\\)"]],
+    displayMath: [["\\[", "\\]"]]
+  }
+});
+</script><script async src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script async src="/lib/encrypt/hbe.js"></script><script async src="/js/pjax.js"></script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js','data-pjax','.busuanzi'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><nav><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="Search" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup" tabindex="0"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">Home</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">Archives</span></a></li><li class="navItem"><a class="navBlock" href="/Proverb/"><span class="navItemTitle">Proverb</span></a></li></ol></nav></header><article><div id="post-bg"><div id="post-title"><h1>Node.js</h1><div id="post-info"><span>First Post: <div class="control"><time datetime="2024-02-22T16:00:00.000Z" id="date"> 2024-02-23</time></div></span><br><span>Last Update: <div class="control"><time datetime="2024-02-23T07:25:12.315Z" id="updated"> 2024-02-23</time></div></span></div></div><hr><div id="post-content"><h1 id="node.js"><a href="#node.js" class="headerlink" title="node.js"></a>node.js</h1>
+<h2 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h2>
+<p>node aa.js 运行</p>
+<p>第一行总是写上<code>'use strict';</code>是因为我们总是以严格模式运行JavaScript代码，避免各种潜在陷阱。</p>
+<p>此外，文件名只能是英文字母、数字和下划线的组合。</p>
+<p>看到只有<code>&gt;</code>是在Node交互式环境下</p>
+<p>两次ctrl+c退出node环境</p>
+<p><code>node --use_strict calc.js</code> 开启严格模式</p>
+<p>模块：完成一种功能的单独一个文件</p>
+<p><code>module.exports = greet;</code>
+把greet函数作为入口（hello.js文件中）</p>
+<p><code>var aa = require("./hello");</code>
+引入的hello模块作为变量保存在aa变量中，aa就是hello中的greet</p>
+<p>位于同一个目录，所以我们用了当前目录<code>.</code> 。</p>
+<h2 id="global"><a href="#global" class="headerlink" title="global"></a>global</h2>
+<p>唯一的全局变量</p>
+<h2 id="process"><a href="#process" class="headerlink" title="process"></a>process</h2>
+<ul>
+<li><p>如果我们想要在下一次事件响应中执行代码，可以调用<code>process.nextTick()</code></p></li>
+<li><p>如果我们响应<code>exit</code>事件，就可以在程序即将退出时执行某个回调函数：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// 程序即将退出时的回调函数:</span><br>process.<span class="hljs-title function_">on</span>(<span class="hljs-string">&#x27;exit&#x27;</span>, <span class="hljs-keyword">function</span> (<span class="hljs-params">code</span>) &#123;<br>    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;about to exit with code: &#x27;</span> + code);<br>&#125;);<br></code></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="fs模块"><a href="#fs模块" class="headerlink" title="fs模块"></a>fs模块</h2>
+<p>读写文件</p>
+<h3 id="异步读文件"><a href="#异步读文件" class="headerlink" title="异步读文件"></a>异步读文件</h3>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">var</span> fs = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;fs&#x27;</span>);<br><br>fs.<span class="hljs-title function_">readFile</span>(<span class="hljs-string">&#x27;sample.txt&#x27;</span>, <span class="hljs-string">&#x27;utf-8&#x27;</span>, <span class="hljs-keyword">function</span> (<span class="hljs-params">err, data</span>) &#123;<br>    <span class="hljs-keyword">if</span> (err) &#123;<br>        <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(err);<br>    &#125; <span class="hljs-keyword">else</span> &#123;<br>        <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(data);<br>    &#125;<br>&#125;);<br></code></pre></td></tr></table></figure>
+<p>但正常读取时err=null</p>
+<ul>
+<li><p>文本文档 data是String</p></li>
+<li><p>二进制文件 data是Buffer 一个包含零个或任意个字节的数组</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">let a = new Buffer(&#x27;END.&#x27;, &#x27;utf-8&#x27;);//string to buffer by utf-8<br></code></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="同步读文件"><a href="#同步读文件" class="headerlink" title="同步读文件"></a>同步读文件</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">var data = fs.readFileSync(&#x27;sample.txt&#x27;, &#x27;utf-8&#x27;);<br></code></pre></td></tr></table></figure>
+<h3 id="异步写文件"><a href="#异步写文件" class="headerlink" title="异步写文件"></a>异步写文件</h3>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">var</span> data = <span class="hljs-string">&#x27;Hello, Node.js&#x27;</span>;<br>fs.<span class="hljs-title function_">writeFile</span>(<span class="hljs-string">&#x27;output.txt&#x27;</span>, data, <span class="hljs-keyword">function</span> (<span class="hljs-params">err</span>) &#123;<br>    <span class="hljs-keyword">if</span> (err) &#123;<br>        <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(err);<br>    &#125; <span class="hljs-keyword">else</span> &#123;<br>        <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;ok.&#x27;</span>);<br>    &#125;<br>&#125;);<br></code></pre></td></tr></table></figure>
+<h3 id="文件信息"><a href="#文件信息" class="headerlink" title="文件信息"></a>文件信息</h3>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs js">fs.<span class="hljs-title function_">stat</span>(<span class="hljs-string">&#x27;sample.txt&#x27;</span>, <span class="hljs-keyword">function</span> (<span class="hljs-params">err, stat</span>) &#123;<br>    <span class="hljs-keyword">if</span> (err) &#123;<br>        <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(err);<br>    &#125; <span class="hljs-keyword">else</span> &#123;<br>        <span class="hljs-comment">// 是否是文件:</span><br>        <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;isFile: &#x27;</span> + stat.<span class="hljs-title function_">isFile</span>());<br>        <span class="hljs-comment">// 是否是目录:</span><br>        <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;isDirectory: &#x27;</span> + stat.<span class="hljs-title function_">isDirectory</span>());<br>        <span class="hljs-keyword">if</span> (stat.<span class="hljs-title function_">isFile</span>()) &#123;<br>            <span class="hljs-comment">// 文件大小:</span><br>            <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;size: &#x27;</span> + stat.<span class="hljs-property">size</span>);<br>            <span class="hljs-comment">// 创建时间, Date对象:</span><br>            <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;birth time: &#x27;</span> + stat.<span class="hljs-property">birthtime</span>);<br>            <span class="hljs-comment">// 修改时间, Date对象:</span><br>            <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;modified time: &#x27;</span> + stat.<span class="hljs-property">mtime</span>);<br>        &#125;<br>    &#125;<br>&#125;);<br></code></pre></td></tr></table></figure>
+<h2 id="stream"><a href="#stream" class="headerlink" title="stream"></a>stream</h2>
+<p>支持“流”这种数据结构，还是在fs模块中的</p>
+<h3 id="读"><a href="#读" class="headerlink" title="读"></a>读</h3>
+<p><code>var rs = fs.createReadStream('sample.txt', 'utf-8');</code></p>
+<p><code>data</code>事件表示流的数据已经可以读取了，<code>end</code>事件表示这个流已经到末尾了，没有数据可以读取了，<code>error</code>事件表示出错了。</p>
+<p>要注意，<code>data</code>事件可能会有多次，每次传递的<code>chunk</code>是流的一部分数据。</p>
+<h3 id="写"><a href="#写" class="headerlink" title="写"></a>写</h3>
+<p><code>createWriteStream</code></p>
+<p>要以流的形式写入文件，只需要不断调用<code>write()</code>方法，最后以<code>end()</code>结束：</p>
+<h3 id="pipe"><a href="#pipe" class="headerlink" title="pipe"></a>pipe()</h3>
+<p>把两个文件流串起来</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">var rs = fs.createReadStream(&#x27;sample.txt&#x27;);<br>var ws = fs.createWriteStream(&#x27;copied.txt&#x27;);<br>rs.pipe(ws);//cope the file<br>//rs.pipe(ws, &#123; end: false &#125;);//not close ws stream, can still write<br></code></pre></td></tr></table></figure>
+<h2 id="http模块"><a href="#http模块" class="headerlink" title="http模块"></a>http模块</h2>
+<p>request对象：HTTP请求</p>
+<p>response对象：HTTP响应</p>
+<p>由于<code>response</code>对象本身是一个<code>Writable Stream</code></p>
+<h2 id="npm"><a href="#npm" class="headerlink" title="npm"></a>npm</h2>
+<p>CLI(只允许键盘输入) &amp; GUI(图形化界面)</p>
+<h3 id="起始"><a href="#起始" class="headerlink" title="起始"></a>起始</h3>
+<p><code>cd xxx</code></p>
+<p><code>npm init</code> 生成package.json档案</p>
+<h3 id="设置代理"><a href="#设置代理" class="headerlink" title="设置代理"></a>设置代理</h3>
+<p><code>npm config set proxy http://127.0.0.1:翻牆端口</code></p>
+<p>代理服务器 IP 地址和端口号查找</p>
+<ol type="1">
+<li>在开始搜索“Internet 选项”。</li>
+<li>选择“连接”标签页。</li>
+<li>点击“局域网设置”按钮。</li>
+<li>在弹出的窗口中，您可以看到代理服务器 IP 地址和端口号。</li>
+</ol>
+<h2 id="install"><a href="#install" class="headerlink" title="install"></a>install</h2>
+<p>npm install lodash --save</p>
+<p>设置与项目相依，会存在package.json中</p>
+<p>卸载 uninstall</p>
+<p>npm ls查看已安装</p>
+<p>npm update lodash</p>
+<h3 id="版本控制"><a href="#版本控制" class="headerlink" title="版本控制"></a>版本控制</h3>
+<p>版本号有三位数字组成（譬如：1.2.3），<code>1</code>
+表示主版本、<code>1.2</code>表示次要版本、<code>1.2.3</code>
+表示补丁版本。</p>
+<p><code>^</code> 表示用于确定主版本号、 <code>~</code> 用于确定主版本号
++ 次要版本号；</p>
+<ul>
+<li><code>^1</code> ：等同于 <code>1.x.x</code> ,
+以<code>1</code>开头的所有版本；</li>
+<li><code>~2.2</code> ：等同于 <code>2.2.x</code> ，以 <code>2.2</code>
+开头的所有版本。</li>
+<li><code>~2.2.1</code> ：以 <code>2.2</code> 开头，且最后一位 补丁号≥1
+的所有版本，即 <code>2.2.1</code> 与 <code>2.2.9</code>
+之间版本，包括头尾。</li>
+</ul>
+<div id="paginator"></div></div><div id="post-footer"><div id="pages"><div class="footer-link" style="width: 50%;text-align:right;border-right:1px #fe2 solid"><a href="/2024/02/23/%E5%89%8D%E7%AB%AF/JS/">← Next JS</a></div><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/2024/02/23/%E5%89%8D%E7%AB%AF/Vue3/">高三暑假集训总结 Prev →</a></div></div></div></div><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="To Top" style="opacity: 0; display: none;">∧ </a><a class="i-index" id="to-index" href="#toc-div" title="To Catalog">≡</a><a class="i-color" id="color-mode" onClick="colorMode.change()" title="Change Theme"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="https://cdn.luogu.com.cn/upload/image_hosting/8cc2fgam.png" alt="Logo"></a><h1 id="Dr"><a href="/">lyx12138</a></h1><div id="description"><p></p></div></div><div id="aside-block"><div id="toc-div"><h1>Catalog</h1><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#node.js"><span class="toc-number">1.</span> <span class="toc-text">node.js</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C"><span class="toc-number">1.1.</span> <span class="toc-text">基本操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#global"><span class="toc-number">1.2.</span> <span class="toc-text">global</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#process"><span class="toc-number">1.3.</span> <span class="toc-text">process</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#fs%E6%A8%A1%E5%9D%97"><span class="toc-number">1.4.</span> <span class="toc-text">fs模块</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%82%E6%AD%A5%E8%AF%BB%E6%96%87%E4%BB%B6"><span class="toc-number">1.4.1.</span> <span class="toc-text">异步读文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%8C%E6%AD%A5%E8%AF%BB%E6%96%87%E4%BB%B6"><span class="toc-number">1.4.2.</span> <span class="toc-text">同步读文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%82%E6%AD%A5%E5%86%99%E6%96%87%E4%BB%B6"><span class="toc-number">1.4.3.</span> <span class="toc-text">异步写文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E4%BF%A1%E6%81%AF"><span class="toc-number">1.4.4.</span> <span class="toc-text">文件信息</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#stream"><span class="toc-number">1.5.</span> <span class="toc-text">stream</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%BB"><span class="toc-number">1.5.1.</span> <span class="toc-text">读</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%99"><span class="toc-number">1.5.2.</span> <span class="toc-text">写</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#pipe"><span class="toc-number">1.5.3.</span> <span class="toc-text">pipe()</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#http%E6%A8%A1%E5%9D%97"><span class="toc-number">1.6.</span> <span class="toc-text">http模块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#npm"><span class="toc-number">1.7.</span> <span class="toc-text">npm</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B5%B7%E5%A7%8B"><span class="toc-number">1.7.1.</span> <span class="toc-text">起始</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86"><span class="toc-number">1.7.2.</span> <span class="toc-text">设置代理</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#install"><span class="toc-number">1.8.</span> <span class="toc-text">install</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6"><span class="toc-number">1.8.1.</span> <span class="toc-text">版本控制</span></a></li></ol></li></ol></li></ol></div></div><footer><nobr>Published with <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> Theme <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr> by <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside></main><canvas id="canvas-dust"></canvas></body></html>
