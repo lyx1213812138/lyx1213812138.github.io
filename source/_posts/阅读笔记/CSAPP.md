@@ -1,0 +1,17 @@
+---
+title: CSAPP
+data: 2024-03-26
+tags:
+  - 底层原理
+hidden: true
+---
+![0D82FC63D006C709937288F5D8487A94](0D82FC63D006C709937288F5D8487A94.jpg)
+![F0B429B06B52D63FC70221996AB409DD](F0B429B06B52D63FC70221996AB409DD.jpg)
+![](4ADE439FC2CFA75C043F2CFE652259DF.jpg)
+![](4EF5B13F3EC7336657E1FB9DEBC4A7EB.jpg)
+- TODO 124 / 775 第二章家庭作业
+- 一字16位
+- ![](Pasted%20image%2020240315210238.png)
+
+## 虚拟内存
+虚拟内存地址 -> { TLB（对PTE的缓存）（CPU里） -> PTE（多重页表来减少空间，B+树）（内存or缓存里）} （找PPN）->  {  缓存or内存 -> 缺页（磁盘）}（通过PPN+PPO找data）

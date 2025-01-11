@@ -1,0 +1,220 @@
+{
+  "main": {
+    "id": "87b7c203d7463699",
+    "type": "split",
+    "children": [
+      {
+        "id": "6654b05763b8e3a8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d5a98c37a33e6c20",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "后端/DB.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "DB"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "eafa42541ae8478b",
+    "type": "split",
+    "children": [
+      {
+        "id": "e22d4d08c0d3d0f7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "af049e58a0c36b23",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "db12bb2b28708c3d",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "git",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "47f622f2e03db3c8",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 220.5
+  },
+  "right": {
+    "id": "62b36b782977d66e",
+    "type": "split",
+    "children": [
+      {
+        "id": "711edc688a3845bd",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "53e0e65dadb7532b",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "语言/Go.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Go 的反向链接列表"
+            }
+          },
+          {
+            "id": "38493ea11a36834e",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "语言/Go.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Go 的出链列表"
+            }
+          },
+          {
+            "id": "4397231fe980fe91",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "66d8fea2df905421",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "语言/Go.md"
+              },
+              "icon": "lucide-list",
+              "title": "Go 的大纲"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "obsidian-excalidraw-plugin:新建绘图文件": false,
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "canvas:新建白板": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "templater-obsidian:Templater": false
+    }
+  },
+  "active": "d5a98c37a33e6c20",
+  "lastOpenFiles": [
+    "前端/CSS.md",
+    "后端/DB.md",
+    "无人机/无人机笔记.md",
+    "无人机/路径规划计划.md",
+    "无人机/无人机理论知识（元启发式）.md",
+    "无人机/ROS快速学习.md",
+    "前端/Vue3.md",
+    "前端/ToBeDone.md",
+    "前端/SSE 流式传输.md",
+    "前端/新人任务学习笔记.md",
+    "前端/正则表达式.pdf",
+    "前端/杂记.md",
+    "其他/强化学习.md",
+    "其他/Python 爬虫.md",
+    "其他/LinuxLearning.md",
+    "其他/GIT.md",
+    "后端/掘金笔记.md",
+    "后端/分布式——MapReduce，GFS.md",
+    "阅读笔记/BLOG阅读笔记.md",
+    "阅读笔记/《做最好的自己》.md",
+    "阅读笔记/数学之美学习笔记.md",
+    "阅读笔记/阅读杂记.md",
+    "总结/新，兴奋与焦虑——大一上期总结.md",
+    "总结/自传.md",
+    "算法竞赛/日常总结.md",
+    "asset/aaaa.png",
+    "总结/大一下总结.md",
+    "算法竞赛/女生赛补题总结.md",
+    "asset/Pasted image 20241107135636.png",
+    "asset/Pasted image 20241107122012.png",
+    "asset/Pasted image 20241107121046.png",
+    "_日记",
+    "asset/Pasted image 20241106225845.png",
+    "asset/Pasted image 20241106215030.png",
+    "未命名.canvas",
+    "asset/Pasted image 20241104185451.png",
+    "asset/Pasted image 20241104185053.png",
+    "asset/Pasted image 20240930215251.png",
+    "asset/aoce2.gif",
+    "语言",
+    "AI",
+    "后端",
+    "Excalidraw",
+    "asset/Arrangement/assets/index-DFbo34J4.js",
+    "asset/Arrangement/assets/index-HUMclLeA.css",
+    "asset/Arrangement/index.html",
+    "asset/Arrangement/assets",
+    "未命名 1.canvas"
+  ]
+}
