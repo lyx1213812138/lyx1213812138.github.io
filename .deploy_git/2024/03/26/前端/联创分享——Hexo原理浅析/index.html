@@ -1,0 +1,137 @@
+<!DOCTYPE html><html lang="en" theme-mode="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>联创分享——Hexo原理浅析 | lyx12138的博客</title><link rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="preload" as="font" crossorigin="anonymous" href="/font/Bender.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/BenderLight.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/JetBrainsMono-Regular.woff2"><link rel="stylesheet" href="/css/arknights.css"><style>@font-face {
+  font-family: Bender;
+  src: local('Bender'), url("/font/Bender.ttf"), url("/font/Bender.otf");
+}
+@font-face {
+  font-family: BenderLight;
+  src: local('BenderLight'), url("/font/BenderLight.ttf");
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}
+</style><script>var config = {"root":"/","search":{"preload":false,"activeHolder":"键入以继续","blurHolder":"数据检索","noResult":"无 $0 相关数据"},"code":{"codeInfo":"$0 - $1 行","copy":"复制"}}</script><link type="text/css" rel="stylesheet" href="/lib/encrypt/hbe.style.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lightgallery.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-zoom.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-thumbnail.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/css/all.min.css"><script>if (window.localStorage.getItem('theme-mode') === 'light')
+ document.documentElement.setAttribute('theme-mode', 'light')
+if (window.localStorage.getItem('theme-mode') === 'dark')
+ document.documentElement.setAttribute('theme-mode', 'dark')</script><style>:root {
+ --dark-background: url('https://ak.hypergryph.com/assets/index/images/ak/pc/bk.jpg');
+ --light-background: url('/img/bk.jpg');
+ --theme-encrypt-confirm: '确认'
+}</style><script defer src="/js/arknights.js"></script><script defer src="/js/search.js"></script><script defer type="module">import mermaid from '//unpkg.com/mermaid@10.5.0/dist/mermaid.esm.mjs';
+window.mermaid = mermaid;
+code.paintMermaid();
+</script><script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.1/MathJax.js"></script><script>MathJax.Hub.Config({
+  menuSettings: {
+    zoom: "None"
+  },
+  showMathMenu: false,
+  jax: ["input/TeX","output/CommonHTML"],
+  extensions: ["tex2jax.js"],
+  TeX: {
+    extensions: ["AMSmath.js","AMSsymbols.js"],
+    equationNumbers: {
+      autoNumber: "AMS"
+    }
+  },
+  tex2jax: {
+    inlineMath: [["\\(", "\\)"]],
+    displayMath: [["\\[", "\\]"]]
+  }
+});
+</script><script async src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script async src="/lib/encrypt/hbe.js"></script><script async src="/js/pjax.js"></script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js','data-pjax','.busuanzi'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><nav><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup" tabindex="0"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">Home</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">Archives</span></a></li><li class="navItem"><a class="navBlock" href="/proverb/"><span class="navItemTitle">Proverb</span></a></li></ol></nav></header><article><div id="post-bg"><div id="post-title"><h1>联创分享——Hexo原理浅析</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2024-03-26T08:07:00.016Z" id="date"> 2024-03-26</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2024-03-26T12:20:58.198Z" id="updated"> 2024-03-26</time></div></span></div></div><hr><div id="post-content"><h2 id="什么是hexo"><a href="#什么是hexo" class="headerlink" title="什么是hexo"></a>什么是Hexo</h2>
+<p>快速、简洁且高效的博客框架 - Node.js
+所带来的超快生成速度，让上百个页面在几秒内瞬间完成渲染。 - Hexo 支持
+GitHub Flavored Markdown 的所有功能，甚至可以整合 Octopress
+的大多数插件。 - 只需一条指令即可部署到 GitHub Pages, Heroku
+或其他平台。 - 强大的 API
+带来无限的可能，与数种模板引擎（EJS，Pug，Nunjucks）和工具（Babel，PostCSS，Less/Sass）轻易集成</p>
+<h2 id="总体文件夹结构"><a href="#总体文件夹结构" class="headerlink" title="总体文件夹结构"></a>总体文件夹结构</h2>
+<p>.<br />
+├── _config.yml<br />
+├── db.json<br />
+├── node_modules<br />
+├── package.json<br />
+├── public<br />
+├── scaffolds<br />
+├── source 所有文章文件放在这里<br />
+└── themes 主题文件夹</p>
+<p>**_config.yml<strong>  站点的配置文件。<br />
+</strong>db.json<strong>   缓存文件<br />
+</strong>public<strong>  最终所见网页的所有内容<br />
+</strong>scaffolds<strong>  
+模板文件夹。当新建一个文章时，会默认包含对应模板的内容。<br />
+</strong>source<strong> 
+资源文件夹是存放用户资源的地方。所有的源文件都会被保存在_post文件夹中。除 <em>posts
+文件夹之外，开头命名为</em> (下划线)的文件 /
+文件夹和隐藏的文件将会被忽略。Markdown 和 HTML 文件会被解析并放到 public
+文件夹，而其他文件会被拷贝过去。<br />
+</strong>themes**  存放主题文件，hexo会根据主题来生成静态页面。 ##
+hexo的模板引擎
+模板引擎的作用，就是将界面与数据分离。最简单的原理是将模板内容中指定的地方替换成数据，实现业务代码与逻辑代码分离。</p>
+<p>hexo默认的是使用ejs，同类型的东西还有很多，比如jade，swig。 ### EJS
+EJS是一种模板引擎，是用于生成包含动态数据的Web页面的工具，可以通过客户端JavaScript在客户端上生成HTML，但更常见的是由后端使用它来根据某个URL请求生成Web页面。
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs plaintext"> &lt;h1&gt;&lt;%= title %&gt;&lt;/h1&gt; // 输出变量title的值<br><br> &lt;% if (isAdmin) &#123; %&gt; // 条件判断<br>  &lt;p&gt;Welcome, admin!&lt;/p&gt;<br> &lt;% &#125; else &#123; %&gt;<br>  &lt;p&gt;Welcome, guest!&lt;/p&gt;<br> &lt;% &#125; %&gt;<br><br>&lt;ul&gt;<br> &lt;% for (let i = 0; i &lt; items.length; i++) &#123; %&gt; // 循环<br>  &lt;li&gt;&lt;%= items[i] %&gt;&lt;/li&gt;<br> &lt;% &#125; %&gt;<br>&lt;/ul&gt;<br></code></pre></td></tr></table></figure></p>
+<h3 id="jade"><a href="#jade" class="headerlink" title="jade"></a>Jade</h3>
+<p>jade采用缩进语法格式。 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">- var users = [&#123;name: &#x27;foo&#x27;, role: &#x27;admin&#x27;&#125;, &#123;name: &#x27;bar&#x27;, role: &#x27;manager&#x27;&#125;, &#123;name: &#x27;baz&#x27;, role: &#x27;technician&#x27;&#125;]<br><br>h2 Users<br><br>// Neat! There&#x27;s another construct called `each`<br>// Also there is `unless` which is equivalent to if (!expr)<br>// Let&#x27;s use that and swap a bit of code<br><br>each user, index in users<br>    unless user.role === &#x27;admin&#x27;<br>        p #&#123;user.name&#125; is not an &quot;admin&quot;<br>    else<br>        p #&#123;user.name&#125; is an &quot;admin&quot;<br><br>// Let&#x27;s take a look at `case` statements now<br><br>h3 case<br><br>case users[2].name<br>    when &#x27;admin&#x27;<br>        p User is an admin<br>    when &#x27;manager&#x27;<br>        p User is a manager<br>    when &#x27;technician&#x27;<br>        p User is a technician<br>    default<br>        p User is a customer!<br></code></pre></td></tr></table></figure></p>
+<h2 id="基本命令"><a href="#基本命令" class="headerlink" title="基本命令"></a>基本命令</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">$ hexo init &lt;folder&gt;<br>$ hexo new [layout] &lt;title&gt;<br>$ hexo generate #生成静态文件<br>$ hexo server<br>$ hexo deploy<br>$ hexo clean<br></code></pre></td></tr></table></figure>
+<p><code>hexo-cli</code> 启动 hexo 命令进程和参数解析机制。每次我们输入
+<code>hexo init</code> 命令后，都会通过 node 调用 hexo-cli 中的 entry
+函数 (比如，可以把 <code>hexo init</code> 视为
+<code>node hexo-cli/entry.js init)</code>， ## 部署流程</p>
+<ol type="1">
+<li>每次执行hexo
+g命令时，hexo都会遍历主题文件中的source目录，这里的source主要包括css，fonts，js等文件，建立索引。</li>
+<li>根据索引会把主题文件生成到public文件中，此时public文件是一个由html，js，css等内容制作的博客，也就是网页的根目录。</li>
+<li>通过部署，hexo d 将 public 文件夹的内容以 git 方式 push 到 github
+的指定项目的指定分支，由 github
+进行显示。当然，也可以部署到自己的域名上。将 <code>public</code> 目录中的文件和目录推送至指定目录，并<strong>完全覆盖</strong>该分支下的已有内容。</li>
+</ol>
+<h2 id="局部缓存优化"><a href="#局部缓存优化" class="headerlink" title="局部缓存优化"></a>局部缓存优化</h2>
+<p>如果主题太过于复杂，或是需要生成的文件量太过于庞大，可能会大幅降低性能，可以考虑局部缓存（Fragment
+Caching）
+功能。它储存局部内容，下次便能直接使用缓存内容，可以减少文件夹查询并使生成速度更快。</p>
+<p>它可用于页首、页脚、侧边栏等文件不常变动的位置，举例来说：
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs html">&lt;%- fragment_cache(&#x27;header&#x27;, function()&#123;  <br>  return &#x27;<span class="hljs-tag">&lt;<span class="hljs-name">header</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>&#x27;;  <br>&#125;); -%&gt;<br></code></pre></td></tr></table></figure> ## hexo-server <code>hexo-server</code> 是 Hexo
+的一个插件，它的作用是启动一个本地服务器，可以实时预览博客的修改效果。它主要是通过监听文件变化和重新渲染静态页面来实现实时预览博客的修改效果。</p>
+<p>其监听文件变化的实现方式如下：</p>
+<p>在 <code>Hexo-server</code> 启动时，它会创建一个 <code>chokidar</code> 的实例，监听
+Hexo
+博客目录下的文件变化。当文件发生变化时，<code>chokidar</code> 会触发相应的事件，例如
+add、change 和 unlink
+等。<code>Hexo-server</code> 在接收到这些事件后，会重新渲染对应的页面，并将结果发送给客户端。</p>
+<p>下面是 <code>Hexo-server</code> 使用 <code>chokidar</code> 监听文件的代码片段：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">const</span> chokidar = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;chokidar&#x27;</span>);  <br>  <br><span class="hljs-comment">// Watch files  </span><br><span class="hljs-keyword">const</span> watcher = chokidar.<span class="hljs-title function_">watch</span>(sourceDir, &#123;  <br>  <span class="hljs-attr">ignored</span>: config.<span class="hljs-property">ignore</span>,  <br>  <span class="hljs-attr">persistent</span>: <span class="hljs-literal">true</span>,  <br>&#125;);  <br>  <br><span class="hljs-comment">// Listen for file events  </span><br>watcher  <br>  .<span class="hljs-title function_">on</span>(<span class="hljs-string">&#x27;add&#x27;</span>, <span class="hljs-function"><span class="hljs-params">file</span> =&gt;</span> &#123; <span class="hljs-comment">/* handle add event */</span> &#125;)  <br>  .<span class="hljs-title function_">on</span>(<span class="hljs-string">&#x27;change&#x27;</span>, <span class="hljs-function"><span class="hljs-params">file</span> =&gt;</span> &#123; <span class="hljs-comment">/* handle change event */</span> &#125;)  <br>  .<span class="hljs-title function_">on</span>(<span class="hljs-string">&#x27;unlink&#x27;</span>, <span class="hljs-function"><span class="hljs-params">file</span> =&gt;</span> &#123; <span class="hljs-comment">/* handle unlink event */</span> &#125;);<br></code></pre></td></tr></table></figure>
+<p>上述代码中，<code>chokidar.watch()</code> 方法用于创建一个 <code>chokidar</code> 的实例，该实例会监听 <code>sourceDir</code> 目录下的文件变化。配置项 <code>ignored</code> 用于指定忽略的文件，<code>persistent</code> 为 <code>true</code> 表示持续监听文件变化。</p>
+<p>接下来，使用 <code>on()</code> 方法监听 <code>add</code>、<code>change</code> 和 <code>unlink</code> 事件，并在相应的回调函数中处理文件变化事件。例如，在
+add
+事件中，可以调用 <code>Hexo</code> 的 <code>generate()</code> 方法重新生成对应的页面。</p>
+<p>总的来说，<code>Hexo-server</code> 通过 <code>chokidar</code> 实现了监听文件变化并重新渲染页面的功能，提供了实时预览和自动刷新等便利特性。</p>
+<hr />
+<p>以下是凑时间的。 # <a
+target="_blank" rel="noopener" href="https://codeforces.com/contest/1948">Educational Codeforces Round
+163 (Rated for Div. 2)</a>D. Tandem Repeats? [[优化处理]] ## 题意
+有一行由小写字母和？组成的字符串，？可以代表任何小写字母。求重复子串的最大长度，重复子串指满足
+<span class="math inline">\(s[l,l+len-1]=s[l+len,l+len*2-1]\)</span>
+的连续子串。 <span class="math inline">\(n&lt;=5e3\)</span> ## 题解
+就是要找到处理的相同量，这里是判断 <span
+class="math inline">\(s[i]==s[i+len]\)</span>
+，当len固定时左端点l和l+1只有端点需要处理。在每次记一个cnt，记录满足相等的个数。因为len固定时判断的永远时s[i]和s[i+len]，所以
+<span class="math inline">\(？\)</span> 可以直接贪心处理。</p>
+<div id="paginator"></div></div><div id="post-footer"><div id="pages"><div class="footer-link" style="width: 50%;text-align:right;border-right:1px #fe2 solid"><a href="/2024/05/16/%E8%AF%AD%E8%A8%80/Go/">← 下一篇 Go</a></div><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/2024/03/07/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B/%E6%97%A5%E5%B8%B8%E6%80%BB%E7%BB%93/">日常总结 上一篇 →</a></div></div></div></div><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="回到顶部" style="opacity: 0; display: none;">∧ </a><a class="i-index" id="to-index" href="#toc-div" title="文章目录">≡</a><a class="i-color" id="color-mode" onClick="colorMode.change()" title="切换主题"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="https://cdn.luogu.com.cn/upload/image_hosting/8cc2fgam.png" alt="Logo"></a><h1 id="Dr"><a href="/">lyx12138</a></h1><div id="description"><p></p></div></div><div id="aside-block"><div id="toc-div"><h1>目录</h1><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFhexo"><span class="toc-number">1.</span> <span class="toc-text">什么是Hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E4%BD%93%E6%96%87%E4%BB%B6%E5%A4%B9%E7%BB%93%E6%9E%84"><span class="toc-number">2.</span> <span class="toc-text">总体文件夹结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#jade"><span class="toc-number">2.1.</span> <span class="toc-text">Jade</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4"><span class="toc-number">3.</span> <span class="toc-text">基本命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B1%80%E9%83%A8%E7%BC%93%E5%AD%98%E4%BC%98%E5%8C%96"><span class="toc-number">4.</span> <span class="toc-text">局部缓存优化</span></a></li></ol></div></div><footer><nobr>构建自 <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> 使用主题 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr> 主题作者 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside></main><canvas id="canvas-dust"></canvas></body></html>

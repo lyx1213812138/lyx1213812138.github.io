@@ -1,0 +1,135 @@
+<!DOCTYPE html><html lang="en" theme-mode="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Python | lyx12138的博客</title><link rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="preload" as="font" crossorigin="anonymous" href="/font/Bender.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/BenderLight.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/JetBrainsMono-Regular.woff2"><link rel="stylesheet" href="/css/arknights.css"><style>@font-face {
+  font-family: Bender;
+  src: local('Bender'), url("/font/Bender.ttf"), url("/font/Bender.otf");
+}
+@font-face {
+  font-family: BenderLight;
+  src: local('BenderLight'), url("/font/BenderLight.ttf");
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}
+</style><script>var config = {"root":"/","search":{"preload":false,"activeHolder":"键入以继续","blurHolder":"数据检索","noResult":"无 $0 相关数据"},"code":{"codeInfo":"$0 - $1 行","copy":"复制"}}</script><link type="text/css" rel="stylesheet" href="/lib/encrypt/hbe.style.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lightgallery.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-zoom.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-thumbnail.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/css/all.min.css"><script>if (window.localStorage.getItem('theme-mode') === 'light')
+ document.documentElement.setAttribute('theme-mode', 'light')
+if (window.localStorage.getItem('theme-mode') === 'dark')
+ document.documentElement.setAttribute('theme-mode', 'dark')</script><style>:root {
+ --dark-background: url('https://ak.hypergryph.com/assets/index/images/ak/pc/bk.jpg');
+ --light-background: url('/img/bk.jpg');
+ --theme-encrypt-confirm: '确认'
+}</style><script defer src="/js/arknights.js"></script><script defer src="/js/search.js"></script><script defer type="module">import mermaid from '//unpkg.com/mermaid@10.5.0/dist/mermaid.esm.mjs';
+window.mermaid = mermaid;
+code.paintMermaid();
+</script><script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.1/MathJax.js"></script><script>MathJax.Hub.Config({
+  menuSettings: {
+    zoom: "None"
+  },
+  showMathMenu: false,
+  jax: ["input/TeX","output/CommonHTML"],
+  extensions: ["tex2jax.js"],
+  TeX: {
+    extensions: ["AMSmath.js","AMSsymbols.js"],
+    equationNumbers: {
+      autoNumber: "AMS"
+    }
+  },
+  tex2jax: {
+    inlineMath: [["\\(", "\\)"]],
+    displayMath: [["\\[", "\\]"]]
+  }
+});
+</script><script async src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script async src="/lib/encrypt/hbe.js"></script><script async src="/js/pjax.js"></script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js','data-pjax','.busuanzi'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><nav><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup" tabindex="0"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">Home</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">Archives</span></a></li><li class="navItem"><a class="navBlock" href="/proverb/"><span class="navItemTitle">Proverb</span></a></li></ol></nav></header><article><div id="post-bg"><div id="post-title"><h1>Python</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2024-09-02T07:56:40.936Z" id="date"> 2024-09-02</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2024-11-06T13:04:26.010Z" id="updated"> 2024-11-06</time></div></span></div></div><hr><div id="post-content"><h2 id="杂记"><a href="#杂记" class="headerlink" title="杂记"></a>杂记</h2>
+<ul>
+<li><p>for循环好办法</p>
+<ul>
+<li>for tittle , address, price, img, name , sex in zip(tittles ,
+addresses, prices, imgs, names, sexs)<br />
+</li>
+<li>list(zip()) 把 zip 对象变成 list</li>
+</ul></li>
+<li><p>通过使用 <code>if __name__ == '__main__':</code>
+条件，我们可以区分出程序是直接执行还是作为模块导入的。</p>
+<p>这样，我们可以在直接执行时运行一些特定的代码，而在作为模块导入时，这些代码将不会被执行。</p></li>
+<li><p>列表的高端用法</p>
+<ul>
+<li><code>list1 = [a*a for a in range(1,10)]</code></li>
+</ul></li>
+<li><p>time.sleep(2)</p>
+<ul>
+<li>在Python中，<code>time.sleep(2)</code>是一个用于暂停程序执行的函数。它会使程序在执行到该语句时停顿2秒钟，然后再继续执行后面的代码。<code>time</code>是一个Python内置的模块</li>
+</ul></li>
+<li><p>json解析</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs plaintext"># 使用loads()方法将JSON字符串转换为Python对象<br>person = json.loads(data)<br># dumps() 反过来<br></code></pre></td></tr></table></figure></li>
+<li><p>在Python中，<code>enumerate()</code>函数用于在迭代过程中同时获取元素的索引和值。</p>
+<ul>
+<li>```for index, fruit in enumerate(fruits): print(index, fruit)</li>
+</ul></li>
+<li><p><code>except requests.RequestException:</code></p>
+<ul>
+<li>requests.RequestException
+是Python中requests库定义的一个基本异常类。这个异常类是其他异常类的父类，可以捕获所有请求过程中的异常。</li>
+</ul></li>
+<li><p>exc_info参数是一个布尔值，默认值为False。如果将exc_info设置为True，logging模块将会在日志中输出异常的详细信息，包括异常类型、异常值和traceback</p>
+<ul>
+<li><code>logging.error('error occurred while scraping %s', url, exc_info=True)</code></li>
+</ul></li>
+<li><p>在re模块中，search() 第一个匹配到的。match_object.span()
+这将返回一个元组，其中包含匹配项的起始位置和结束位置。match_object.group()
+这将返回匹配的字符串。</p>
+<ul>
+<li>还有findall()</li>
+</ul></li>
+<li><p>你可以使用<code>sort()</code>函数来对包含字典的列表按照特定的键进行排序。在Python中，<code>sort()</code>函数是用于对可变序列进行原地排序的方法。下面是一个示例代码，演示如何使用<code>sort()</code>函数对包含字典的列表按照特定键进行排序：</p>
+<p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># 创建一个包含字典的列表</span><br>people = [<br>    &#123;<span class="hljs-string">&#x27;name&#x27;</span>: <span class="hljs-string">&#x27;Alice&#x27;</span>, <span class="hljs-string">&#x27;age&#x27;</span>: <span class="hljs-number">25</span>&#125;,<br>    &#123;<span class="hljs-string">&#x27;name&#x27;</span>: <span class="hljs-string">&#x27;Bob&#x27;</span>, <span class="hljs-string">&#x27;age&#x27;</span>: <span class="hljs-number">30</span>&#125;,<br>    &#123;<span class="hljs-string">&#x27;name&#x27;</span>: <span class="hljs-string">&#x27;Charlie&#x27;</span>, <span class="hljs-string">&#x27;age&#x27;</span>: <span class="hljs-number">20</span>&#125;<br>]<br><br><span class="hljs-comment"># 使用lambda函数作为排序的key参数，指定按照age键进行排序</span><br>people.sort(key=<span class="hljs-keyword">lambda</span> x: x[<span class="hljs-string">&#x27;age&#x27;</span>])<br><br><span class="hljs-comment"># 打印排序后的结果</span><br><span class="hljs-keyword">for</span> person <span class="hljs-keyword">in</span> people:<br>    <span class="hljs-built_in">print</span>(person)<br></code></pre></td></tr></table></figure></p>
+<p>运行上述代码，输出结果如下：</p>
+<p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-punctuation">&#123;</span>&#x27;name&#x27;<span class="hljs-punctuation">:</span> &#x27;Charlie&#x27;<span class="hljs-punctuation">,</span> &#x27;age&#x27;<span class="hljs-punctuation">:</span> <span class="hljs-number">20</span><span class="hljs-punctuation">&#125;</span><br><span class="hljs-punctuation">&#123;</span>&#x27;name&#x27;<span class="hljs-punctuation">:</span> &#x27;Alice&#x27;<span class="hljs-punctuation">,</span> &#x27;age&#x27;<span class="hljs-punctuation">:</span> <span class="hljs-number">25</span><span class="hljs-punctuation">&#125;</span><br><span class="hljs-punctuation">&#123;</span>&#x27;name&#x27;<span class="hljs-punctuation">:</span> &#x27;Bob&#x27;<span class="hljs-punctuation">,</span> &#x27;age&#x27;<span class="hljs-punctuation">:</span> <span class="hljs-number">30</span><span class="hljs-punctuation">&#125;</span><br></code></pre></td></tr></table></figure></p>
+<p>在这个示例中，我们使用了lambda函数作为<code>sort()</code>函数的key参数，指定按照字典中的age键进行排序。lambda函数接受一个字典作为参数，并返回该字典的age值。<code>sort()</code>函数根据返回的age值进行排序，从而实现按照age键进行排序的效果。</p>
+<p>你也可以根据需要指定其他键进行排序，只需将lambda函数中的键名修改为你想要排序的键即可。</p>
+<p>希望这个示例能帮助你理解如何使用<code>sort()</code>函数对包含字典的列表按照特定键进行排序。如果你还有其他问题，请随时提问。</p></li>
+<li><p><code>name_str = ''.join([now_char['text'] for now_char in char_list])</code></p></li>
+<li><p>所以大多数Python程序员会遵循一种命名惯例就是让属性名以单下划线开头来表示属性是受保护的</p></li>
+<li><p><span class="citation" data-cites="property">@property</span> 和
+<span class="citation" data-cites="属性名.setter">@属性名.setter</span>
+装饰器 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Person</span>:<br><span class="hljs-meta">	@property</span><br>	<span class="hljs-keyword">def</span> <span class="hljs-title function_">name</span>(<span class="hljs-params">self</span>):<br>		<span class="hljs-keyword">return</span> self._name<br>	<br><span class="hljs-meta">	@name.setter</span><br>	<span class="hljs-keyword">def</span> <span class="hljs-title function_">name</span>(<span class="hljs-params">self, value</span>):<br>		<span class="hljs-keyword">if</span> <span class="hljs-built_in">isinstance</span>(value, <span class="hljs-built_in">str</span>):<br>			self._name = value<br>		<span class="hljs-keyword">else</span>:<br>			<span class="hljs-keyword">raise</span> ValueError(<span class="hljs-string">&quot;Name must be a string&quot;</span>)<br>		<br><span class="hljs-built_in">print</span>(person.name)  <span class="hljs-comment"># 输出: Alice</span><br>person.name = <span class="hljs-string">&quot;Bob&quot;</span>  <span class="hljs-comment"># 更新名字</span><br></code></pre></td></tr></table></figure></p></li>
+<li><p>作用域和命名空间</p>
+<ul>
+<li>global 和 nonlocal <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python">num = <span class="hljs-number">1</span> <br><span class="hljs-keyword">def</span> <span class="hljs-title function_">fun1</span>(): <br>	<span class="hljs-keyword">global</span> num <span class="hljs-comment"># 需要使用 global 关键字声明 </span><br>	<span class="hljs-built_in">print</span>(num) <br></code></pre></td></tr></table></figure></li>
+</ul></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">outer</span>(): <br>	num = <span class="hljs-number">10</span> <br>	<span class="hljs-keyword">def</span> <span class="hljs-title function_">inner</span>(): <br>		<span class="hljs-keyword">nonlocal</span> num <span class="hljs-comment"># nonlocal关键字声明 </span><br>		<span class="hljs-built_in">print</span>(num)<br></code></pre></td></tr></table></figure>
+<ul>
+<li><p>静态方法和类方法</p>
+<ul>
+<li>静态方法 ：类的静态方法和我们自定义的函数基本没什么区别，没有
+self，且不能访问类属性，实际项目中很少用到，因为可以使用普通函数替代。<span
+class="citation" data-cites="staticmethod">@staticmethod</span>
+装饰器声明。</li>
+<li>类方法：必须包含一个参数，通常约定为 cls ，cls 代表 类本身（可以用
+cls() 实例化 class），这个参数也不需要我们传值。</li>
+</ul></li>
+<li><p>处理数组：insert()
+方法可以在列表的指定位置插入一个元素。如果你想在列表的最前面添加一个元素，可以使用
+insert(0, element)，其中 0 表示列表的第一个位置。
+另一种方法是通过拼接（concatenation）来创建一个新的列表，将新元素和原列表合并。b
+= [0] + b</p></li>
+<li><p>输入 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">a,b = map(int,input().split());  <br>print(a+b)<br></code></pre></td></tr></table></figure></p></li>
+<li><p>print 在Python中，print
+函数默认在输出之后添加一个换行符。如果你不希望print函数在输出后换行，可以使用end参数来指定不换行。end参数的默认值是，表示换行。如果你想要在同一行输出多个内容，可以将end参数设置为一个空字符串''。</p></li>
+</ul>
+<div id="paginator"></div></div><div id="post-footer"><div id="pages"><div class="footer-link" style="width: 50%;text-align:right;border-right:1px #fe2 solid"><a href="/2024/09/09/%E5%89%8D%E7%AB%AF/SSE%20%E6%B5%81%E5%BC%8F%E4%BC%A0%E8%BE%93/">← 下一篇 SSE 流式传输——组会分享</a></div><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/2024/08/24/%E5%85%B6%E4%BB%96/Vim/">Vim 上一篇 →</a></div></div></div></div><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="回到顶部" style="opacity: 0; display: none;">∧ </a><a class="i-index" id="to-index" href="#toc-div" title="文章目录">≡</a><a class="i-color" id="color-mode" onClick="colorMode.change()" title="切换主题"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="https://cdn.luogu.com.cn/upload/image_hosting/8cc2fgam.png" alt="Logo"></a><h1 id="Dr"><a href="/">lyx12138</a></h1><div id="description"><p></p></div></div><div id="aside-block"><div id="toc-div"><h1>目录</h1><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9D%82%E8%AE%B0"><span class="toc-number">1.</span> <span class="toc-text">杂记</span></a></li></ol></div></div><footer><nobr>构建自 <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> 使用主题 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr> 主题作者 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside></main><canvas id="canvas-dust"></canvas></body></html>
