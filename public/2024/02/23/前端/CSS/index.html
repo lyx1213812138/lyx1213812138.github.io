@@ -1,0 +1,205 @@
+<!DOCTYPE html><html lang="en" theme-mode="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>css学习笔记 | lyx12138的博客</title><link rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="preload" as="font" crossorigin="anonymous" href="/font/Bender.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/BenderLight.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/JetBrainsMono-Regular.woff2"><link rel="stylesheet" href="/css/arknights.css"><style>@font-face {
+  font-family: Bender;
+  src: local('Bender'), url("/font/Bender.ttf"), url("/font/Bender.otf");
+}
+@font-face {
+  font-family: BenderLight;
+  src: local('BenderLight'), url("/font/BenderLight.ttf");
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}
+</style><script>var config = {"root":"/","search":{"preload":false,"activeHolder":"Enter here","blurHolder":"Search","noResult":"Data \"$0\" not found"},"code":{"codeInfo":"$0 - $1 lines","copy":"copy"}}</script><link type="text/css" rel="stylesheet" href="/lib/encrypt/hbe.style.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lightgallery.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-zoom.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-thumbnail.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/css/all.min.css"><script>if (window.localStorage.getItem('theme-mode') === 'light')
+ document.documentElement.setAttribute('theme-mode', 'light')
+if (window.localStorage.getItem('theme-mode') === 'dark')
+ document.documentElement.setAttribute('theme-mode', 'dark')</script><style>:root {
+ --dark-background: url('https://ak.hypergryph.com/assets/index/images/ak/pc/bk.jpg');
+ --light-background: url('/img/bk.jpg');
+ --theme-encrypt-confirm: 'confirm'
+}</style><script defer src="/js/arknights.js"></script><script defer src="/js/search.js"></script><script defer type="module">import mermaid from '//unpkg.com/mermaid@10.5.0/dist/mermaid.esm.mjs';
+window.mermaid = mermaid;
+code.paintMermaid();
+</script><script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.1/MathJax.js"></script><script>MathJax.Hub.Config({
+  menuSettings: {
+    zoom: "None"
+  },
+  showMathMenu: false,
+  jax: ["input/TeX","output/CommonHTML"],
+  extensions: ["tex2jax.js"],
+  TeX: {
+    extensions: ["AMSmath.js","AMSsymbols.js"],
+    equationNumbers: {
+      autoNumber: "AMS"
+    }
+  },
+  tex2jax: {
+    inlineMath: [["\\(", "\\)"]],
+    displayMath: [["\\[", "\\]"]]
+  }
+});
+</script><script async src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script async src="/lib/encrypt/hbe.js"></script><script async src="/js/pjax.js"></script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js','data-pjax','.busuanzi'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><nav><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="Search" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup" tabindex="0"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">Home</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">Archives</span></a></li><li class="navItem"><a class="navBlock" href="/proverb/"><span class="navItemTitle">Proverb</span></a></li></ol></nav></header><article><div id="post-bg"><div id="post-title"><h1>css学习笔记</h1><div id="post-info"><span>First Post: <div class="control"><time datetime="2024-02-23T07:04:07.000Z" id="date"> 2024-02-23</time></div></span><br><span>Last Update: <div class="control"><time datetime="2024-12-19T08:19:36.915Z" id="updated"> 2024-12-19</time></div></span></div></div><hr><div id="post-content"><h1 id="css学习笔记"><a href="#css学习笔记" class="headerlink" title="css学习笔记"></a>css学习笔记</h1>
+<h2 id="选择多个元素"><a href="#选择多个元素" class="headerlink" title="选择多个元素"></a>选择多个元素</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">p,li,h1&#123;<br>	Color:red;<br>&#125;<br></code></pre></td></tr></table></figure>
+<h2 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h2>
+<ul>
+<li><p>通用选择器（选择全部）：<code>*</code></p></li>
+<li><p>伪类</p></li>
+<li><p>属性选择器</p></li>
+<li><p>a:hover {color :red;}当鼠标停在a上时</p></li>
+</ul>
+<h2 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h2>
+<p>color</p>
+<p>Font-family字体</p>
+<p>Font-size</p>
+<p>Text-align向哪里对齐</p>
+<p>Padding 内边距</p>
+<p>Margin 外边距</p>
+<ul>
+<li>当只指定<strong>一个</strong>值时，该值会统一应用到<strong>全部四个边</strong>的外边距上。</li>
+<li>指定<strong>两个</strong>值时，第一个值会应用于<strong>上边和下边</strong>的外边距，第二个值应用于<strong>左边和右边</strong>。</li>
+<li>指定<strong>三个</strong>值时，第一个值应用于<strong>上边</strong>，第二个值应用于<strong>右边和左边</strong>，第三个则应用于<strong>下边</strong>的外边距。</li>
+<li>指定<strong>四个</strong>值时，依次（顺时针方向）作为<strong>上边</strong>，<strong>右边</strong>，<strong>下边</strong>，和<strong>左边</strong>的外边距。</li>
+<li>auto</li>
+</ul>
+<p>让浏览器自己选择一个合适的外边距。有时，在一些特殊情况下，该值可以使元素居中。</p>
+<p>color：元素内容（通常是文本）的颜色</p>
+<p>background-color：元素内容和内边距底下的颜色</p>
+<p>Width height</p>
+<h2 id="css变量"><a href="#css变量" class="headerlink" title="css变量"></a>css变量</h2>
+<p>必须以--开头</p>
+<p>定义：--aa:50px;</p>
+<p>应用：height:var(--aa);</p>
+<h2 id="css动画"><a href="#css动画" class="headerlink" title="css动画"></a>css动画</h2>
+<p>https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations</p>
+<p>transition and transform</p>
+<h2 id="flex布局"><a href="#flex布局" class="headerlink" title="flex布局"></a>flex布局</h2>
+<p><code>display:flex</code></p>
+<h3 id="主轴和交叉轴"><a href="#主轴和交叉轴" class="headerlink" title="主轴和交叉轴"></a>主轴和交叉轴</h3>
+<p><code>flex-direction:row</code> 或 <code>row-reverse</code> 或
+<code>column</code> 或 <code>column-reverse</code>（主轴）</p>
+<h3 id="宽度"><a href="#宽度" class="headerlink" title="宽度"></a>宽度</h3>
+<h4 id="auto"><a href="#auto" class="headerlink" title="auto"></a>auto</h4>
+<p>足够大时相当于 width=max-content（一直不换行）</p>
+<p>当元素宽度远远超过容器宽度时，相当于
+width=min-content（最大单词的距离）</p>
+<h4 id="设置宽度"><a href="#设置宽度" class="headerlink" title="设置宽度"></a>设置宽度</h4>
+<ul>
+<li><p><code>flex-basis</code> 基础长度</p></li>
+<li><p><code>flex-grow</code> 生长的权值 （<span
+class="math inline">\(\sum_i
+(flexBasis_i+flexGrow_i*x)=contentWidth\)</span> 这样求x）</p>
+<p>（0：最大就是basis）</p></li>
+<li><p>实现某元素的宽度是其他元素的宽度的5倍：flex-basis：0px</p>
+<p>（1：容器不够时均匀缩小）</p></li>
+<li><p><code>flex-shrink</code>
+缩小的权值（如果子元素宽度和大于了容器宽度）</p>
+<p>（<span class="math inline">\(\sum_i
+(flexBasis_i-flexShrink_i*x)=contentWidth\)</span> 这样求x）</p></li>
+<li><p><code>flex:&lt;grow&gt; &lt;shrink&gt; &lt;basis&gt;</code></p>
+<p>默认 <code>flex:0 1 auto;= flex:initial</code></p>
+<p>none = 0 0 auto</p></li>
+</ul>
+<h3 id="对齐"><a href="#对齐" class="headerlink" title="对齐"></a>对齐</h3>
+<p>（包括内部的文字也算一个item）</p>
+<p class='item-img' data-src='C:\Users\27427\AppData\Roaming\Typora\typora-user-images\image-20240110103504960.png'><img src="C:\Users\27427\AppData\Roaming\Typora\typora-user-images\image-20240110103504960.png" alt="image-20240110103504960" style="zoom: 33%;" /></p>
+<h4 id="主轴上"><a href="#主轴上" class="headerlink" title="主轴上"></a>主轴上</h4>
+<p><strong>align-items</strong>（一个主轴上）</p>
+<p>stretch 所有的元素行高都一样（默认）</p>
+<p>在交叉轴起点/终点/中间对齐 align-items : flex-start flex-end
+center</p>
+<p>baseline 不管字体大小，都在文字的基线来对齐</p>
+<p><strong>align-content</strong>（多个主轴上）</p>
+<p>同下（justify-content）</p>
+<h4 id="交叉轴上"><a href="#交叉轴上" class="headerlink" title="交叉轴上"></a>交叉轴上</h4>
+<p><strong>justify-content</strong> : flex-start flex-end center</p>
+<p>space-between 中间相同空隙，首尾紧靠两边</p>
+<p>space-around 中间相同空隙，首尾与两边的空隙是中间的1/2</p>
+<p>space-evenly 中间与首位的空隙都相同</p>
+<h3 id="换行"><a href="#换行" class="headerlink" title="换行"></a>换行</h3>
+<p>flex-wrap:wrap 保证宽度的同时换行</p>
+<h3 id="顺序"><a href="#顺序" class="headerlink" title="顺序"></a>顺序</h3>
+<p>order</p>
+<p>无障碍人士</p>
+<h2 id="css过渡动画"><a href="#css过渡动画" class="headerlink" title="css过渡动画"></a>css过渡动画</h2>
+<p>过渡不行时试试</p>
+<p><code>setTimeout(() =&gt; &#123;element.style.top = "100px";&#125;,1);</code></p>
+<p><a
+target="_blank" rel="noopener" href="https://stackoverflow.com/questions/64707211/transition-not-working-correctly-when-element-is-added-to-the-dom">discussion</a></p>
+<h2 id="cursor属性"><a href="#cursor属性" class="headerlink" title="cursor属性"></a>cursor属性</h2>
+<p><code>cursor</code>属性用于指定鼠标指针在元素上的样式。它可以改变鼠标指针的外观，以提供视觉反馈或指示用户可以执行的操作。</p>
+<p>default箭头 pointer手指，可点击 text文本</p>
+<h2 id="选择器-1"><a href="#选择器-1" class="headerlink" title="选择器-1"></a>选择器</h2>
+<h3 id="相邻兄弟选择器"><a href="#相邻兄弟选择器" class="headerlink" title="相邻兄弟选择器"></a>相邻兄弟选择器 ‘+’</h3>
+<p><code>input[type="checkbox"]:checked + label</code> 是一个 CSS
+选择器，用于选择被选中的复选框（checkbox）后面紧邻的
+<code>&lt;label&gt;</code> 元素。</p>
+<h3 id="一般兄弟组合器"><a href="#一般兄弟组合器" class="headerlink" title="一般兄弟组合器"></a>一般兄弟组合器 <code>~</code></h3>
+<p>后一个节点在前一个节点后面的任意位置，并且共享同一个父节点。</p>
+<h3 id="后代选择器-空格"><a href="#后代选择器-空格" class="headerlink" title="后代选择器-空格"></a>后代选择器 ‘ ’（空格）</h3>
+<p>要实现当某个元素被覆盖时，其子元素的样式发生改变，可以使用 CSS
+中的后代选择器（descendant selector）和伪类选择器（pseudo-class
+selector）。</p>
+<p>首先，您可以使用后代选择器来选择被覆盖元素的子元素。后代选择器使用空格来表示元素之间的层级关系。</p>
+<h3 id="直接子代选择器"><a href="#直接子代选择器" class="headerlink" title="直接子代选择器"></a><code>&gt;</code> : 直接子代选择器</h3>
+<h3 id="nth-child"><a href="#nth-child" class="headerlink" title="nth-child"></a><code>:nth-child</code></h3>
+<p>不是真的子元素，是这个选择器选择的第n个，比如下面选择的都是<code>&lt;li&gt;</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">/* 选择第3个子元素 */ li:nth-child(3) <br>/* 选择所有3的倍数位置的子元素 */ li:nth-child(3n) <br>/* 选择所有3的倍数位置的子元素，并减去2 */ li:nth-child(3n-2)<br></code></pre></td></tr></table></figure>
+<h3 id="属性选择器"><a href="#属性选择器" class="headerlink" title="属性选择器"></a>属性选择器</h3>
+<p><a
+target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Attribute_selectors">link</a></p>
+<h3 id="分组选择器"><a href="#分组选择器" class="headerlink" title="分组选择器"></a>分组选择器 <code>，</code></h3>
+<p><code>,</code>
+是将不同的选择器组合在一起的方法，它选择所有能被列表中的任意一个选择器选中的节点。</p>
+<h3 id="where"><a href="#where" class="headerlink" title="where"></a><code>:where</code></h3>
+<p><code>:where(h1, h2, h3)</code> 将选择
+<code>&lt;h1&gt;</code>、<code>&lt;h2&gt;</code> 和
+<code>&lt;h3&gt;</code> 元素 <code>:where(section, article) p</code>
+选择器将选择 <code>&lt;section&gt;</code> 和
+<code>&lt;article&gt;</code> 元素中的所有 <code>&lt;p&gt;</code>
+元素，并将样式规则应用于它们。</p>
+<h3 id="not"><a href="#not" class="headerlink" title="not"></a><code>:not</code></h3>
+<p>是一个CSS伪类选择器，用于选择不符合指定选择器的元素。</p>
+<p><code>p:not(.red)</code> 选择器将选择所有 <code>&lt;p&gt;</code>
+元素，但排除了具有 <code>red</code> 类的元素</p>
+<h2 id="修改属性"><a href="#修改属性" class="headerlink" title="修改属性"></a>修改属性</h2>
+<p>嗯，你提到的<code>labelElement.for = 'myInput'</code>语法是无效的，因为<code>for</code>是<code>label</code>元素的保留属性，不能直接通过赋值来修改。</p>
+<p>要修改<code>label</code>元素的<code>for</code>属性，你可以使用<code>setAttribute()</code>方法，如下所示：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">const labelElement = document.getElementById(&#x27;myLabel&#x27;);<br>labelElement.setAttribute(&#x27;for&#x27;, &#x27;myInput&#x27;);<br></code></pre></td></tr></table></figure>
+<p>这样，<code>label</code>元素的<code>for</code>属性就会被设置为"myInput"，与id为"myInput"的表单元素关联起来。</p>
+<p>请注意，使用<code>setAttribute()</code>方法可以在任何情况下修改元素的属性。</p>
+<h2 id="css函数"><a href="#css函数" class="headerlink" title="css函数"></a>css函数</h2>
+<p>CSS中有一些内置的函数，可以用于处理值、生成动态效果或执行其他操作。以下是一些常见的CSS函数：</p>
+<ol type="1">
+<li><p><code>rgb()</code> 和
+<code>rgba()</code>：用于设置颜色值，接受红、绿、蓝和透明度参数。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs css">   <span class="hljs-attribute">color</span>: <span class="hljs-built_in">rgb</span>(<span class="hljs-number">255</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>);       <span class="hljs-comment">/* 红色 */</span><br>   <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">255</span>, <span class="hljs-number">0.5</span>);  <span class="hljs-comment">/* 半透明蓝色 */</span><br>   ```<br><br><span class="hljs-number">2</span>. `hsl()` 和 `hsla()`：用于设置颜色值，接受色调、饱和度、亮度和透明度参数。<br><br>   ````css<br>   <span class="hljs-attribute">color</span>: <span class="hljs-built_in">hsl</span>(<span class="hljs-number">120</span>, <span class="hljs-number">100%</span>, <span class="hljs-number">50%</span>);       <span class="hljs-comment">/* 饱和度为100%，亮度为50%的绿色 */</span><br>   <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">hsla</span>(<span class="hljs-number">240</span>, <span class="hljs-number">100%</span>, <span class="hljs-number">50%</span>, <span class="hljs-number">0.5</span>);  <span class="hljs-comment">/* 半透明的饱和度为100%，亮度为50%的蓝色 */</span><br>   <br><span class="hljs-number">3</span>. `calc()`：用于执行数学计算，可以在CSS属性中使用。<br><br>   ````css<br>   <span class="hljs-attribute">width</span>: <span class="hljs-built_in">calc</span>(<span class="hljs-number">100%</span> - <span class="hljs-number">20px</span>);   <span class="hljs-comment">/* 宽度为父元素宽度减去20像素 */</span><br>   <br><span class="hljs-number">4</span>. `<span class="hljs-selector-tag">var</span>()`：用于引用CSS自定义属性的值。<br><br>   ````css<br>   <span class="hljs-attr">--primary-color</span>: blue;<br>   <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--primary-color);   <span class="hljs-comment">/* 使用自定义属性的值作为颜色 */</span><br>   <br><span class="hljs-number">5</span>. `url()`：用于引用外部资源，如图像、字体等。<br><br>   ````css<br>   <span class="hljs-attribute">background-image</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">&quot;path/to/image.jpg&quot;</span>);   <span class="hljs-comment">/* 引用图像资源 */</span><br></code></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="css单位"><a href="#css单位" class="headerlink" title="css单位"></a>css单位</h3>
+<ol type="1">
+<li><p>px</p></li>
+<li><p>百分比（%）：百分比单位相对于父元素的相对值。</p></li>
+<li><p>em：em单位是相对于元素的字体大小。如果修改的属性为<code>font-size</code>，则相对于父元素的字体大小。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-attribute">font-size</span>: <span class="hljs-number">1.2em</span>;   <span class="hljs-comment">/* 相对于父元素字体大小的1.2倍 */</span><br><span class="hljs-attribute">margin</span>: <span class="hljs-number">0.5em</span>;      <span class="hljs-comment">/* 相对于元素字体大小的0.5倍 */</span><br></code></pre></td></tr></table></figure></li>
+<li><p>视窗单位（vw、vh、vmin、vmax）：视窗单位是相对于视窗大小的相对值。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-attribute">width</span>: <span class="hljs-number">50vw</span>;    <span class="hljs-comment">/* 相对于视窗宽度的50% */</span><br><span class="hljs-attribute">height</span>: <span class="hljs-number">25vh</span>;   <span class="hljs-comment">/* 相对于视窗高度的25% */</span><br></code></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="背景图片自适应"><a href="#背景图片自适应" class="headerlink" title="背景图片自适应"></a>背景图片自适应</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs vue">&lt;div<br>    :style=&quot;&#123;<br>      backgroundImage: `url($&#123;backgroundImageUrl&#125;)`,<br>      height: &#x27;100%&#x27;,<br>    &#125;&quot;<br>    class=&quot;bg-cover w-full absolute&quot;<br>    id=&quot;container&quot;<br></code></pre></td></tr></table></figure>
+<div id="paginator"></div></div><div id="post-footer"><div id="pages"><div class="footer-link" style="width: 50%;text-align:right;border-right:1px #fe2 solid"><a href="/2024/02/24/%E5%AD%A6%E4%B9%A0%E9%A1%B9%E7%9B%AE/Bilibili%E6%B8%85%E7%90%86%E8%AE%A1%E5%88%92/">← Next Bilibili清理计划</a></div><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/2024/02/23/%E5%89%8D%E7%AB%AF/Node.js/">Node.js Prev →</a></div></div></div></div><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="To Top" style="opacity: 0; display: none;">∧ </a><a class="i-index" id="to-index" href="#toc-div" title="To Catalog">≡</a><a class="i-color" id="color-mode" onClick="colorMode.change()" title="Change Theme"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="https://cdn.luogu.com.cn/upload/image_hosting/8cc2fgam.png" alt="Logo"></a><h1 id="Dr"><a href="/">lyx12138</a></h1><div id="description"><p></p></div></div><div id="aside-block"><div id="toc-div"><h1>Catalog</h1><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0"><span class="toc-number">1.</span> <span class="toc-text">css学习笔记</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%89%E6%8B%A9%E5%A4%9A%E4%B8%AA%E5%85%83%E7%B4%A0"><span class="toc-number">1.1.</span> <span class="toc-text">选择多个元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">1.2.</span> <span class="toc-text">选择器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B1%9E%E6%80%A7"><span class="toc-number">1.3.</span> <span class="toc-text">属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#css%E5%8F%98%E9%87%8F"><span class="toc-number">1.4.</span> <span class="toc-text">css变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#css%E5%8A%A8%E7%94%BB"><span class="toc-number">1.5.</span> <span class="toc-text">css动画</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#flex%E5%B8%83%E5%B1%80"><span class="toc-number">1.6.</span> <span class="toc-text">flex布局</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E8%BD%B4%E5%92%8C%E4%BA%A4%E5%8F%89%E8%BD%B4"><span class="toc-number">1.6.1.</span> <span class="toc-text">主轴和交叉轴</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%BD%E5%BA%A6"><span class="toc-number">1.6.2.</span> <span class="toc-text">宽度</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#auto"><span class="toc-number">1.6.2.1.</span> <span class="toc-text">auto</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E5%AE%BD%E5%BA%A6"><span class="toc-number">1.6.2.2.</span> <span class="toc-text">设置宽度</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E9%BD%90"><span class="toc-number">1.6.3.</span> <span class="toc-text">对齐</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%BB%E8%BD%B4%E4%B8%8A"><span class="toc-number">1.6.3.1.</span> <span class="toc-text">主轴上</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%A4%E5%8F%89%E8%BD%B4%E4%B8%8A"><span class="toc-number">1.6.3.2.</span> <span class="toc-text">交叉轴上</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8D%A2%E8%A1%8C"><span class="toc-number">1.6.4.</span> <span class="toc-text">换行</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A1%BA%E5%BA%8F"><span class="toc-number">1.6.5.</span> <span class="toc-text">顺序</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#css%E8%BF%87%E6%B8%A1%E5%8A%A8%E7%94%BB"><span class="toc-number">1.7.</span> <span class="toc-text">css过渡动画</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#cursor%E5%B1%9E%E6%80%A7"><span class="toc-number">1.8.</span> <span class="toc-text">cursor属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%89%E6%8B%A9%E5%99%A8-1"><span class="toc-number">1.9.</span> <span class="toc-text">选择器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%B8%E9%82%BB%E5%85%84%E5%BC%9F%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">1.9.1.</span> <span class="toc-text">相邻兄弟选择器 ‘+’</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E8%88%AC%E5%85%84%E5%BC%9F%E7%BB%84%E5%90%88%E5%99%A8"><span class="toc-number">1.9.2.</span> <span class="toc-text">一般兄弟组合器 ~</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%8E%E4%BB%A3%E9%80%89%E6%8B%A9%E5%99%A8-%E7%A9%BA%E6%A0%BC"><span class="toc-number">1.9.3.</span> <span class="toc-text">后代选择器 ‘ ’（空格）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%B4%E6%8E%A5%E5%AD%90%E4%BB%A3%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">1.9.4.</span> <span class="toc-text">&gt; : 直接子代选择器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#nth-child"><span class="toc-number">1.9.5.</span> <span class="toc-text">:nth-child</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B1%9E%E6%80%A7%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">1.9.6.</span> <span class="toc-text">属性选择器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E7%BB%84%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">1.9.7.</span> <span class="toc-text">分组选择器 ，</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#where"><span class="toc-number">1.9.8.</span> <span class="toc-text">:where</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#not"><span class="toc-number">1.9.9.</span> <span class="toc-text">:not</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E5%B1%9E%E6%80%A7"><span class="toc-number">1.10.</span> <span class="toc-text">修改属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#css%E5%87%BD%E6%95%B0"><span class="toc-number">1.11.</span> <span class="toc-text">css函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#css%E5%8D%95%E4%BD%8D"><span class="toc-number">1.11.1.</span> <span class="toc-text">css单位</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87%E8%87%AA%E9%80%82%E5%BA%94"><span class="toc-number">1.12.</span> <span class="toc-text">背景图片自适应</span></a></li></ol></li></ol></div></div><footer><nobr>Published with <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> Theme <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr> by <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside></main><canvas id="canvas-dust"></canvas></body></html>

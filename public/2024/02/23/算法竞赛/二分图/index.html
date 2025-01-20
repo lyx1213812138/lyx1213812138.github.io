@@ -1,0 +1,103 @@
+<!DOCTYPE html><html lang="en" theme-mode="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>二分图 | lyx12138的博客</title><link rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="preload" as="font" crossorigin="anonymous" href="/font/Bender.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/BenderLight.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/JetBrainsMono-Regular.woff2"><link rel="stylesheet" href="/css/arknights.css"><style>@font-face {
+  font-family: Bender;
+  src: local('Bender'), url("/font/Bender.ttf"), url("/font/Bender.otf");
+}
+@font-face {
+  font-family: BenderLight;
+  src: local('BenderLight'), url("/font/BenderLight.ttf");
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}
+</style><script>var config = {"root":"/","search":{"preload":false,"activeHolder":"Enter here","blurHolder":"Search","noResult":"Data \"$0\" not found"},"code":{"codeInfo":"$0 - $1 lines","copy":"copy"}}</script><link type="text/css" rel="stylesheet" href="/lib/encrypt/hbe.style.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lightgallery.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-zoom.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-thumbnail.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/css/all.min.css"><script>if (window.localStorage.getItem('theme-mode') === 'light')
+ document.documentElement.setAttribute('theme-mode', 'light')
+if (window.localStorage.getItem('theme-mode') === 'dark')
+ document.documentElement.setAttribute('theme-mode', 'dark')</script><style>:root {
+ --dark-background: url('https://ak.hypergryph.com/assets/index/images/ak/pc/bk.jpg');
+ --light-background: url('/img/bk.jpg');
+ --theme-encrypt-confirm: 'confirm'
+}</style><script defer src="/js/arknights.js"></script><script defer src="/js/search.js"></script><script defer type="module">import mermaid from '//unpkg.com/mermaid@10.5.0/dist/mermaid.esm.mjs';
+window.mermaid = mermaid;
+code.paintMermaid();
+</script><script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.1/MathJax.js"></script><script>MathJax.Hub.Config({
+  menuSettings: {
+    zoom: "None"
+  },
+  showMathMenu: false,
+  jax: ["input/TeX","output/CommonHTML"],
+  extensions: ["tex2jax.js"],
+  TeX: {
+    extensions: ["AMSmath.js","AMSsymbols.js"],
+    equationNumbers: {
+      autoNumber: "AMS"
+    }
+  },
+  tex2jax: {
+    inlineMath: [["\\(", "\\)"]],
+    displayMath: [["\\[", "\\]"]]
+  }
+});
+</script><script async src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script async src="/lib/encrypt/hbe.js"></script><script async src="/js/pjax.js"></script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js','data-pjax','.busuanzi'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><nav><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="Search" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup" tabindex="0"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">Home</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">Archives</span></a></li><li class="navItem"><a class="navBlock" href="/proverb/"><span class="navItemTitle">Proverb</span></a></li></ol></nav></header><article><div id="post-bg"><div id="post-title"><h1>二分图</h1><div id="post-info"><span>First Post: <div class="control"><time datetime="2024-02-22T16:00:00.000Z" id="date"> 2024-02-23</time></div></span><br><span>Last Update: <div class="control"><time datetime="2024-02-23T07:21:37.741Z" id="updated"> 2024-02-23</time></div></span></div></div><hr><div id="post-content"><p>一个图是二分图 &lt;=&gt; 染色法存在矛盾 &lt;=&gt;
+图中不存在奇数环</p>
+<p>（通过染色法可以想到<strong>棋盘，树，DAG</strong>）</p>
+<p>匹配：“一夫一妻”</p>
+<p>最大匹配：一个二分图中边数最多的一组匹配</p>
+<p>增广路径：（对于一个匹配来说）始于非匹配点且终于非匹配点（除了起始的点）的由匹配边与非匹配边交错而成路径。增广路中边的数量是奇数，所以这两个匹配点一定是不同边。</p>
+<p class='item-img' data-src='image_1.bf2209b0.png'><img src="image_1.bf2209b0.png" /></p>
+<p>最大匹配&lt;=&gt;此匹配不存在增广路径</p>
+<p>匈牙利算法：</p>
+<p>遍历每一个男的，看他喜欢的女生的男朋友能不能再找一个，好让他们两个在一起</p>
+<p>用到了递归，就是看那个男朋友能不能再找一个的时候用到的算法是一样的（find）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">bool find(int x)<br>&#123;<br>    for (int i = h[x]; i != -1; i = ne[i])<br>    &#123;<br>        int j = e[i];<br>if (!vis[j])<br>        &#123;<br>vis[j] = true;<br>            if (match[j] == 0 || find(match[j]))<br>            &#123;<br>                match[j] = x;<br>                return true;<br>            &#125;<br>        &#125;<br>    &#125;<br>    <br>    return false;<br>&#125;<br>int main() &#123;<br>for (int i = 1; i &lt;= M; ++i) // 遍历二分图的一边<br>    &#123;<br>        memset(vis, 0, sizeof(vis)); //重置vis数组<br>if (find(i)) cnt++;<br>    &#125;<br>    return 0;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>*下面的遍历是指main函数中的，只有M次</p>
+<p>其实本质上是每次遍历找一条增广路径</p>
+<p>（遍历过的男的不一定是匹配点，但男的匹配点一定被遍历过，因为只有被遍历的时候男的会变成匹配点）</p>
+<p>记得每次遍历的时候标记一下vis（因为这个点向外扩展的方式的唯一的）</p>
+<hr />
+<ul>
+<li>最小点覆盖：选出最少的点，使得每一条边的端点至少有一边被选</li>
+<li>二分图中 <strong>最小点覆盖 = 最大匹配数</strong>
+<strong>！</strong></li>
+<li>最大独立集：选出最多的点，使得选出的任意两点之间没有边 =&gt;
+去掉最少的点，把所有的边破坏掉 =&gt; 最小点覆盖</li>
+<li>最大团：选出最多的点，使得选出的任意两点之间都有边（即补图的最大独立集）</li>
+<li>最小路径点覆盖：用最少的互不相交的路径将所有点覆盖
+<ul>
+<li>针对有向无环图</li>
+<li>不是边，是几条路径</li>
+<li>不一定能找到可行解</li>
+<li>= 点数 - 拆点后的最大匹配数</li>
+<li>方法：拆点（拆成出点和入点 =&gt; 二分图） 不相交
+=&gt;（拆点后的）匹配</li>
+</ul></li>
+<li>最小路径重复点覆盖：
+<ul>
+<li>传递闭包后图G‘做最小点覆盖</li>
+<li>原图G的每一个路径重复点覆盖 都对应
+G'中的一个路径点覆盖，且路径数目相同；G'中的一个路径点覆盖 都对应
+原图G的每一个路径重复点覆盖，且路径数目相同</li>
+</ul></li>
+<li>例：acwing379. 捉迷藏
+<ul>
+<li>题目：一个有向无环图，问最多选多少个点，使得两两之间没有路径连接</li>
+<li>题解：即传递闭包只有的最大独立集</li>
+</ul></li>
+</ul>
+<div id="paginator"></div></div><div id="post-footer"><div id="pages"><div class="footer-link" style="width: 50%;text-align:right;border-right:1px #fe2 solid"><a href="/2024/02/23/%E5%85%B6%E4%BB%96/GIT/">← Next GIT</a></div><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/2024/02/23/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B/%E5%A5%B3%E7%94%9F%E8%B5%9B%E8%A1%A5%E9%A2%98%E6%80%BB%E7%BB%93/">女生赛补题总结 Prev →</a></div></div></div></div><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="To Top" style="opacity: 0; display: none;">∧ </a><a class="i-color" id="color-mode" onClick="colorMode.change()" title="Change Theme"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="https://cdn.luogu.com.cn/upload/image_hosting/8cc2fgam.png" alt="Logo"></a><h1 id="Dr"><a href="/">lyx12138</a></h1><div id="description"><p></p></div></div><div id="aside-block"></div><footer><nobr>Published with <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> Theme <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr> by <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside></main><canvas id="canvas-dust"></canvas></body></html>

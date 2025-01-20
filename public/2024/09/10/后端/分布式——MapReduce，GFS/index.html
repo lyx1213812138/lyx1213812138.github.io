@@ -1,0 +1,106 @@
+<!DOCTYPE html><html lang="en" theme-mode="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>分布式——MapReduce，GFS | lyx12138的博客</title><link rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="preload" as="font" crossorigin="anonymous" href="/font/Bender.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/BenderLight.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/JetBrainsMono-Regular.woff2"><link rel="stylesheet" href="/css/arknights.css"><style>@font-face {
+  font-family: Bender;
+  src: local('Bender'), url("/font/Bender.ttf"), url("/font/Bender.otf");
+}
+@font-face {
+  font-family: BenderLight;
+  src: local('BenderLight'), url("/font/BenderLight.ttf");
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}
+</style><script>var config = {"root":"/","search":{"preload":false,"activeHolder":"Enter here","blurHolder":"Search","noResult":"Data \"$0\" not found"},"code":{"codeInfo":"$0 - $1 lines","copy":"copy"}}</script><link type="text/css" rel="stylesheet" href="/lib/encrypt/hbe.style.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lightgallery.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-zoom.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-thumbnail.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/css/all.min.css"><script>if (window.localStorage.getItem('theme-mode') === 'light')
+ document.documentElement.setAttribute('theme-mode', 'light')
+if (window.localStorage.getItem('theme-mode') === 'dark')
+ document.documentElement.setAttribute('theme-mode', 'dark')</script><style>:root {
+ --dark-background: url('https://ak.hypergryph.com/assets/index/images/ak/pc/bk.jpg');
+ --light-background: url('/img/bk.jpg');
+ --theme-encrypt-confirm: 'confirm'
+}</style><script defer src="/js/arknights.js"></script><script defer src="/js/search.js"></script><script defer type="module">import mermaid from '//unpkg.com/mermaid@10.5.0/dist/mermaid.esm.mjs';
+window.mermaid = mermaid;
+code.paintMermaid();
+</script><script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.1/MathJax.js"></script><script>MathJax.Hub.Config({
+  menuSettings: {
+    zoom: "None"
+  },
+  showMathMenu: false,
+  jax: ["input/TeX","output/CommonHTML"],
+  extensions: ["tex2jax.js"],
+  TeX: {
+    extensions: ["AMSmath.js","AMSsymbols.js"],
+    equationNumbers: {
+      autoNumber: "AMS"
+    }
+  },
+  tex2jax: {
+    inlineMath: [["\\(", "\\)"]],
+    displayMath: [["\\[", "\\]"]]
+  }
+});
+</script><script async src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script async src="/lib/encrypt/hbe.js"></script><script async src="/js/pjax.js"></script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js','data-pjax','.busuanzi'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><nav><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="Search" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup" tabindex="0"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">Home</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">Archives</span></a></li><li class="navItem"><a class="navBlock" href="/proverb/"><span class="navItemTitle">Proverb</span></a></li></ol></nav></header><article><div id="post-bg"><div id="post-title"><h1>分布式——MapReduce，GFS</h1><div id="post-info"><span>First Post: <div class="control"><time datetime="2024-09-10T06:32:37.891Z" id="date"> 2024-09-10</time></div></span><br><span>Last Update: <div class="control"><time datetime="2024-12-15T11:31:25.904Z" id="updated"> 2024-12-15</time></div></span></div></div><hr><div id="post-content"><h2 id="mapreduce"><a href="#mapreduce" class="headerlink" title="mapreduce"></a>MapReduce</h2>
+<h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3>
+<p>专门为并行处理大规模数据量而设计的简单模型。 自定义 Map 和 Reduce
+函数，进行分布式运算和基于 key 的检索 <img src="aaaa.png" /></p>
+<ul>
+<li><code>map(key: string, value: string): (key: string, value:string)</code></li>
+<li><code>reduce(key: string, values: []string): any</code> ### 执行流程
+<img src="aaa.png" /></li>
+<li>master 分配 map 任务到 worker。（master
+负责分配任务和传输数据地址）</li>
+<li>worker 挨个执行 map 函数，将中间数据分为 nReduce
+组存储。分的方式是按照 hash(key) mod R 的方式。nReduce 即为 reduce
+任务的数量。执行完后再在 master 处领取新的 map 任务。</li>
+<li>所有 map 任务完成后，master 开始分配 reduce 任务。</li>
+<li>worker 收集中间数据，按 key 进行排序，对每个 key 找到所有对应的
+value，然后挨个执行 reduce 函数。存储输出数据。</li>
+</ul>
+<h3 id="用处"><a href="#用处" class="headerlink" title="用处"></a>用处</h3>
+<p>词频统计 倒排索引。每个文档里有什么词语 -&gt; 每个词语在哪些文档里
+分布式排序。</p>
+<h2 id="gfs"><a href="#gfs" class="headerlink" title="gfs"></a>GFS</h2>
+<h3 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h3>
+<ul>
+<li>需要能够运行在经常故障的物理机环境上。使得能采用相对便宜的服务器硬件。</li>
+<li>大文件居多。几个GB这样的级别</li>
+<li>大多数写是append写，即在文件末尾追加。（应该没有顺序要求）</li>
+</ul>
+<h3 id="概念-1"><a href="#概念-1" class="headerlink" title="概念-1"></a>概念</h3>
+<p>GFS由一个Master节点、ChunkServer和提供给用户的client组成。
+所有的数据，被切分成固定大小的”chunk”，写入ChunkServer所在的物理机的磁盘上。
+master节点管理好所有的元信息，包括表示文件系统目录结构的namespace、文件所属的chunk所在位置等
+用户需要读写文件的时候，通过GFS的client，首先从master查到文件所在的chunk相关信息，而后直接与对应的chunkserver通讯。</p>
+<ul>
+<li>master通过检查点+重放（replay）操作日志来恢复其文件系统的状态。</li>
+<li>master在启动时从chunkserver获取chunk信息，存在内存中。随后master控制着所有chunk的分配并通过周期性的心跳消息监控chunkserver状态。</li>
+</ul>
+<h3 id="一致性"><a href="#一致性" class="headerlink" title="一致性"></a>一致性</h3>
+<p>弱一致性：从不同chunk副本（一个文件大概有3份，保证不会被损坏）中获得的数据可能会有一点差距。chunkserver
+在返回数据之前检查 校验和
+，如果校验和不匹配，让client请求其他副本，并会新建一个副本并删除损坏的。
+非确定：并发写（不是 append）导致结果不确定。 <img src="bbb.png" /></p>
+<h3 id="primary-和租约"><a href="#primary-和租约" class="headerlink" title="primary-和租约"></a>Primary 和租约</h3>
+<ul>
+<li>master 找到 Primary 或 选择 Primary 并给定租约</li>
+<li>client
+把变更传给所有副本的chunkserver，server缓存变更（变更：write，append……）</li>
+<li>所有副本server都确认收到了数据后，primary为变更选取顺序，所有副本应用变更。</li>
+</ul>
+<p>租约 -&gt; 防止部分网络问题导致的脑裂</p>
+<div id="paginator"></div></div><div id="post-footer"><div id="pages"><div class="footer-link" style="width: 50%;text-align:right;border-right:1px #fe2 solid"><a href="/2024/09/18/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/%E9%98%85%E8%AF%BB%E6%9D%82%E8%AE%B0/">← Next 阅读杂记</a></div><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/2024/09/09/%E5%89%8D%E7%AB%AF/SSE%20%E6%B5%81%E5%BC%8F%E4%BC%A0%E8%BE%93/">SSE 流式传输——组会分享 Prev →</a></div></div></div></div><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="To Top" style="opacity: 0; display: none;">∧ </a><a class="i-index" id="to-index" href="#toc-div" title="To Catalog">≡</a><a class="i-color" id="color-mode" onClick="colorMode.change()" title="Change Theme"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="https://cdn.luogu.com.cn/upload/image_hosting/8cc2fgam.png" alt="Logo"></a><h1 id="Dr"><a href="/">lyx12138</a></h1><div id="description"><p></p></div></div><div id="aside-block"><div id="toc-div"><h1>Catalog</h1><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#mapreduce"><span class="toc-number">1.</span> <span class="toc-text">MapReduce</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A6%82%E5%BF%B5"><span class="toc-number">1.1.</span> <span class="toc-text">概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%A8%E5%A4%84"><span class="toc-number">1.2.</span> <span class="toc-text">用处</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#gfs"><span class="toc-number">2.</span> <span class="toc-text">GFS</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%89%8D%E6%8F%90"><span class="toc-number">2.1.</span> <span class="toc-text">前提</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A6%82%E5%BF%B5-1"><span class="toc-number">2.2.</span> <span class="toc-text">概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E8%87%B4%E6%80%A7"><span class="toc-number">2.3.</span> <span class="toc-text">一致性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#primary-%E5%92%8C%E7%A7%9F%E7%BA%A6"><span class="toc-number">2.4.</span> <span class="toc-text">Primary 和租约</span></a></li></ol></li></ol></div></div><footer><nobr>Published with <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> Theme <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr> by <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside></main><canvas id="canvas-dust"></canvas></body></html>

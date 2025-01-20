@@ -1,0 +1,146 @@
+<!DOCTYPE html><html lang="en" theme-mode="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>日常总结 | lyx12138的博客</title><link rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="preload" as="font" crossorigin="anonymous" href="/font/Bender.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/BenderLight.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/JetBrainsMono-Regular.woff2"><link rel="stylesheet" href="/css/arknights.css"><style>@font-face {
+  font-family: Bender;
+  src: local('Bender'), url("/font/Bender.ttf"), url("/font/Bender.otf");
+}
+@font-face {
+  font-family: BenderLight;
+  src: local('BenderLight'), url("/font/BenderLight.ttf");
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}
+</style><script>var config = {"root":"/","search":{"preload":false,"activeHolder":"Enter here","blurHolder":"Search","noResult":"Data \"$0\" not found"},"code":{"codeInfo":"$0 - $1 lines","copy":"copy"}}</script><link type="text/css" rel="stylesheet" href="/lib/encrypt/hbe.style.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lightgallery.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-zoom.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-thumbnail.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/css/all.min.css"><script>if (window.localStorage.getItem('theme-mode') === 'light')
+ document.documentElement.setAttribute('theme-mode', 'light')
+if (window.localStorage.getItem('theme-mode') === 'dark')
+ document.documentElement.setAttribute('theme-mode', 'dark')</script><style>:root {
+ --dark-background: url('https://ak.hypergryph.com/assets/index/images/ak/pc/bk.jpg');
+ --light-background: url('/img/bk.jpg');
+ --theme-encrypt-confirm: 'confirm'
+}</style><script defer src="/js/arknights.js"></script><script defer src="/js/search.js"></script><script defer type="module">import mermaid from '//unpkg.com/mermaid@10.5.0/dist/mermaid.esm.mjs';
+window.mermaid = mermaid;
+code.paintMermaid();
+</script><script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.1/MathJax.js"></script><script>MathJax.Hub.Config({
+  menuSettings: {
+    zoom: "None"
+  },
+  showMathMenu: false,
+  jax: ["input/TeX","output/CommonHTML"],
+  extensions: ["tex2jax.js"],
+  TeX: {
+    extensions: ["AMSmath.js","AMSsymbols.js"],
+    equationNumbers: {
+      autoNumber: "AMS"
+    }
+  },
+  tex2jax: {
+    inlineMath: [["\\(", "\\)"]],
+    displayMath: [["\\[", "\\]"]]
+  }
+});
+</script><script async src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script async src="/lib/encrypt/hbe.js"></script><script async src="/js/pjax.js"></script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js','data-pjax','.busuanzi'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><nav><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="Search" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup" tabindex="0"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">Home</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">Archives</span></a></li><li class="navItem"><a class="navBlock" href="/proverb/"><span class="navItemTitle">Proverb</span></a></li></ol></nav></header><article><div id="post-bg"><div id="post-title"><h1>日常总结</h1><div id="post-info"><span>First Post: <div class="control"><time datetime="2024-03-07T13:21:12.304Z" id="date"> 2024-03-07</time></div></span><br><span>Last Update: <div class="control"><time datetime="2024-11-20T13:35:52.051Z" id="updated"> 2024-11-20</time></div></span></div></div><hr><div id="post-content"><h2 id="cf932-div2比赛总结"><a href="#cf932-div2比赛总结" class="headerlink" title="cf932-div2比赛总结"></a>CF932 div2比赛总结</h2>
+<p>很烂，只做了两道题，感觉晚上好困。C思路是差不多的，主要是中间实现太复杂了，我忘了在遍历区间的右端点的时候，那个值是递减的。还是要注意区间与区间之间的关系。实现的时候还有些sb问题，需要注意。
+## <a target="_blank" rel="noopener" href="https://codeforces.com/contest/1935/problem/E">CF932 div2 E.
+Distance Learning Courses in MAC</a> ### 题意 n个数，每个数为 <span
+class="math inline">\([x_i,y_i]\)</span>
+内任意一个数，q个询问，每次给一个 <span class="math inline">\(l,
+r\)</span>，问从第l个数到第r个数（共r-l+1个数）的最大or和。 ### 题解 -
+从最大位开始贪心 - 如果该位（设为第 j
+位）有两个数能为1（<code>y_i &lt;= (1&lt;&lt;j)</code>），且至少一个数的
+<span class="math inline">\(x_i\)</span> &lt;=
+(1&lt;&lt;j)，说明这个数可以进行“降维打击”，变成 (1&lt;&lt;j)-1
+直接结束游戏 -
+这样就把题目简化了很多，要么使用这个1后面继续考虑此数，要么不使用这个1直接进行降维打击。这个1只要不用就会结束游戏，所以一般情况必须得用。
+# <a target="_blank" rel="noopener" href="https://codeforces.com/contest/1922/problem/D">Educational
+Codeforces Round 161 Div.2 D. Berserk Monsters</a> [[优化处理]]</p>
+<h2 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h2>
+<p>n个二元组 <span class="math inline">\((a_i,d_i)\)</span>
+排成一列，n轮，每一轮对于每一个 i 若 <span
+class="math inline">\(d_i&lt;a_{pre_i}+a_{nxt_i}\)</span>
+则去掉这个二元组。（pre，nxt就是最近的没有去掉的二元组）。求每一轮去掉的组数。</p>
+<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2>
+<p>这道题比赛时想复杂了，想着对于每个联通块的左右端点处理，但其实没那么复杂。</p>
+<blockquote>
+<p>It is important to note that if during the j�-th round the i�-th
+monster did not die and none of its alive neighbors died, then there is
+no point in checking this monster in the (j+1)(�+1)-th round. Therefore,
+we can solve the problem as follows: let's maintain a list of candidates
+(those who can die) for the current round; if the monster dies in the
+current round, then add its neighbors to the list of candidates for the
+next round.</p>
+</blockquote>
+<p>只用每次检查没有被保护的人（list），如果死了就在list中加入它附近的人。注意检查和去掉应该是两个循环。</p>
+<h1
+id="educational-codeforces-round-161-div.2-e---increasing-subsequences-构造"><a
+target="_blank" rel="noopener" href="https://codeforces.com/contest/1922/problem/E">Educational
+Codeforces Round 161 Div.2 E - Increasing Subsequences</a> [[构造]]</h1>
+<h2 id="题意-1"><a href="#题意-1" class="headerlink" title="题意-1"></a>题意</h2>
+<p>构造一个子严格上升子序列的数量恰好为x的序列 ## 题解
+构造-&gt;找到特殊处理方式
+在一个序列最后如果加上一个比它们都小的值-&gt;t+=1
+在一个序列最后如果加上一个比它们都小的值-&gt;t<em>=2
+t为子严格上升子序列的数量 将序列操作与数的二进制操作联系。 # </em>
+把一段染成一个颜色之后可以把这一段看成一个数 # <a
+target="_blank" rel="noopener" href="https://codeforces.com/contest/1948">Educational Codeforces Round
+163 (Rated for Div. 2)</a>D. Tandem Repeats? [[优化处理]] ## 题意
+有一行由小写字母和？组成的字符串，？可以代表任何小写字母。求重复子串的最大长度，重复子串指满足
+<span class="math inline">\(s[l,l+len-1]=s[l+len,l+len*2-1]\)</span>
+的连续子串。 <span class="math inline">\(n&lt;=5e3\)</span> ## 题解
+没想到那么简单qwq 就是要找到处理的相同量，这里是判断 <span
+class="math inline">\(s[i]==s[i+len]\)</span>
+，当len固定时左端点l和l+1只有端点需要处理。在每次记一个cnt，记录满足相等的个数。因为len固定时判断的永远时s[i]和s[i+len]，所以
+<span class="math inline">\(？\)</span> 可以直接贪心处理。 # <a
+target="_blank" rel="noopener" href="https://codeforces.com/contest/1948">Educational Codeforces Round
+163 (Rated for Div. 2)</a>E. Clique Partition [[构造]] ## 题意
+n个点，第i个点序号为i，让你给每个点分配一个 a_i（1~n中互不相同的数）。当
+<span class="math inline">\(|i−j|+|a_i−a_j|≤k\)</span>
+时第i个点和第j个点连一条边。求此图的极大强连通子图的个数的最大值。 ##
+题解
+易得每个强连通子图的点的个数&lt;=k，则构造一种方式使n=k时答案为1。如下：
+<span
+class="math display">\[m,m-1,m-2,...,1,n,n-1,...,m+1，其中m=k/2向上取整\]</span>
+<strong>找到边界，构造边界</strong> # <a
+target="_blank" rel="noopener" href="https://codeforces.com/contest/1948">Educational Codeforces Round
+163 (Rated for Div. 2)</a> F. Rare Coins [[概率]] [[优化处理]] ## 题意
+有n个袋子，编号为1到n。第i个袋子里装着 <span
+class="math inline">\(b_i\)</span>
+个银币。每个银币有50%的概率价值为0，50%的概率价值为1。一个袋子的价值为其银币价值的和。现在问你Q个问题，每次给一个l和一个r和一个a，求
+<span class="math display">\[编号为l到r的袋子的价值和 - 其他袋子价值和
+&gt; a\]</span> 的概率 ## 题解
+简化问题：b1个银币贡献是加，b2个银币贡献是减，求 <span
+class="math inline">\(res=t+b1-b2&gt;0\)</span> 的可能性。
+我们假设这b1个银币默认值是0，有1/2的概率变成1；b2个银币默认值是1，有1/2的概率变成0。则这b1+b2个银币都有1/2的概率使res增加1。我们再求res满足上述条件的概率（或者是方案数）就行。
+<strong>把“和”变成“变化值”，整体化</strong> # *
+[[构造]]可以注意一下特殊情况，比如 11111……1111
+。还有题目上的限制可能比实际要用到的大，可能是来迷惑你的。</p>
+<h1 id="section"><a href="#section" class="headerlink" title="section"></a>9.30</h1>
+<p>记得每次都要初始化，特别记住map， vector sqrt(long long)
+精度不够，还是两边都平方 并查集卡常 -&gt; 启发式合并 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">void merge(int x, int y) &#123; x = find(x), y = find(y); if (x == y) return; if (sz[x] &gt; sz[y]) swap(x, y); f[x] = y, sz[y] += sz[x]; &#125;<br></code></pre></td></tr></table></figure> <img
+src="Pasted%20image%2020240930215251.png" /></p>
+<h1 id="d.-penchick-and-desert-rabbit"><a
+target="_blank" rel="noopener" href="https://codeforces.com/contest/2031/problem/D">D. Penchick and
+Desert Rabbit</a></h1>
+<p>一列数，只能跳左边比它大的，和右边比它小的，求以每一个数为起点能跳到的最高处。
+突破口：a[i] 如何跳到 a[i+1]，利用 1~i最高 和
+i+1~n最矮。然后发现如果跳不到则两边隔离。
+why：发现从一个数跳到另一个数要考虑 左中右
+三边的数，所以把中间删掉。</p>
+<div id="paginator"></div></div><div id="post-footer"><div id="pages"><div class="footer-link" style="width: 50%;text-align:right;border-right:1px #fe2 solid"><a href="/2024/03/26/%E5%89%8D%E7%AB%AF/%E8%81%94%E5%88%9B%E5%88%86%E4%BA%AB%E2%80%94%E2%80%94Hexo%E5%8E%9F%E7%90%86%E6%B5%85%E6%9E%90/">← Next 联创分享——Hexo原理浅析</a></div><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/2024/03/02/%E6%97%A0%E4%BA%BA%E6%9C%BA/%E8%B7%AF%E5%BE%84%E8%A7%84%E5%88%92%E8%AE%A1%E5%88%92/">路径规划计划 Prev →</a></div></div></div></div><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="To Top" style="opacity: 0; display: none;">∧ </a><a class="i-index" id="to-index" href="#toc-div" title="To Catalog">≡</a><a class="i-color" id="color-mode" onClick="colorMode.change()" title="Change Theme"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="https://cdn.luogu.com.cn/upload/image_hosting/8cc2fgam.png" alt="Logo"></a><h1 id="Dr"><a href="/">lyx12138</a></h1><div id="description"><p></p></div></div><div id="aside-block"><div id="toc-div"><h1>Catalog</h1><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#cf932-div2%E6%AF%94%E8%B5%9B%E6%80%BB%E7%BB%93"><span class="toc-number">1.</span> <span class="toc-text">CF932 div2比赛总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E6%84%8F"><span class="toc-number">2.</span> <span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E8%A7%A3"><span class="toc-number">3.</span> <span class="toc-text">题解</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#educational-codeforces-round-161-div.2-e---increasing-subsequences-%E6%9E%84%E9%80%A0"><span class="toc-number"></span> <span class="toc-text">Educational
+Codeforces Round 161 Div.2 E - Increasing Subsequences [[构造]]</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E6%84%8F-1"><span class="toc-number">1.</span> <span class="toc-text">题意</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#section"><span class="toc-number"></span> <span class="toc-text">9.30</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#d.-penchick-and-desert-rabbit"><span class="toc-number"></span> <span class="toc-text">D. Penchick and
+Desert Rabbit</span></a></div></div><footer><nobr>Published with <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> Theme <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr> by <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside></main><canvas id="canvas-dust"></canvas></body></html>
