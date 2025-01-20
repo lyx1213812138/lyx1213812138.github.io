@@ -1,0 +1,137 @@
+<!DOCTYPE html><html lang="en" theme-mode="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>ROS快速学习 | lyx12138的博客</title><link rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="preload" as="font" crossorigin="anonymous" href="/font/Bender.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/BenderLight.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/JetBrainsMono-Regular.woff2"><link rel="stylesheet" href="/css/arknights.css"><style>@font-face {
+  font-family: Bender;
+  src: local('Bender'), url("/font/Bender.ttf"), url("/font/Bender.otf");
+}
+@font-face {
+  font-family: BenderLight;
+  src: local('BenderLight'), url("/font/BenderLight.ttf");
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}
+</style><script>var config = {"root":"/","search":{"preload":false,"activeHolder":"Enter here","blurHolder":"Search","noResult":"Data \"$0\" not found"},"code":{"codeInfo":"$0 - $1 lines","copy":"copy"}}</script><link type="text/css" rel="stylesheet" href="/lib/encrypt/hbe.style.css"><script src="//unpkg.com/mermaid@10.5.0/dist/mermaid.min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.1/MathJax.js"></script><script>MathJax.Hub.Config({
+ menuSettings: {
+   zoom: "None"
+ },
+ showMathMenu: false,
+ jax: ["input/TeX","output/CommonHTML"],
+ extensions: ["tex2jax.js"],
+ TeX: {
+   extensions: ["AMSmath.js","AMSsymbols.js"],
+   equationNumbers: {
+     autoNumber: "AMS"
+   }
+ },
+ tex2jax: {
+   inlineMath: [["\\(", "\\)"]],
+   displayMath: [["\\[", "\\]"]]
+ }
+});</script><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lightgallery.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-zoom.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-thumbnail.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/css/all.min.css"><script>if (window.localStorage.getItem('theme-mode') === 'light')
+ document.documentElement.setAttribute('theme-mode', 'light')
+if (window.localStorage.getItem('theme-mode') === 'dark')
+ document.documentElement.setAttribute('theme-mode', 'dark')</script><style>@font-face {
+ font-family: BenderLight;
+ src: local('Bender'), url("/font/BenderLight.woff2") format('woff2');
+}
+@font-face {
+ font-family: 'JetBrains Mono';
+ src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}</style><style>:root {
+ --dark-background: url('https://ak.hypergryph.com/assets/index/images/ak/pc/bk.jpg');
+ --light-background: url('/img/bk.jpg');
+ --theme-encrypt-confirm: 'confirm'
+}</style><script defer src="/js/arknights.js"></script><script defer src="/js/search.js"></script><script defer type="module">import mermaid from '//unpkg.com/mermaid@10.5.0/dist/mermaid.esm.mjs';
+window.mermaid = mermaid;
+code.paintMermaid();
+</script><script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.1/MathJax.js"></script><script>MathJax.Hub.Config({
+  menuSettings: {
+    zoom: "None"
+  },
+  showMathMenu: false,
+  jax: ["input/TeX","output/CommonHTML"],
+  extensions: ["tex2jax.js"],
+  TeX: {
+    extensions: ["AMSmath.js","AMSsymbols.js"],
+    equationNumbers: {
+      autoNumber: "AMS"
+    }
+  },
+  tex2jax: {
+    inlineMath: [["\\(", "\\)"]],
+    displayMath: [["\\[", "\\]"]]
+  }
+});
+</script><script async src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script async src="/lib/encrypt/hbe.js"></script><script async src="/js/pjax.js"></script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js','data-pjax','.busuanzi'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><nav><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="Search" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup" tabindex="0"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">Home</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">Archives</span></a></li><li class="navItem"><a class="navBlock" href="/proverb/"><span class="navItemTitle">Proverb</span></a></li></ol></nav></header><article><div id="post-bg"><div id="post-title"><h1>ROS快速学习</h1><div id="post-info"><span>First Post: <div class="control"><time datetime="2024-02-22T16:00:00.000Z" id="date"> 2024-02-23</time></div></span><br><span>Last Update: <div class="control"><time datetime="2025-01-20T12:04:10.848Z" id="updated"> 2025-01-20</time></div></span></div></div><hr><div id="post-content"><p>Node节点：完成一个功能的一个模块</p>
+<p>Package包：多个相关节点组成。节点不能独立于包存在</p>
+<p>头文件 <code>#include &lt;ros/ros.h&gt;</code></p>
+<p>初始化 <code>ros::init(argc, argv, "px4_pos_controller");</code></p>
+<p>NodeHandle对象 <code>ros::NodeHandle nh("~");</code>
+相当于一个管家，与ros通讯的关键</p>
+<h2 id="循环及控制循环频率"><a href="#循环及控制循环频率" class="headerlink" title="循环及控制循环频率"></a>循环及控制循环频率</h2>
+<p><code>while(ros::ok())&#123;&#125;</code> 才能响应外部信息（ctrl+c）</p>
+<p>ros::Rate loop_rate(10);//括号内为每秒执行的次数</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">while</span>(ros::<span class="hljs-built_in">ok</span>())&#123;<br>	...<br>    loop_rate.<span class="hljs-built_in">sleep</span>();<br>&#125;<br></code></pre></td></tr></table></figure>
+<h2 id="ros节点通讯方式-topicmessage"><a href="#ros节点通讯方式-topicmessage" class="headerlink" title="ros节点通讯方式-topicmessage"></a>ros节点通讯方式 Topic+Message</h2>
+<h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3>
+<ul>
+<li><p>创建一个话题Topic，在这个话题中进行持续通讯</p></li>
+<li><p>发布消息的是话题的发布者Publisher，接收消息的是话题的订阅者Subscriber</p></li>
+<li><p>通常按照一定频率持续不断发出，以保证消息的实时性</p></li>
+<li><p>就跟聊天群一样，一个话题可以同时有多个发布者和订阅者</p>
+<ul>
+<li><p>传感器消息的话题一般只有一个发布者</p></li>
+<li><p>指令话题可能有多个发布者</p></li>
+</ul></li>
+</ul>
+<h3 id="消息类型"><a href="#消息类型" class="headerlink" title="消息类型"></a>消息类型</h3>
+<p>可以嵌套，相当于class</p>
+<p>用std_msgs包获得一些标准消息类型</p>
+<h3 id="创建发布者及发布消息"><a href="#创建发布者及发布消息" class="headerlink" title="创建发布者及发布消息"></a>创建发布者及发布消息</h3>
+<p><code>ros::Publisher pub = nh.advertise&lt;std_msgs::String&gt;("test", 10);</code></p>
+<p>泛型函数，&lt;&gt;中定义参数（消息）的类型，第一个参数是话题名称，第二个参数是消息缓存长度（缓存里可以容纳的消息个数），之后用pub来往这个话题发布消息</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">while</span> (ros::<span class="hljs-built_in">ok</span>()) &#123;<br>    std_msgs::String msg;<br>    msg.data = <span class="hljs-string">&quot;hello world&quot;</span>;<br>    pub.<span class="hljs-built_in">publish</span>(msg);<br>&#125;<br></code></pre></td></tr></table></figure>
+<h3 id="rostopic查看话题信息"><a href="#rostopic查看话题信息" class="headerlink" title="rostopic查看话题信息"></a>rostopic查看话题信息</h3>
+<p><code>rostopic list</code> 列出活跃话题名称</p>
+<p><code>rostopic echo /话题名称</code> 列出话题下的消息</p>
+<h3 id="创建接收者及接收消息"><a href="#创建接收者及接收消息" class="headerlink" title="创建接收者及接收消息"></a>创建接收者及接收消息</h3>
+<p><code>ros::Subscriber pub = nh.subscribe&lt;std_msgs::String&gt;("test", 10, func);</code></p>
+<p>func为回调函数，是接收到消息后需要做的事情</p>
+<p><code>void func(std_msgs::Sting msg)&#123;&#125;</code></p>
+<p>在订阅之后保持在运行状态:</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">while</span> (ros::<span class="hljs-built_in">ok</span>()) &#123;<br>	ros::<span class="hljs-built_in">spinOnce</span>();<span class="hljs-comment">// 查看是否有消息包需要接收</span><br>&#125;<br></code></pre></td></tr></table></figure>
+<p>通讯网络的图形化显示</p>
+<p>rqt_graph</p>
+<div id="paginator"></div></div><div id="post-footer"><div id="pages"><div class="footer-link" style="width: 50%;text-align:right;border-right:1px #fe2 solid"><a href="/2024/02/23/%E6%97%A0%E4%BA%BA%E6%9C%BA/%E6%97%A0%E4%BA%BA%E6%9C%BA%E7%90%86%E8%AE%BA%E7%9F%A5%E8%AF%86%EF%BC%88%E5%85%83%E5%90%AF%E5%8F%91%E5%BC%8F%EF%BC%89/">← Next 无人机理论知识（元启发式）</a></div><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/2024/02/23/%E6%97%A0%E4%BA%BA%E6%9C%BA/%E6%97%A0%E4%BA%BA%E6%9C%BA%E7%AC%94%E8%AE%B0/">无人机笔记 Prev →</a></div></div></div></div><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="To Top" style="opacity: 0; display: none;">∧ </a><a class="i-index" id="to-index" href="#toc-div" title="To Catalog">≡</a><a class="i-color" id="color-mode" onClick="colorMode.change()" title="Change Theme"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="https://cdn.luogu.com.cn/upload/image_hosting/8cc2fgam.png" alt="Logo" style="margin:0;border-radius:0;"></a><h1 id="Dr"><a href="/">lyx12138</a></h1><div id="description"><p></p></div></div><div id="aside-block"><div id="toc-div"><h1>Catalog</h1><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BE%AA%E7%8E%AF%E5%8F%8A%E6%8E%A7%E5%88%B6%E5%BE%AA%E7%8E%AF%E9%A2%91%E7%8E%87"><span class="toc-number">1.</span> <span class="toc-text">循环及控制循环频率</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ros%E8%8A%82%E7%82%B9%E9%80%9A%E8%AE%AF%E6%96%B9%E5%BC%8F-topicmessage"><span class="toc-number">2.</span> <span class="toc-text">ros节点通讯方式 Topic+Message</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89"><span class="toc-number">2.1.</span> <span class="toc-text">定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B6%88%E6%81%AF%E7%B1%BB%E5%9E%8B"><span class="toc-number">2.2.</span> <span class="toc-text">消息类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E5%8F%91%E5%B8%83%E8%80%85%E5%8F%8A%E5%8F%91%E5%B8%83%E6%B6%88%E6%81%AF"><span class="toc-number">2.3.</span> <span class="toc-text">创建发布者及发布消息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#rostopic%E6%9F%A5%E7%9C%8B%E8%AF%9D%E9%A2%98%E4%BF%A1%E6%81%AF"><span class="toc-number">2.4.</span> <span class="toc-text">rostopic查看话题信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E6%8E%A5%E6%94%B6%E8%80%85%E5%8F%8A%E6%8E%A5%E6%94%B6%E6%B6%88%E6%81%AF"><span class="toc-number">2.5.</span> <span class="toc-text">创建接收者及接收消息</span></a></li></ol></li></ol></div></div><footer><nobr>Published with <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> Theme <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr> by <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside></main><canvas id="canvas-dust"></canvas></body></html>
