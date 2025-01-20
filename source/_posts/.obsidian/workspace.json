@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "后端/DB.md",
+                "file": "算法竞赛/日常总结.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "DB"
+              "title": "日常总结"
             }
           }
         ]
@@ -155,25 +155,39 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "obsidian-excalidraw-plugin:新建绘图文件": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
       "canvas:新建白板": false,
+      "obsidian-excalidraw-plugin:新建绘图文件": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
       "templater-obsidian:Templater": false
     }
   },
   "active": "d5a98c37a33e6c20",
   "lastOpenFiles": [
-    "前端/CSS.md",
-    "后端/DB.md",
+    "算法竞赛/女生赛补题总结.md",
+    "算法竞赛/高三暑假集训总结.md",
+    "算法竞赛/二分图.md",
+    "无人机/ROS快速学习.md",
+    "无人机/无人机理论知识（元启发式）.md",
     "无人机/无人机笔记.md",
     "无人机/路径规划计划.md",
-    "无人机/无人机理论知识（元启发式）.md",
-    "无人机/ROS快速学习.md",
+    "学习项目/Todo Programs.md",
+    "学习项目/Programmming Challenges.png",
+    "学习项目/Bilibili清理计划.md",
+    "语言/JS.md",
+    "语言/Python.md",
+    "语言/Go.md",
+    "总结/新，兴奋与焦虑——大一上期总结.md",
+    "总结/自传.md",
+    "总结/大一下总结.md",
+    "阅读笔记/How Google Works.md",
+    "阅读笔记/CSAPP.md",
+    "后端/DB.md",
+    "前端/CSS.md",
     "前端/Vue3.md",
     "前端/ToBeDone.md",
     "前端/SSE 流式传输.md",
@@ -182,20 +196,7 @@
     "前端/杂记.md",
     "其他/强化学习.md",
     "其他/Python 爬虫.md",
-    "其他/LinuxLearning.md",
-    "其他/GIT.md",
-    "后端/掘金笔记.md",
-    "后端/分布式——MapReduce，GFS.md",
-    "阅读笔记/BLOG阅读笔记.md",
-    "阅读笔记/《做最好的自己》.md",
-    "阅读笔记/数学之美学习笔记.md",
-    "阅读笔记/阅读杂记.md",
-    "总结/新，兴奋与焦虑——大一上期总结.md",
-    "总结/自传.md",
-    "算法竞赛/日常总结.md",
     "asset/aaaa.png",
-    "总结/大一下总结.md",
-    "算法竞赛/女生赛补题总结.md",
     "asset/Pasted image 20241107135636.png",
     "asset/Pasted image 20241107122012.png",
     "asset/Pasted image 20241107121046.png",
@@ -206,7 +207,6 @@
     "asset/Pasted image 20241104185451.png",
     "asset/Pasted image 20241104185053.png",
     "asset/Pasted image 20240930215251.png",
-    "asset/aoce2.gif",
     "语言",
     "AI",
     "后端",
