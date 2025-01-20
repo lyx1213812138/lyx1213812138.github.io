@@ -36,6 +36,9 @@ jobs:
         run: npm install -g hexo-cli
         working-directory: ./blog
 
+      - name: Setup pandoc
+        uses: nikeee/setup-pandoc@v1
+
       - name: Generate static pages
         run: hexo generate
         working-directory: ./blog
