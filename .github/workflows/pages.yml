@@ -12,8 +12,6 @@ jobs:
       - uses: actions/checkout@v4
         with:
           token: ${{ secrets.PERSONAL_TOKEN }}
-          # If your repository depends on submodule, please see: https://github.com/actions/checkout
-          submodules: recursive
       - name: Use Node.js 18.19
         uses: actions/setup-node@v4
         with:
