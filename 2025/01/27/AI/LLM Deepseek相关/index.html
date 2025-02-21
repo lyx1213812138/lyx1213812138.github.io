@@ -10,7 +10,7 @@
   font-family: 'JetBrains Mono';
   src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
 }
-</style><script>var config = {"root":"/","search":{"preload":false,"activeHolder":"键入以继续","blurHolder":"数据检索","noResult":"无 $0 相关数据"},"code":{"codeInfo":"$0 - $1 行","copy":"复制"}}</script><link type="text/css" rel="stylesheet" href="/lib/encrypt/hbe.style.css"><script src="//unpkg.com/mermaid@10.5.0/dist/mermaid.min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.1/MathJax.js"></script><script>MathJax.Hub.Config({
+</style><script>var config = {"root":"/","search":{"preload":false,"activeHolder":"Enter here","blurHolder":"Search","noResult":"Data \"$0\" not found"},"code":{"codeInfo":"$0 - $1 lines","copy":"copy"}}</script><link type="text/css" rel="stylesheet" href="/lib/encrypt/hbe.style.css"><script src="//unpkg.com/mermaid@10.5.0/dist/mermaid.min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.1/MathJax.js"></script><script>MathJax.Hub.Config({
  menuSettings: {
    zoom: "None"
  },
@@ -40,7 +40,7 @@ if (window.localStorage.getItem('theme-mode') === 'dark')
 }</style><style>:root {
  --dark-background: url('https://ak.hypergryph.com/assets/index/images/ak/pc/bk.jpg');
  --light-background: url('/img/bk.jpg');
- --theme-encrypt-confirm: '确认'
+ --theme-encrypt-confirm: 'confirm'
 }</style><script defer src="/js/arknights.js"></script><script defer src="/js/search.js"></script><script defer type="module">import mermaid from '//unpkg.com/mermaid@10.5.0/dist/mermaid.esm.mjs';
 window.mermaid = mermaid;
 code.paintMermaid();
@@ -94,7 +94,7 @@ lightGallery(document.getElementById('post-bg'), {
    }
  }
 });
-document.addEventListener("pjax:complete", reset);reset()})</script><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><nav><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup" tabindex="0"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">Home</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">Archives</span></a></li><li class="navItem"><a class="navBlock" href="/proverb/"><span class="navItemTitle">Proverb</span></a></li></ol></nav></header><article><div id="post-bg"><div id="post-title"><h1>LLM Deepseek相关</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2025-01-27T03:30:58.805Z" id="date"> 2025-01-27</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2025-02-17T07:54:30.395Z" id="updated"> 2025-02-17</time></div></span></div></div><hr><div id="post-content"><h2 id="基本原理"><a href="#基本原理" class="headerlink" title="基本原理"></a>基本原理</h2>
+document.addEventListener("pjax:complete", reset);reset()})</script><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><nav><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="Search" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup" tabindex="0"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">Home</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">Archives</span></a></li><li class="navItem"><a class="navBlock" href="/proverb/"><span class="navItemTitle">Proverb</span></a></li></ol></nav></header><article><div id="post-bg"><div id="post-title"><h1>LLM Deepseek相关</h1><div id="post-info"><span>First Post: <div class="control"><time datetime="2025-01-27T03:30:58.805Z" id="date"> 2025-01-27</time></div></span><br><span>Last Update: <div class="control"><time datetime="2025-02-21T14:17:59.590Z" id="updated"> 2025-02-21</time></div></span></div></div><hr><div id="post-content"><h2 id="基本原理"><a href="#基本原理" class="headerlink" title="基本原理"></a>基本原理</h2>
 <ul>
 <li>token 一个词语或者词组，--(embedding)
 ---&gt;对应一个向量，表示含义</li>
@@ -129,36 +129,32 @@ class="math inline">\(\Delta E\)</span> 相加
 <li>ReLU函数激活（得到的值叫做神经元）</li>
 <li><span class="math inline">\(W_{down} \times E + B_{down}\)</span>
 （注意降维了）</li>
-<li>事实存储在wup的行向量（像embedding一样代表一种特征）和对应的wdown的列向量的关系中
-<img src="/asset/Pasted%20image%2020250127153936.png" /> ##
-Deepseek原理</li>
+<li>事实存储在wup的行向量（像embedding一样代表一种特征）和对应的wdown的列向量的关系中</li>
 </ul></li>
-<li>MLE多头潜在注意力 = 多头自注意力+低秩联合压缩</li>
-<li>MoE 每个token激活8个专家，共享专家+路由专家</li>
-<li><strong>辅助损失的主要作用</strong> 是在训练过程中鼓励 token
+</ul>
+<p class='item-img' data-src='/asset/logo.png'><img src="/asset/logo.png" /></p>
+<p class='item-img' data-src='/asset/Pasted%20image%2020250127153936.png'><img src="/asset/Pasted%20image%2020250127153936.png" /> ##
+Deepseek原理 - MLE多头潜在注意力 = 多头自注意力+低秩联合压缩 - MoE
+每个token激活8个专家，共享专家+路由专家 -
+<strong>辅助损失的主要作用</strong> 是在训练过程中鼓励 token
 更均匀地分配给不同的专家。无辅助损失的负载均衡策略：采用
 <strong>动态偏置项（Bias Term）</strong>
-来调整专家的选择概率。监控每个专家的负载来调整概率。</li>
-<li>MTP 同时预测多个后续token</li>
-<li>train：
-<ul>
-<li>PP：流水线 -&gt; DualPipe</li>
-<li>EP：专家并行</li>
-<li>DP：数据并行</li>
-</ul></li>
-<li>大多数核心计算内核，即 GEMM（General Matrix Multiply）操作，以 FP8
-精度实现。保持以下组件的原始精度（例如 BF16 或
-FP32）：嵌入模块、输出头、MoE
-门控模块、归一化操作符和注意力操作符。</li>
-<li>Adam 它是一种自动调整学习率的算法，优化器</li>
-<li><strong>Wgrad 操作</strong>（权重反向传播，Weight Gradient）</li>
-<li>通信带宽是 MoE 模型训练的关键瓶颈。 ### 部署</li>
-<li>“部署”指的是将训练好的模型应用到实际场景中的过程，使其能够在特定环境中运行并提供服务</li>
-<li><strong>MoE的全对全通信</strong>：<strong>跨节点通信</strong>使用高速网络（如InfiniBand，IB）；<strong>节点内通信</strong>在节点内部，通过GPU之间的NVLink</li>
-<li>预填充和解码：推理的两个阶段，预填充是用prompt生成第一个输出token，解码是一个一个输出token。预填充阶段计算密集，适合高性能计算资源；解码阶段计算稀疏，适合低延迟优化</li>
-<li>KV
+来调整专家的选择概率。监控每个专家的负载来调整概率。 - MTP
+同时预测多个后续token - train： - PP：流水线 -&gt; DualPipe -
+EP：专家并行 - DP：数据并行 - 大多数核心计算内核，即 GEMM（General
+Matrix Multiply）操作，以 FP8 精度实现。保持以下组件的原始精度（例如
+BF16 或 FP32）：嵌入模块、输出头、MoE
+门控模块、归一化操作符和注意力操作符。 - Adam
+它是一种自动调整学习率的算法，优化器 - <strong>Wgrad
+操作</strong>（权重反向传播，Weight Gradient） - 通信带宽是 MoE
+模型训练的关键瓶颈。 ### 部署 -
+“部署”指的是将训练好的模型应用到实际场景中的过程，使其能够在特定环境中运行并提供服务
+-
+<strong>MoE的全对全通信</strong>：<strong>跨节点通信</strong>使用高速网络（如InfiniBand，IB）；<strong>节点内通信</strong>在节点内部，通过GPU之间的NVLink
+-
+预填充和解码：推理的两个阶段，预填充是用prompt生成第一个输出token，解码是一个一个输出token。预填充阶段计算密集，适合高性能计算资源；解码阶段计算稀疏，适合低延迟优化
+- KV
 Cache：在自回归生成任务中，模型每次生成一个新token时，都需要计算当前token与之前所有token之间的注意力关系。KV
 Cache
-通过缓存之前计算过的K和V矩阵，避免重复计算，从而显著提高推理效率。</li>
-</ul>
-<div id="paginator"></div></div><div id="post-footer"><div id="pages"><div class="footer-link" style="width: 50%;text-align:right;border-right:1px #fe2 solid"><a href="/2025/02/21/%E6%80%BB%E7%BB%93/%E5%A4%A7%E4%BA%8C%E4%B8%8A%E6%80%BB%E7%BB%93/">← 下一篇 大二上总结</a></div><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/2025/01/20/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/test/">test 上一篇 →</a></div></div></div></div><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="回到顶部" style="opacity: 0; display: none;">∧ </a><a class="i-index" id="to-index" href="#toc-div" title="文章目录">≡</a><a class="i-color" id="color-mode" onClick="colorMode.change()" title="切换主题"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="https://cdn.luogu.com.cn/upload/image_hosting/8cc2fgam.png" alt="Logo" style="margin:0;border-radius:0;"></a><h1 id="Dr"><a href="/">lyx12138</a></h1><div id="description"><p></p></div></div><div id="aside-block"><div id="toc-div"><h1>目录</h1><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86"><span class="toc-number">1.</span> <span class="toc-text">基本原理</span></a></li></ol></div></div><footer><nobr>构建自 <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> 使用主题 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr> 主题作者 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside></main><canvas id="canvas-dust"></canvas></body></html>
+通过缓存之前计算过的K和V矩阵，避免重复计算，从而显著提高推理效率。</p>
+<div id="paginator"></div></div><div id="post-footer"><div id="pages"><div class="footer-link" style="width: 50%;text-align:right;border-right:1px #fe2 solid"><a href="/2025/02/21/%E6%80%BB%E7%BB%93/%E5%A4%A7%E4%BA%8C%E4%B8%8A%E6%80%BB%E7%BB%93/">← Next 大二上总结</a></div><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/2025/01/20/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/test/">test Prev →</a></div></div></div></div><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="To Top" style="opacity: 0; display: none;">∧ </a><a class="i-index" id="to-index" href="#toc-div" title="To Catalog">≡</a><a class="i-color" id="color-mode" onClick="colorMode.change()" title="Change Theme"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="https://cdn.luogu.com.cn/upload/image_hosting/8cc2fgam.png" alt="Logo" style="margin:0;border-radius:0;"></a><h1 id="Dr"><a href="/">lyx12138</a></h1><div id="description"><p></p></div></div><div id="aside-block"><div id="toc-div"><h1>Catalog</h1><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86"><span class="toc-number">1.</span> <span class="toc-text">基本原理</span></a></li></ol></div></div><footer><nobr>Published with <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> Theme <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr> by <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside></main><canvas id="canvas-dust"></canvas></body></html>
