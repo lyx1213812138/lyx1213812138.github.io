@@ -1,0 +1,322 @@
+<!DOCTYPE html><html lang="en" theme-mode="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>linux 学习笔记 | lyx12138的博客</title><link rel="icon" type="image/x-icon" href="https://cdn.luogu.com.cn/upload/image_hosting/8cc2fgam.png"><link rel="preload" as="font" crossorigin="anonymous" href="/font/Bender.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/BenderLight.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/JetBrainsMono-Regular.woff2"><link rel="stylesheet" href="/css/arknights.css"><style>@font-face {
+  font-family: Bender;
+  src: local('Bender'), url("/font/Bender.ttf"), url("/font/Bender.otf");
+}
+@font-face {
+  font-family: BenderLight;
+  src: local('BenderLight'), url("/font/BenderLight.ttf");
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}
+</style><script>var config = {"root":"/","search":{"preload":false,"activeHolder":"键入以继续","blurHolder":"数据检索","noResult":"无 $0 相关数据"},"code":{"codeInfo":"$0 - $1 行","copy":"复制"}}</script><link type="text/css" rel="stylesheet" href="/lib/encrypt/hbe.style.css"><script src="//unpkg.com/mermaid@10.5.0/dist/mermaid.min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.1/MathJax.js"></script><script>MathJax.Hub.Config({
+ menuSettings: {
+   zoom: "None"
+ },
+ showMathMenu: false,
+ jax: ["input/TeX","output/CommonHTML"],
+ extensions: ["tex2jax.js"],
+ TeX: {
+   extensions: ["AMSmath.js","AMSsymbols.js"],
+   equationNumbers: {
+     autoNumber: "AMS"
+   }
+ },
+ tex2jax: {
+   inlineMath: [["\\(", "\\)"]],
+   displayMath: [["\\[", "\\]"]]
+ }
+});</script><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lightgallery.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-zoom.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-thumbnail.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/css/all.min.css"><script>if (window.localStorage.getItem('theme-mode') === 'light')
+ document.documentElement.setAttribute('theme-mode', 'light')
+if (window.localStorage.getItem('theme-mode') === 'dark')
+ document.documentElement.setAttribute('theme-mode', 'dark')</script><style>@font-face {
+ font-family: BenderLight;
+ src: local('Bender'), url("/font/BenderLight.woff2") format('woff2');
+}
+@font-face {
+ font-family: 'JetBrains Mono';
+ src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}</style><style>:root {
+ --dark-background: url('https://ak.hypergryph.com/assets/index/images/ak/pc/bk.jpg');
+ --light-background: url('/img/bk.jpg');
+ --theme-encrypt-confirm: '确认'
+}</style><script defer src="/js/arknights.js"></script><script defer src="/js/search.js"></script><script defer type="module">import mermaid from '//unpkg.com/mermaid@10.5.0/dist/mermaid.esm.mjs';
+window.mermaid = mermaid;
+code.paintMermaid();
+</script><script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.1/MathJax.js"></script><script>MathJax.Hub.Config({
+  menuSettings: {
+    zoom: "None"
+  },
+  showMathMenu: false,
+  jax: ["input/TeX","output/CommonHTML"],
+  extensions: ["tex2jax.js"],
+  TeX: {
+    extensions: ["AMSmath.js","AMSsymbols.js"],
+    equationNumbers: {
+      autoNumber: "AMS"
+    }
+  },
+  tex2jax: {
+    inlineMath: [["\\(", "\\)"]],
+    displayMath: [["\\[", "\\]"]]
+  }
+});
+</script><script async src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script async src="/lib/encrypt/hbe.js"></script><script async src="/js/pjax.js"></script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js','data-pjax','.busuanzi'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><nav><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup" tabindex="0"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">Home</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">Archives</span></a></li><li class="navItem"><a class="navBlock" href="/Proverb/"><span class="navItemTitle">Proverb</span></a></li><li class="navItem"><a class="navBlock" href="/demo/Arrangement/"><span class="navItemTitle">Arrangement</span></a></li></ol></nav></header><article><div id="post-bg"><div id="post-title"><h1>linux 学习笔记</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2026-01-04T14:13:09.922Z" id="date"> 2026-01-04</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2026-01-10T15:44:21.680Z" id="updated"> 2026-01-10</time></div></span></div></div><hr><div id="post-content"><p>https://github.com/0voice/linux_kernel_wiki/tree/main?tab=readme-ov-file#5</p>
+<h2 id="boot"><a href="#boot" class="headerlink" title="boot"></a>boot</h2>
+<p>进入实模式（直接访问物理内存），执行BIOS执行程序存储在ROM中。 BIOS
+-》 bootloader (协议为 GRUB 2 or ……) -》保护模式 -》操作系统</p>
+<p>GDT（Global Descriptor Table，全局描述符表）（所有进程的目录）
+IDT（Interrupt Descriptor Table，中断描述符表）</p>
+<p>打开A20，意味着CPU可以进行32位寻址（而非实模式20位）</p>
+<p>linux内核正式启动
+创建0号进程：包括内存、页表、必要数据结构、信号、调度器、硬件设备等的初始化
+-》启动：kernel_init内核线程和kthreadd内核线程（管理调度其他的内核线程的守护线程）
+-》1号进程：运行一个用户进程，并从此开始形成用户态进程树（pstree）（Fork-Exec
+模型，这个模型将“创建进程”和“加载程序”变成两个步骤）
+-》2号进程：kthreadd，即2号进程，用于内核态线程的管理，是一个守护线程
+（如果有需要create的内核线程，则create，否则睡觉）（新create的kthread在创建完后调用schedule()让出CPU资源，而不是直接运行）</p>
+<h2 id="io"><a href="#io" class="headerlink" title="io"></a>I/O</h2>
+<p>cpu和设备的设备控制器交流，设备控制器内有三种控制寄存器，数据，命令，状态。还有数据缓冲区。
+cpu如何读写数据：两种：1.分配I/O端口，用特殊汇编指令；2.映射到内存中
+i/o设备通知cpu：中断
+dma：cpu下达指令（告诉它想读取多少数据，读完的数据放在内存的某个地方就可以了）=》dma把I/o设备控制器数据存入内存
+=》dma中断cpu</p>
+<p>设备驱动程序：中断处理程序，（初始化时注册中断处理程序到中断描述符表里）
+ I/O
+调度算法：fifo，Deadline（截止时间调度，适用于对延迟敏感的应用）</p>
+<p> linux 应用程序与io设备交换：内核将输入事件写入
+/dev/input/eventX； 内核通过 <code>/dev/fb0</code>（或其他编号）设备文件将显存映射到文件系统
+## I/O设备数据传输 从disk读到网卡 一般方式： <img
+src="asset/Pasted%20image%2020260105130031.png" /></p>
+<p>sendfile+DMA收集 只能用于<strong>文件描述符到 Socket
+描述符</strong>的传输 <img
+src="asset/Pasted%20image%2020260105130105.png" /></p>
+<p>splice <code>splice()</code>
+更通用，允许在<strong>任意两个文件描述符</strong>之间移动数据，但它要求其中一个描述符必须是
+<strong>Pipe（管道）</strong>。  数据页的所有权（页的指针）从
+内核缓冲区A 转移到 Pipe 转移到 内核缓冲区B（两次splice）  
+应用：Kafka：生产者写入：利用 <code>mmap()</code> 实现高效日志追加（消息日志文件映射到用户进程内存空间），消费者读取：利用 <code>sendfile()</code> 实现高效网络传输（消息日志文件disk到socket
+response）</p>
+<h2 id="调度算法"><a href="#调度算法" class="headerlink" title="调度算法"></a>调度算法</h2>
+<h3 id="进程调度算法"><a href="#进程调度算法" class="headerlink" title="进程调度算法"></a>进程调度算法</h3>
+<p>FCFS，最短优先，<strong>高响应比优先调度算法</strong>（）</p>
+<p>多级反馈队列：多个队列（每次消费最高优先级的），每个进程运行完一个时间片降低一个优先级
+linux现有: 完全公平调度器 (Completely Fair Scheduler, CFS):
+尝试让每个进程获得相等的CPU使用份额，每次运行已运行事件最小的进程。可以提高并设置进程优先级（进程运行时调用c语言的sched_setscheduler()
+or 命令行工具 chrt 需要sudo）。Linux对普通进程调度，提供了
+完全公平调度算法，每次都会调vruntime最小的进程调度。用分子pruntime来照顾
+睡眠情况，用分母来照顾nice值</p>
+<p>NICE值：反映进程优先级，nice越小优先级越高，cpu分配比例越高
+sched_latency_ns 预期延迟时间</p>
+<p>量化指标：周转时间（run+wait），带权周转时间（run/(run+wait)）</p>
+<h3 id="linux-进程线程调度"><a href="#linux-进程线程调度" class="headerlink" title="linux-进程线程调度"></a>linux 进程/线程调度</h3>
+<p>5态：就绪，睡眠/等待（锁，I/O……），运行，僵死</p>
+<p>协程：线程切换成本太大，用户调度器（而非内核）控制</p>
+<h3 id="高低级分类"><a href="#高低级分类" class="headerlink" title="高低级分类"></a>高低级分类</h3>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>特性</th>
+<th>作业调度 (高级)</th>
+<th>中级调度 (中级)</th>
+<th>进程调度 (低级/CPU)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>调度对象</strong></td>
+<td>作业</td>
+<td>进程 (挂起态)</td>
+<td>进程 (就绪态)</td>
+</tr>
+<tr class="even">
+<td><strong>任务</strong></td>
+<td>磁盘 <span class="math inline">\(\rightarrow\)</span> 内存</td>
+<td>外存 <span class="math inline">\(\leftrightarrow\)</span> 内存</td>
+<td>内存 <span class="math inline">\(\rightarrow\)</span> CPU</td>
+</tr>
+<tr class="odd">
+<td><strong>频率</strong></td>
+<td>低</td>
+<td>中</td>
+<td>高</td>
+</tr>
+<tr class="even">
+<td><strong>状态变化</strong></td>
+<td>无 <span class="math inline">\(\rightarrow\)</span> 就绪</td>
+<td>挂起 <span class="math inline">\(\leftrightarrow\)</span> 就绪</td>
+<td>就绪 <span class="math inline">\(\rightarrow\)</span> 运行</td>
+</tr>
+<tr class="odd">
+<td><strong>备注</strong></td>
+<td>创建进程</td>
+<td>交换 (Swapping)</td>
+<td>最核心、最基本的调度</td>
+</tr>
+</tbody>
+</table>
+<h3 id="内存页面调度算法缓存"><a href="#内存页面调度算法缓存" class="headerlink" title="内存页面调度算法缓存"></a>内存页面调度算法（缓存）</h3>
+<p>当虚拟内存大于物理内存时，页面放在内存还是磁盘。LRU选择最长时间没有被访问的页面进行置换</p>
+<h3 id="磁盘调度算法"><a href="#磁盘调度算法" class="headerlink" title="磁盘调度算法"></a>磁盘调度算法</h3>
+<p>fifo，Deadline（截止时间调度，适用于对延迟敏感的应用），scan（每次消费磁头移动方向上最近的，磁头到最后的磁道才调转方向）</p>
+<h2 id="内存访问流程图-mmu"><a href="#内存访问流程图-mmu" class="headerlink" title="内存访问流程图-mmu"></a>内存访问流程图 MMU</h2>
+<p class='item-img' data-src='asset/Pasted%20image%2020251220165619.png'><img src="asset/Pasted%20image%2020251220165619.png" /> TLB：VPN
+(Virtual Page Number) PFN (Page Frame Number) ## 进程同步</p>
+<p><strong>定义：</strong>
+协调多个进程或线程的执行顺序，确保它们按照预定的顺序或条件进行操作</p>
+<p>互斥：锁</p>
+<h3 id="信号量"><a href="#信号量" class="headerlink" title="信号量"></a>信号量</h3>
+<p>初始化，P操作（-，消费，阻塞如果为负）和V操作（+，释放）。|信号量|
+=信号量&lt;0 ? 阻塞的线程数 : 能消费的资源数</p>
+<p><strong>跨进程</strong>：通过文件系统路径名（通常在
+<code>/dev/shm</code>
+下）进行标识和访问。用字符串（例如<code>/myshm</code>进行表示）</p>
+<h4 id="生产者和消费者模型"><a href="#生产者和消费者模型" class="headerlink" title="生产者和消费者模型"></a>生产者和消费者模型</h4>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-number">1</span> <span class="hljs-type">sem_t</span> empty;<br><br><span class="hljs-number">2</span> <span class="hljs-type">sem_t</span> full;<br><br><span class="hljs-number">3</span> <span class="hljs-type">sem_t</span> mutex;<br><br><span class="hljs-number">4</span><br><br><span class="hljs-number">5</span> <span class="hljs-type">void</span> *<span class="hljs-title function_">producer</span><span class="hljs-params">(<span class="hljs-type">void</span> *arg)</span> &#123;<br><br><span class="hljs-number">6</span> <span class="hljs-type">int</span> i;<br><br><span class="hljs-number">7</span> <span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; loops; i++) &#123;<br><br><span class="hljs-number">8</span> sem_wait(&amp;empty); <span class="hljs-comment">// line p1</span><br><br><span class="hljs-number">9</span> sem_wait(&amp;mutex); <span class="hljs-comment">// line p1.5 (MOVED MUTEX HERE...)</span><br><br><span class="hljs-number">10</span> put(i); <span class="hljs-comment">// line p2</span><br><br><span class="hljs-number">11</span> sem_post(&amp;mutex); <span class="hljs-comment">// line p2.5 (... AND HERE)</span><br><br><span class="hljs-number">12</span> sem_post(&amp;full); <span class="hljs-comment">// line p3</span><br><br><span class="hljs-number">13</span> &#125;<br><br><span class="hljs-number">14</span> &#125;<br><br><span class="hljs-number">15</span><br><br><span class="hljs-number">16</span> <span class="hljs-type">void</span> *<span class="hljs-title function_">consumer</span><span class="hljs-params">(<span class="hljs-type">void</span> *arg)</span> &#123;<br><br><span class="hljs-number">17</span> <span class="hljs-type">int</span> i;<br><br><span class="hljs-number">18</span> <span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; loops; i++) &#123;<br><br><span class="hljs-number">19</span> sem_wait(&amp;full); <span class="hljs-comment">// line c1</span><br><br><span class="hljs-number">20</span> sem_wait(&amp;mutex); <span class="hljs-comment">// line c1.5 (MOVED MUTEX HERE...)</span><br><br><span class="hljs-number">21</span> <span class="hljs-type">int</span> tmp = get(); <span class="hljs-comment">// line c2</span><br><br><span class="hljs-number">22</span> sem_post(&amp;mutex); <span class="hljs-comment">// line c2.5 (... AND HERE)</span><br><br><span class="hljs-number">23</span> sem_post(&amp;empty); <span class="hljs-comment">// line c3</span><br><br><span class="hljs-number">24</span> <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d\n&quot;</span>, tmp);<br><br><span class="hljs-number">25</span> &#125;<br><br><span class="hljs-number">26</span> &#125;<br><br><span class="hljs-number">27</span><br><br><span class="hljs-number">28</span> <span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">(<span class="hljs-type">int</span> argc, <span class="hljs-type">char</span> *argv[])</span> &#123;<br><br><span class="hljs-number">29</span> <span class="hljs-comment">// ...</span><br><br><span class="hljs-number">30</span> sem_init(&amp;empty, <span class="hljs-number">0</span>, MAX); <span class="hljs-comment">// MAX buffers are empty to begin with...</span><br><br><span class="hljs-number">31</span> sem_init(&amp;full, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>); <span class="hljs-comment">// ... and 0 are full</span><br><br><span class="hljs-number">32</span> sem_init(&amp;mutex, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>); <span class="hljs-comment">// mutex=1 because it is a lock</span><br><br><span class="hljs-number">33</span> <span class="hljs-comment">// ...</span><br><br><span class="hljs-number">34</span> &#125;<br></code></pre></td></tr></table></figure>
+<h3 id="锁的实现原理"><a href="#锁的实现原理" class="headerlink" title="锁的实现原理"></a>锁的实现原理</h3>
+<p>原子指令 Compare-and-Swap :CAS(address,expected_value,new_value)</p>
+<p>if (*p == v1) *p = v2;</p>
+<p>自旋锁</p>
+<p>互斥锁和信号量：内部维护一个状态变量（表示锁是否被占用或可用资源数）和一个<strong>等待队列</strong>（Wait
+Queue）</p>
+<h3 id="条件变量"><a href="#条件变量" class="headerlink" title="条件变量"></a>条件变量</h3>
+<p><code>pthread_cond_wait</code>，<strong><code>pthread_cond_signal</code></strong>（唤醒一个），<strong><code>pthread_cond_broadcast</code></strong>。</p>
+<h4 id="lost-wakeup"><a href="#lost-wakeup" class="headerlink" title="lost-wakeup"></a><strong>Lost Wakeup</strong></h4>
+<p>在条件变量写法中，保护读条件-&gt;lock，要防止<strong>Lost
+Wakeup</strong>：
+wait时自动unlock绑定的锁，唤醒时lock。因为检查条件和进入阻塞必须是原子的，而这通过绑定
+释放互斥锁 和 进入阻塞 来实现。</p>
+<blockquote>
+<p>如果不是原子操作，想象一下以下场景：</p>
+<ol type="1">
+<li>Goroutine A 检查条件，发现不满足，决定等待。</li>
+<li>Goroutine A 释放互斥锁。</li>
+<li><strong>（此时，另一个 Goroutine B
+获得了锁，改变了状态，并发送了信号。）</strong></li>
+<li>Goroutine A 随后进入阻塞状态。</li>
+</ol>
+</blockquote>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs go">cond.L.Lock()<br><span class="hljs-keyword">for</span> check &#123; <span class="hljs-comment">// 一定用while</span><br>    cond.Wait()<br>&#125;<br></code></pre></td></tr></table></figure>
+<h4 id="生产者和消费者"><a href="#生产者和消费者" class="headerlink" title="生产者和消费者"></a>生产者和消费者</h4>
+<p>full和empty不能用同一个变量，因为： 2个消费者 wait 1个生产者 run
+唤醒一个消费者 消费者Arun 错误唤醒消费者B</p>
+<h3 id="rwlock"><a href="#rwlock" class="headerlink" title="rwlock"></a>rwlock</h3>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">rwlock</span> &#123;</span><br>	<span class="hljs-type">int</span> readers;<br>	<span class="hljs-type">sem_t</span> write_lock; <span class="hljs-comment">// 写锁。如果多个读者运行，则在第一个读者开始时lock此锁，在最后一个读者完成时unlock即可</span><br>	<span class="hljs-type">sem_t</span> lock; <span class="hljs-comment">// 保护上面两个的原子性</span><br>&#125;<br></code></pre></td></tr></table></figure>
+<h2 id="mmap"><a href="#mmap" class="headerlink" title="mmap"></a>mmap</h2>
+<p>用户把一个文件描述符映射到一片虚拟内存中，对此内存进行读写会直接对
+内核空间/其他用户内存
+进行读写，然后操作系统对硬件进行读写。用于I/O优化-&gt;零拷贝，共享内存-&gt;IPC</p>
+<h2 id="ipc-进程通信"><a href="#ipc-进程通信" class="headerlink" title="ipc-进程通信"></a>IPC 进程通信</h2>
+<p>内核把 用户A内存 转到 内核 再转到 用户B内存 ### 管道
+创建特殊的管道文件，对其正常read/write <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">int pipe(int fd[2]) // 返回两个文件描述符<br></code></pre></td></tr></table></figure>
+一个很小的缓冲区（内核） 生产者消费者模型，一个生产一个消费</p>
+<h3 id="posix-消息队列"><a href="#posix-消息队列" class="headerlink" title="posix-消息队列"></a>POSIX 消息队列</h3>
+<p>多个生产多个消费，有优先级而不是先进先出 /dev/mqueue/name</p>
+<h3 id="共享内存"><a href="#共享内存" class="headerlink" title="共享内存"></a>共享内存</h3>
+<p>tmpfs：内存中的文件系统 不同进程fd指向同一个tmpfs
+inode指向同一个内存（内核态） 用户用mmap把自己的内存映射到这个fd上</p>
+<h3 id="信号量-1"><a href="#信号量-1" class="headerlink" title="信号量-1"></a>信号量</h3>
+<p>命名信号量用于进程间通信，存储在内核内存空间中 其实也是共享内存</p>
+<h3 id="socket及后端底层原理"><a href="#socket及后端底层原理" class="headerlink" title="socket及后端底层原理"></a>Socket及后端底层原理</h3>
+<p>Socket ：传输层，tcp
+本地地址（ip+端口），外部地址（可能没有），状态，pid 1.
+创建socket（也是文件，返回fd）并bind到某个端口， 开始监听 listen() 2.
+accept()
+阻塞直到有消息（有客户端请求连接），返回一个新的socket（连接socket） 3.
+创建线程/协程，处理此连接</p>
+<p>改进：每个连接创建一个线程开销太大 -&gt; i/o多路复用 /<br />
+/<br />
+select -&gt; epoll<br />
+一个go routine I/O阻塞 -&gt; 挂起 -&gt; 注册到epoll中（一两个专门的Net
+Poller线程用于等待和调度） -&gt; epoll发现某个事件就绪 -&gt;
+唤醒对应的goroutine</p>
+<h2 id="os复习"><a href="#os复习" class="headerlink" title="os复习"></a>OS复习</h2>
+<p>多道程序：（脱机）批处理系统，没有时间分片， 非抢断，多个程序在内存
+分时。用dma防止主cpu参与I/O</p>
+<p>信号量 P- V+</p>
+<p>PCB</p>
+<p>CAS</p>
+<p>缓冲区=最小单位：同步：1/(一个资源在A的时间+一个资源在B的时间) &gt;:
+并行 min(效率A，效率B)</p>
+<p>信号量实现XX 1. 定义共享变量 2. 信号量初值 3. 创建线程，cobegin
+P1();P2(); coend 4. 定义线程</p>
+<p>kstack 每个进程的内核栈</p>
+<p>哲学家进餐：圆桌拿两边筷子</p>
+<p>银行家算法：动态预测，避免死锁，本质是预测未来会获取的最多的所有资源，如果未来想要获取的资源现在不够
+-&gt; 不安全 无环-&gt;树-&gt;有一个不依赖别人的-&gt;拓扑排序 if
+available &gt; need : available += allocated</p>
+<p>磁盘调度：SSTF<strong>Shortest Seek Time
+First</strong>，SCAN电梯。注意0和MAX没有直接相通</p>
+<p>状态变迁图中<strong>变迁2→5</strong>是否发生是指：有没有什么情况一个进程发生2变迁，然后另一个进程发生5变迁。</p>
+<p><strong>优先级与时间片轮转相结合的调度算法</strong>：如果高优先级就绪，抢占低优先级直接运行
+or 与其他高优先级进行轮转。</p>
+<p>分区放置策略（before 分页）： 首次匹配，最佳匹配（最小的），最坏匹配
+空闲区队列：大小+下一个空闲块的地址（从前到后，从大到小，从小到大）</p>
+<p>分级页表：顶级表项尽量小</p>
+<p>答案不要用 2^x，用xxMB，十六进制表示</p>
+<p>段页式：进程里面每个段一个页表（仅x86） &gt;
+在段页式系统中，逻辑地址由三部分组成： [ = ( S, P, W) ]
+&gt;地址转换步骤： &gt;1. <strong>查段表</strong>：根据段号 <span
+class="math inline">\(S\)</span>
+找到对应的段表项。段表项中不再直接给出物理地址，而是给出该段的<strong>页表起始地址</strong>和<strong>页表长度</strong>。
+&gt;2. <strong>查页表</strong>：根据页号 <span
+class="math inline">\(P\)</span>
+在该段的页表中找到对应的物理块号（页框号）。 &gt;3.
+<strong>拼接地址</strong>：将物理块号与页内偏移量 <span
+class="math inline">\(W\)</span>
+拼接，得到最终的<strong>物理地址</strong>。 &gt; &gt;linux是全分页。</p>
+<p>页号为0x7，偏移为0x2ad，一页大小为1kb。可得物理地址为：0x1EAD</p>
+<p><strong>近似LRU置换算法（先移动替换指针）</strong>：一个固定环。命中就把引用位=1，指针不变。每次替换遍历环，发现1就置为0，发现0就替换，调入的新页面为1，把指针指向下一个块。</p>
+<p>打开文件：文件描述符。打开文件对象。内存中的inode。文件描述符在文件描述表里面找到系统打开文件表。</p>
+<p>空闲磁盘块的管理。每一组的最后一块作为索引表，用来登记下一组100块的物理块号和块数</p>
+<p>inode块大小 !=
+磁盘块大小。但是<strong>间接索引</strong>是一个磁盘块</p>
+<p>1k/128=8</p>
+<p>剥夺式/抢占式：I/O结束（高优先进程）时是否即刻调度</p>
+<p>带权周转时间</p>
+<p>证明不会发生死锁：死锁条件：sum(alloc) =
+资源数；进程无限等待（获取的资源没有达到最大）</p>
+<p>LRU的队列顺序和请求队列顺序相同 ### TODO 银行家题目</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">在某采用页式地址管理的分时系统中，一个应用程序试图访问某虚地址，然而此虚地址<br><br>对应的内容并未调入内存（即系统尚未建立此虚地址到实地址的映射）。试描述系统处理应<br><br>用程序对该虚地址访问的过程。<br></code></pre></td></tr></table></figure>
+<p>ostep文件修改部分</p>
+<p>408</p>
+<div id="paginator"></div></div><div id="post-footer"><div id="pages"><div class="footer-link" style="width: 50%;text-align:right;border-right:1px #fe2 solid"><a href="/2026/01/05/%E5%90%8E%E7%AB%AF/docker%20&amp;%20k8s/">← 下一篇 docker &amp; k8s</a></div><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/2025/11/27/%E6%89%BE%E5%B7%A5%E4%BD%9C%E5%A5%BD%E9%9A%BE/%E8%BD%AC%E8%BD%AC%E8%BD%AC%E5%90%8E%E7%AB%AF/">转转转后端 上一篇 →</a></div></div></div></div><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="回到顶部" style="opacity: 0; display: none;">∧ </a><a class="i-index" id="to-index" href="#toc-div" title="文章目录">≡</a><a class="i-color" id="color-mode" onClick="colorMode.change()" title="切换主题"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="https://cdn.luogu.com.cn/upload/image_hosting/8cc2fgam.png" alt="Logo" style="margin:0;border-radius:0;"></a><h1 id="Dr"><a href="/">lyx12138</a></h1><div id="description"><p></p></div></div><div id="aside-block"><div id="toc-div"><h1>目录</h1><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#boot"><span class="toc-number">1.</span> <span class="toc-text">boot</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#io"><span class="toc-number">2.</span> <span class="toc-text">I&#x2F;O</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B0%83%E5%BA%A6%E7%AE%97%E6%B3%95"><span class="toc-number">3.</span> <span class="toc-text">调度算法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9B%E7%A8%8B%E8%B0%83%E5%BA%A6%E7%AE%97%E6%B3%95"><span class="toc-number">3.1.</span> <span class="toc-text">进程调度算法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#linux-%E8%BF%9B%E7%A8%8B%E7%BA%BF%E7%A8%8B%E8%B0%83%E5%BA%A6"><span class="toc-number">3.2.</span> <span class="toc-text">linux 进程&#x2F;线程调度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%AB%98%E4%BD%8E%E7%BA%A7%E5%88%86%E7%B1%BB"><span class="toc-number">3.3.</span> <span class="toc-text">高低级分类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%85%E5%AD%98%E9%A1%B5%E9%9D%A2%E8%B0%83%E5%BA%A6%E7%AE%97%E6%B3%95%E7%BC%93%E5%AD%98"><span class="toc-number">3.4.</span> <span class="toc-text">内存页面调度算法（缓存）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A3%81%E7%9B%98%E8%B0%83%E5%BA%A6%E7%AE%97%E6%B3%95"><span class="toc-number">3.5.</span> <span class="toc-text">磁盘调度算法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%85%E5%AD%98%E8%AE%BF%E9%97%AE%E6%B5%81%E7%A8%8B%E5%9B%BE-mmu"><span class="toc-number">4.</span> <span class="toc-text">内存访问流程图 MMU</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%A1%E5%8F%B7%E9%87%8F"><span class="toc-number">4.1.</span> <span class="toc-text">信号量</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%94%9F%E4%BA%A7%E8%80%85%E5%92%8C%E6%B6%88%E8%B4%B9%E8%80%85%E6%A8%A1%E5%9E%8B"><span class="toc-number">4.1.1.</span> <span class="toc-text">生产者和消费者模型</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%94%81%E7%9A%84%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86"><span class="toc-number">4.2.</span> <span class="toc-text">锁的实现原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9D%A1%E4%BB%B6%E5%8F%98%E9%87%8F"><span class="toc-number">4.3.</span> <span class="toc-text">条件变量</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#lost-wakeup"><span class="toc-number">4.3.1.</span> <span class="toc-text">Lost Wakeup</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%94%9F%E4%BA%A7%E8%80%85%E5%92%8C%E6%B6%88%E8%B4%B9%E8%80%85"><span class="toc-number">4.3.2.</span> <span class="toc-text">生产者和消费者</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#rwlock"><span class="toc-number">4.4.</span> <span class="toc-text">rwlock</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#mmap"><span class="toc-number">5.</span> <span class="toc-text">mmap</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ipc-%E8%BF%9B%E7%A8%8B%E9%80%9A%E4%BF%A1"><span class="toc-number">6.</span> <span class="toc-text">IPC 进程通信</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#posix-%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97"><span class="toc-number">6.1.</span> <span class="toc-text">POSIX 消息队列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B1%E4%BA%AB%E5%86%85%E5%AD%98"><span class="toc-number">6.2.</span> <span class="toc-text">共享内存</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%A1%E5%8F%B7%E9%87%8F-1"><span class="toc-number">6.3.</span> <span class="toc-text">信号量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#socket%E5%8F%8A%E5%90%8E%E7%AB%AF%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86"><span class="toc-number">6.4.</span> <span class="toc-text">Socket及后端底层原理</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#os%E5%A4%8D%E4%B9%A0"><span class="toc-number">7.</span> <span class="toc-text">OS复习</span></a></li></ol></div></div><footer><nobr>构建自 <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> 使用主题 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr> 主题作者 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside></main><canvas id="canvas-dust"></canvas></body></html>

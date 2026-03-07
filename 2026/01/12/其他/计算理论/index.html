@@ -1,0 +1,329 @@
+<!DOCTYPE html><html lang="en" theme-mode="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>计算理论 | lyx12138的博客</title><link rel="icon" type="image/x-icon" href="https://cdn.luogu.com.cn/upload/image_hosting/8cc2fgam.png"><link rel="preload" as="font" crossorigin="anonymous" href="/font/Bender.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/BenderLight.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/JetBrainsMono-Regular.woff2"><link rel="stylesheet" href="/css/arknights.css"><style>@font-face {
+  font-family: Bender;
+  src: local('Bender'), url("/font/Bender.ttf"), url("/font/Bender.otf");
+}
+@font-face {
+  font-family: BenderLight;
+  src: local('BenderLight'), url("/font/BenderLight.ttf");
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}
+</style><script>var config = {"root":"/","search":{"preload":false,"activeHolder":"键入以继续","blurHolder":"数据检索","noResult":"无 $0 相关数据"},"code":{"codeInfo":"$0 - $1 行","copy":"复制"}}</script><link type="text/css" rel="stylesheet" href="/lib/encrypt/hbe.style.css"><script src="//unpkg.com/mermaid@10.5.0/dist/mermaid.min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.1/MathJax.js"></script><script>MathJax.Hub.Config({
+ menuSettings: {
+   zoom: "None"
+ },
+ showMathMenu: false,
+ jax: ["input/TeX","output/CommonHTML"],
+ extensions: ["tex2jax.js"],
+ TeX: {
+   extensions: ["AMSmath.js","AMSsymbols.js"],
+   equationNumbers: {
+     autoNumber: "AMS"
+   }
+ },
+ tex2jax: {
+   inlineMath: [["\\(", "\\)"]],
+   displayMath: [["\\[", "\\]"]]
+ }
+});</script><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lightgallery.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-zoom.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-thumbnail.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/css/all.min.css"><script>if (window.localStorage.getItem('theme-mode') === 'light')
+ document.documentElement.setAttribute('theme-mode', 'light')
+if (window.localStorage.getItem('theme-mode') === 'dark')
+ document.documentElement.setAttribute('theme-mode', 'dark')</script><style>@font-face {
+ font-family: BenderLight;
+ src: local('Bender'), url("/font/BenderLight.woff2") format('woff2');
+}
+@font-face {
+ font-family: 'JetBrains Mono';
+ src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}</style><style>:root {
+ --dark-background: url('https://ak.hypergryph.com/assets/index/images/ak/pc/bk.jpg');
+ --light-background: url('/img/bk.jpg');
+ --theme-encrypt-confirm: '确认'
+}</style><script defer src="/js/arknights.js"></script><script defer src="/js/search.js"></script><script defer type="module">import mermaid from '//unpkg.com/mermaid@10.5.0/dist/mermaid.esm.mjs';
+window.mermaid = mermaid;
+code.paintMermaid();
+</script><script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.1/MathJax.js"></script><script>MathJax.Hub.Config({
+  menuSettings: {
+    zoom: "None"
+  },
+  showMathMenu: false,
+  jax: ["input/TeX","output/CommonHTML"],
+  extensions: ["tex2jax.js"],
+  TeX: {
+    extensions: ["AMSmath.js","AMSsymbols.js"],
+    equationNumbers: {
+      autoNumber: "AMS"
+    }
+  },
+  tex2jax: {
+    inlineMath: [["\\(", "\\)"]],
+    displayMath: [["\\[", "\\]"]]
+  }
+});
+</script><script async src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script async src="/lib/encrypt/hbe.js"></script><script async src="/js/pjax.js"></script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js','data-pjax','.busuanzi'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><nav><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup" tabindex="0"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">Home</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">Archives</span></a></li><li class="navItem"><a class="navBlock" href="/Proverb/"><span class="navItemTitle">Proverb</span></a></li><li class="navItem"><a class="navBlock" href="/demo/Arrangement/"><span class="navItemTitle">Arrangement</span></a></li></ol></nav></header><article><div id="post-bg"><div id="post-title"><h1>计算理论</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2026-01-12T10:55:14.749Z" id="date"> 2026-01-12</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2026-01-14T16:21:59.874Z" id="updated"> 2026-01-15</time></div></span></div></div><hr><div id="post-content"><h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2>
+<h3 id="正规语言与有限自动机-01-08"><a href="#正规语言与有限自动机-01-08" class="headerlink" title="正规语言与有限自动机-01-08"></a>1. 正规语言与有限自动机 (01-08)</h3>
+<p>这一部分涵盖了乔姆斯基谱系中的 <strong>3
+型文法</strong>，是编译原理中词法分析的基础。</p>
+<ul>
+<li><p>语言基础</p></li>
+<li><p>有限状态机与有限状态自动机</p></li>
+<li><p>确定有限自动机 (DFA)</p></li>
+<li><p>非确定有限自动机 (NFA)</p></li>
+<li><p>正则语言的性质</p></li>
+<li><p>正则表达式</p></li>
+<li><p>正则文法</p></li>
+<li><p>正则语言泵引理及其示例</p></li>
+</ul>
+<h3 id="上下文无关语言与下推自动机-09-16">2. 上下文无关语言与下推自动机
+(09-16)</h3>
+<p>这一部分涵盖了 <strong>2
+型文法</strong>，主要用于描述编程语言的语法结构。</p>
+<ul>
+<li><p>上下文无关文法 (CFG)</p></li>
+<li><p>上下文无关文法的范式</p></li>
+<li><p>下推自动机 (PDA)</p></li>
+<li><p>PDA 对上下文无关语言的识别</p></li>
+<li><p>确定性下推自动机 (DPDA)</p></li>
+<li><p>上下文无关语言的性质</p></li>
+<li><p>上下文无关语言泵引理及其示例</p></li>
+</ul>
+<h3 id="图灵机与可判定性理论-17-22"><a href="#图灵机与可判定性理论-17-22" class="headerlink" title="图灵机与可判定性理论-17-22"></a>3. 图灵机与可判定性理论 (17-22)</h3>
+<p>这一部分探讨计算的极限，即哪些问题是计算机可以解决的，哪些是不可以的。</p>
+<ul>
+<li><p>图灵机基础与变体</p></li>
+<li><p>通用图灵机</p></li>
+<li><p>可判定性</p></li>
+<li><p>不可判定性</p></li>
+<li><p>可判定性归约</p></li>
+</ul>
+<h3 id="计算复杂度与-np-完全性-23-27">4. 计算复杂度与 NP 完全性
+(23-27)</h3>
+<p>这一部分关注计算的效率，即解决问题需要多少时间资源。</p>
+<ul>
+<li><p>时间复杂度基础</p></li>
+<li><p>NP 完全性 (NPC)</p></li>
+<li><p>NP 完全性归约</p></li>
+<li><p>2-可满足性问题 (2SAT)</p></li>
+<li><p>更多 NPC 问题与近似算法</p></li>
+</ul>
+<h2 id="文法"><a href="#文法" class="headerlink" title="文法"></a>文法：</h2>
+<p>Vn一坨东西，Vt一个字母，"-&gt;"“可能为”
+S开始变元：最后的那一坨；句型：和s等价的所有一坨 推导：一个句型
+=》另一个句型 <img src="asset/Pasted%20image%2020260112190052.png" / class='item-img' data-src='asset/Pasted%20image%2020260112190052.png'><img src="asset/Pasted%20image%2020260112190052.png" /></p>
+<h2 id="nfa和正则"><a href="#nfa和正则" class="headerlink" title="nfa和正则"></a>nfa和正则</h2>
+<p>确定的有限状态自动机 dfa <img
+src="asset/Pasted%20image%2020260113112314.png" /> nfa 不确定
+delta(q0,0) = {q0, q1} nfa转dfa：把所有{qi,
+……}的状态都转一遍，并且只要包含之前结束状态就是结束状态 <img
+src="asset/Pasted%20image%2020260113112953.png" /></p>
+<p>空-NFA （转移条件可能是空 空nfa转nfa：读
+空*a空*到达的状态，所有读空*到终止的都是终止
+dfa表示正则语言：把所有可能列出来。a+b或 a*b连接 a*闭包 <img
+src="asset/Pasted%20image%2020260113164516.png" />
+正则语言的性质：（用dfa证明） 差集：所有状态的非可转移条件都指向终点
+<img src="asset/Pasted%20image%2020260113162539.png" /></p>
+<p>dfa化简：如果两个点等价（出度相同）就合起来</p>
+<p>dfa相关判定：用另一个dfa交这个dfa，判断是不是空集</p>
+<h3 id="泵引理"><a href="#泵引理" class="headerlink" title="泵引理"></a>泵引理</h3>
+<p>对于正则语言 <span class="math inline">\(L\)</span>，存在一个常数
+<span
+class="math inline">\(p\)</span>（泵长度）（p为状态个数），使得任何长度
+<span class="math inline">\(|s| \ge p\)</span> 的字符串 <span
+class="math inline">\(s\)</span> 都可以拆分为三部分 <span
+class="math inline">\(s = xyz\)</span>：</p>
+<ol type="1">
+<li><p><strong><span class="math inline">\(|y| &gt;
+0\)</span></strong>：被重复的部分不能为空。</p></li>
+<li><p><strong><span class="math inline">\(|xy| \le
+p\)</span></strong>：循环发生在字符串的开头附近。</p></li>
+<li><p><strong>对于所有 <span class="math inline">\(i \ge 0, xy^iz \in
+L\)</span></strong>：无论你把中间的 <span
+class="math inline">\(y\)</span> 重复多少次（包括 0
+次，即删除它），得到的新串都必须在 <span
+class="math inline">\(L\)</span> 中。</p></li>
+</ol>
+<p>使用选一个和p有关的字符串，如<span class="math inline">\(s = a^p
+b^p\)</span>，由|xy|&lt;=p得y一定为……</p>
+<h2 id="cfg-上下文无关语法"><a href="#cfg-上下文无关语法" class="headerlink" title="cfg-上下文无关语法"></a>CFG 上下文无关语法</h2>
+<p>派生树，最左派生，二义性（存在两个派生树生成一个句子） 两个cfg
+并集，连接，闭包还是cfg</p>
+<p>简化： 1. 去掉无用符号 - 从符号集开始倒推 <span
+class="math inline">\(若N推出T^*中的一个,N加入T\)</span> -
+在用这个集合里，从S开始推出所有有用符号 2. 去掉空产生式，把 A-&gt;sigma
+融入其他产生式 A|sigma 3. 去单一产生式，推和被推都是一个符号（非终结符 -
+如何是S-&gt;A，就把A的复制粘贴到S上</p>
+<p>CNF 乔姆斯基范式（标准化 1. 化简CFG 2. 保留 A-&gt;一个终结符 3.
+S-&gt;Abc: S-&gt;ABC,B-&gt;b 4. A-&gt;ABCD: A-&gt;AE……
+派生长度n的字符串需要2n-1步</p>
+<p>PDA：下推自动机可以看作是<strong>有限自动机加上一个栈</strong>。转移函数为：当前状态，pop出来的栈顶元素（空表示不pop），输入字符
+-&gt; {对栈顶修改，状态转移}所有可能性 <img
+src="asset/Pasted%20image%2020260114201604.png" /></p>
+<p>d/n之中只有npda计算能力大于dpda，</p>
+<p>CYK：用动态规划凑一个知道文法的上下文无关文法（CNF）中的一个字符串
+dp[i][j]:
+所有能够生成子串【i，j】的非终结符集合。分成【i，k】和【k+1，j】两个终结符。</p>
+<h3 id="泵引理-1"><a href="#泵引理-1" class="headerlink" title="泵引理-1"></a>泵引理</h3>
+<p>对于 CFL，字符串 <span class="math inline">\(s\)</span>
+被拆分为五部分 <span class="math inline">\(s = uvxyz\)</span>：</p>
+<ol type="1">
+<li><p><strong><span class="math inline">\(|vy| &gt;
+0\)</span></strong>：<span class="math inline">\(v\)</span> 和 <span
+class="math inline">\(y\)</span>
+不能同时为空（至少有一个可以泵）。</p></li>
+<li><p><strong><span class="math inline">\(|vxy| \le
+p\)</span></strong>：中间待泵的部分不能太长。</p></li>
+<li><p><strong>对于所有 <span class="math inline">\(i \ge 0, uv^ixy^iz
+\in L\)</span></strong>：<span class="math inline">\(v\)</span> 和 <span
+class="math inline">\(y\)</span>
+必须<strong>同步</strong>增加或减少。</p></li>
+</ol>
+<p>例子 <span class="math inline">\(L = \{a^n b^n c^n \mid n \ge
+0\}\)</span></p>
+<ul>
+<li><p><strong>拆分 <span class="math inline">\(s =
+uvxyz\)</span></strong>：根据规则 <span class="math inline">\(|vxy| \le
+p\)</span> 且 <span class="math inline">\(|vy| &gt; 0\)</span>。</p>
+<ul>
+<li><p>因为 <span class="math inline">\(|vxy| \le p\)</span>，所以 <span
+class="math inline">\(vxy\)</span>
+这段长度有限的部分<strong>不可能同时包含 <span
+class="math inline">\(a\)</span>、<span class="math inline">\(b\)</span>
+和 <span class="math inline">\(c\)</span></strong>
+这三种字符（因为它们被分成了三块，每块长度都是 <span
+class="math inline">\(p\)</span>）。</p></li>
+<li><p>这意味着 <span class="math inline">\(v\)</span> 和 <span
+class="math inline">\(y\)</span> 中只可能包含 <span
+class="math inline">\(\{a, b\}\)</span>、<span
+class="math inline">\(\{b, c\}\)</span> 或单一字符。</p></li>
+</ul></li>
+<li><p><strong>泵起（Pumping）</strong>：我们令 <span
+class="math inline">\(i = 2\)</span>，查看串 <span
+class="math inline">\(uv^2xy^2z\)</span>。</p>
+<ul>
+<li><p>如果你增加（泵起）<span class="math inline">\(v\)</span> 和 <span
+class="math inline">\(y\)</span>，那么只会增加其中一两种字符的数量，而第三种字符的数量保持
+<span class="math inline">\(p\)</span> 不变。</p></li>
+<li><p>结果导致三个字符的数量不再相等，<span
+class="math inline">\(uv^2xy^2z \notin L\)</span>。
+证明两个数量增加，另一个不变</p></li>
+</ul></li>
+</ul>
+<h2 id="图灵机"><a href="#图灵机" class="headerlink" title="图灵机"></a>图灵机</h2>
+<p>读入字符（把这个字符变为，左移/右移） <img
+src="asset/Pasted%20image%2020260113202325.png" />
+实现加法和compare：3&amp;4：11101111 -&gt; 3+4=7 -&gt; 1111111 <img
+src="asset/Pasted%20image%2020260113204117.png" /> <img
+src="asset/Pasted%20image%2020260113204212.png" /> ###
+<strong>递归可枚举 (Recursively Enumerable)</strong> 这是乔姆斯基谱系中
+<strong>0 型语言</strong>
+的别称。它对应于能够被<strong>图灵机</strong>识别的所有语言。
+接受/不接受/死循环</p>
+<h3 id="证明不同图灵机等价"><a href="#证明不同图灵机等价" class="headerlink" title="证明不同图灵机等价"></a>证明不同图灵机等价</h3>
+<p class='item-img' data-src='asset/Pasted%20image%2020260113205003.png'><img src="asset/Pasted%20image%2020260113205003.png" /></p>
+<p>多轨和多带，多轨还是标准，但是符号从单个字母变成了多个字母。
+多轨模拟多带（n带），n*2个轨道，存每个轨道的磁头在哪里（0/1）
+图灵机可以靠状态来记忆 <code>q_remember_a_for_tape1</code>。 <img
+src="asset/Pasted%20image%2020260113212908.png" /> ###
+图灵机可判定语言（<strong>递归语言</strong>） 不能死循环 A_DFA <img
+src="asset/Pasted%20image%2020260114125103.png" /> 各种dfa -&gt;
+用dfa的性质转化为可接受or判定空 cfg：可接受or空 EQ_CFG不可判定 ###
+不可判定的证明 对角化方法（）： 1.
+证明“A_TM图灵机接受串”是不可判定的。反证，D&lt;M&gt;:非(H&lt;M&gt;:判定M接受串&lt;M&gt;);
+D&lt;D&gt;矛盾 反证： 2.
+证明“tm停机“是不可判定的。反证：假设xx可判定，得到tm可判定 3.
+证明“tm为空”不可判定。对于特定串w，构造M1拒绝除w之外的所有串，若输入为w模拟M（M1不空&lt;=&gt;M接受）
+4. 证明“tm识别正则语言”不可判定。反证：构造M1，M1正则&lt;=&gt;M接受w -
+若M不接受w，M1仅接受0n1n - 若M接受w，M1接受(0+1)n
+（注意不接受的情况比接受的情况少） 归约： tm停机，tm可判定 归约到
+问题X可判定 构造M‘模拟M，且用问题X判定</p>
+<p><span class="math inline">\(A_{TM}\)</span> 的不可判定性意味着其补集
+<span class="math inline">\(\overline{A_{TM}}\)</span>
+必然是<strong>不可识别</strong>的。反证：非atm接受就不接受，atm接受就接受
+### 归约 <img src="asset/Pasted%20image%2020260114151009.png" /></p>
+<h2 id="复杂度"><a href="#复杂度" class="headerlink" title="复杂度"></a>复杂度</h2>
+<p>P多项式 NP所有能被非确定性图灵机在多项式时间内解决的问题集合
+哈密顿：恰好路过每个点一次 <strong>团问题 (The Clique
+Problem)</strong>：判定一个给定的图中是否存在大小为 <span
+class="math inline">\(k\)</span>
+的完全子图（即每两个顶点之间都有边的子图） 布尔可满足性问题
+(Satisfiability Problem /
+SAT)：2-CNF：(a||b)&amp;&amp;(a||c)&amp;&amp;(b||c)</p>
+<p>NP完全 -》sat NP难 &amp;&amp; NP = NP完全 证明NP完全：sat
+多项式时间归约到 问题X， a+b = (a+c)^(b+~c)</p>
+<p>3sat to clique：不同子句中的非矛盾符号连边，k是子句个数
+图G:&lt;V,E&gt; v={d1,d2,d3}, e={(xi, yi)|} 复杂度|G|=|V| |E| 1. 构造 2.
+正确性证明：&lt;=&gt; 3. 复杂度</p>
+<ul>
+<li><p><strong>从 3-SAT 到 团问题 (Clique)</strong>：</p>
+<ul>
+<li><p><strong>设计</strong>：将布尔表达式的子句转化为图中的顶点，将不矛盾的变量关系转化为边。
+8888</p></li>
+<li><p><strong>实现</strong>：证明原表达式可满足，当且仅当生成的图中存在大小为
+<span class="math inline">\(k\)</span> 的团。 9999</p></li>
+</ul></li>
+<li><p><strong>从 团问题 到 独立集问题 (Independent Set)</strong>：</p>
+<ul>
+<li><p><strong>设计</strong>：利用图的补图性质。 10101010</p></li>
+<li><p><strong>实现</strong>：证明图 <span
+class="math inline">\(G\)</span> 中的最大团即为其补图 <span
+class="math inline">\(\bar{G}\)</span> 中的最大独立集。
+11111111</p></li>
+</ul></li>
+<li><p><strong>从 独立集问题 到 顶点覆盖问题 (Vertex Cover)</strong>
+用点管住边：</p>
+<ul>
+<li><strong>完成工作</strong>：证明在一个拥有 <span
+class="math inline">\(n\)</span> 个顶点的图中，<span
+class="math inline">\(S\)</span> 是独立集（s中两点之间没有边）当且仅当
+<span class="math inline">\(V-S\)</span>
+是顶点覆盖（v-s可以覆盖所有边）。 12121212</li>
+</ul></li>
+<li><p><strong>其他涉及的问题</strong>：</p>
+<ul>
+<li><p><strong>哈密顿回路 (Hamiltonian Cycle)</strong> 与
+<strong>旅行商问题 (TSP)</strong>。 13131313</p></li>
+<li><p><strong>子集和问题 (Subset
+Sum)</strong>：证明在给定集合中寻找是否存在和为特定值的问题也是
+NP完全的。 14 证明 2SAT 属于 P 类问题（多项式时间可解），而其优化版本
+Max2SAT 是 NPC 问题 # TODO： <img
+src="asset/Pasted%20image%2020260112191508.png" /> 图灵机例题 递归定理
+团的npc</p></li>
+</ul></li>
+</ul>
+<div id="paginator"></div></div><div id="post-footer"><div id="pages" style="justify-content: flex-end"><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/2026/01/05/%E5%90%8E%E7%AB%AF/%E6%9C%AA%E5%91%BD%E5%90%8D/"> 上一篇 →</a></div></div></div></div><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="回到顶部" style="opacity: 0; display: none;">∧ </a><a class="i-index" id="to-index" href="#toc-div" title="文章目录">≡</a><a class="i-color" id="color-mode" onClick="colorMode.change()" title="切换主题"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="https://cdn.luogu.com.cn/upload/image_hosting/8cc2fgam.png" alt="Logo" style="margin:0;border-radius:0;"></a><h1 id="Dr"><a href="/">lyx12138</a></h1><div id="description"><p></p></div></div><div id="aside-block"><div id="toc-div"><h1>目录</h1><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%AE%E5%BD%95"><span class="toc-number">1.</span> <span class="toc-text">目录</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A3%E8%A7%84%E8%AF%AD%E8%A8%80%E4%B8%8E%E6%9C%89%E9%99%90%E8%87%AA%E5%8A%A8%E6%9C%BA-01-08"><span class="toc-number">1.1.</span> <span class="toc-text">1. 正规语言与有限自动机 (01-08)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8A%E4%B8%8B%E6%96%87%E6%97%A0%E5%85%B3%E8%AF%AD%E8%A8%80%E4%B8%8E%E4%B8%8B%E6%8E%A8%E8%87%AA%E5%8A%A8%E6%9C%BA-09-16"><span class="toc-number">1.2.</span> <span class="toc-text">2. 上下文无关语言与下推自动机
+(09-16)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%BE%E7%81%B5%E6%9C%BA%E4%B8%8E%E5%8F%AF%E5%88%A4%E5%AE%9A%E6%80%A7%E7%90%86%E8%AE%BA-17-22"><span class="toc-number">1.3.</span> <span class="toc-text">3. 图灵机与可判定性理论 (17-22)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E5%A4%8D%E6%9D%82%E5%BA%A6%E4%B8%8E-np-%E5%AE%8C%E5%85%A8%E6%80%A7-23-27"><span class="toc-number">1.4.</span> <span class="toc-text">4. 计算复杂度与 NP 完全性
+(23-27)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E6%B3%95"><span class="toc-number">2.</span> <span class="toc-text">文法：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#nfa%E5%92%8C%E6%AD%A3%E5%88%99"><span class="toc-number">3.</span> <span class="toc-text">nfa和正则</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%B5%E5%BC%95%E7%90%86"><span class="toc-number">3.1.</span> <span class="toc-text">泵引理</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#cfg-%E4%B8%8A%E4%B8%8B%E6%96%87%E6%97%A0%E5%85%B3%E8%AF%AD%E6%B3%95"><span class="toc-number">4.</span> <span class="toc-text">CFG 上下文无关语法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%B5%E5%BC%95%E7%90%86-1"><span class="toc-number">4.1.</span> <span class="toc-text">泵引理</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BE%E7%81%B5%E6%9C%BA"><span class="toc-number">5.</span> <span class="toc-text">图灵机</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%81%E6%98%8E%E4%B8%8D%E5%90%8C%E5%9B%BE%E7%81%B5%E6%9C%BA%E7%AD%89%E4%BB%B7"><span class="toc-number">5.1.</span> <span class="toc-text">证明不同图灵机等价</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="toc-number">6.</span> <span class="toc-text">复杂度</span></a></li></ol></div></div><footer><nobr>构建自 <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> 使用主题 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr> 主题作者 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside></main><canvas id="canvas-dust"></canvas></body></html>

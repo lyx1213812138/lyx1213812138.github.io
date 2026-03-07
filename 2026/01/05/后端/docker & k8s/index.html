@@ -1,0 +1,121 @@
+<!DOCTYPE html><html lang="en" theme-mode="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>docker &amp; k8s | lyx12138的博客</title><link rel="icon" type="image/x-icon" href="https://cdn.luogu.com.cn/upload/image_hosting/8cc2fgam.png"><link rel="preload" as="font" crossorigin="anonymous" href="/font/Bender.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/BenderLight.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/JetBrainsMono-Regular.woff2"><link rel="stylesheet" href="/css/arknights.css"><style>@font-face {
+  font-family: Bender;
+  src: local('Bender'), url("/font/Bender.ttf"), url("/font/Bender.otf");
+}
+@font-face {
+  font-family: BenderLight;
+  src: local('BenderLight'), url("/font/BenderLight.ttf");
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}
+</style><script>var config = {"root":"/","search":{"preload":false,"activeHolder":"键入以继续","blurHolder":"数据检索","noResult":"无 $0 相关数据"},"code":{"codeInfo":"$0 - $1 行","copy":"复制"}}</script><link type="text/css" rel="stylesheet" href="/lib/encrypt/hbe.style.css"><script src="//unpkg.com/mermaid@10.5.0/dist/mermaid.min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.1/MathJax.js"></script><script>MathJax.Hub.Config({
+ menuSettings: {
+   zoom: "None"
+ },
+ showMathMenu: false,
+ jax: ["input/TeX","output/CommonHTML"],
+ extensions: ["tex2jax.js"],
+ TeX: {
+   extensions: ["AMSmath.js","AMSsymbols.js"],
+   equationNumbers: {
+     autoNumber: "AMS"
+   }
+ },
+ tex2jax: {
+   inlineMath: [["\\(", "\\)"]],
+   displayMath: [["\\[", "\\]"]]
+ }
+});</script><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lightgallery.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-zoom.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-thumbnail.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/css/all.min.css"><script>if (window.localStorage.getItem('theme-mode') === 'light')
+ document.documentElement.setAttribute('theme-mode', 'light')
+if (window.localStorage.getItem('theme-mode') === 'dark')
+ document.documentElement.setAttribute('theme-mode', 'dark')</script><style>@font-face {
+ font-family: BenderLight;
+ src: local('Bender'), url("/font/BenderLight.woff2") format('woff2');
+}
+@font-face {
+ font-family: 'JetBrains Mono';
+ src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}</style><style>:root {
+ --dark-background: url('https://ak.hypergryph.com/assets/index/images/ak/pc/bk.jpg');
+ --light-background: url('/img/bk.jpg');
+ --theme-encrypt-confirm: '确认'
+}</style><script defer src="/js/arknights.js"></script><script defer src="/js/search.js"></script><script defer type="module">import mermaid from '//unpkg.com/mermaid@10.5.0/dist/mermaid.esm.mjs';
+window.mermaid = mermaid;
+code.paintMermaid();
+</script><script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.1/MathJax.js"></script><script>MathJax.Hub.Config({
+  menuSettings: {
+    zoom: "None"
+  },
+  showMathMenu: false,
+  jax: ["input/TeX","output/CommonHTML"],
+  extensions: ["tex2jax.js"],
+  TeX: {
+    extensions: ["AMSmath.js","AMSsymbols.js"],
+    equationNumbers: {
+      autoNumber: "AMS"
+    }
+  },
+  tex2jax: {
+    inlineMath: [["\\(", "\\)"]],
+    displayMath: [["\\[", "\\]"]]
+  }
+});
+</script><script async src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script async src="/lib/encrypt/hbe.js"></script><script async src="/js/pjax.js"></script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js','data-pjax','.busuanzi'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><nav><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup" tabindex="0"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">Home</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">Archives</span></a></li><li class="navItem"><a class="navBlock" href="/Proverb/"><span class="navItemTitle">Proverb</span></a></li><li class="navItem"><a class="navBlock" href="/demo/Arrangement/"><span class="navItemTitle">Arrangement</span></a></li></ol></nav></header><article><div id="post-bg"><div id="post-title"><h1>docker &amp; k8s</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2026-01-05T04:58:02.564Z" id="date"> 2026-01-05</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2026-01-05T04:59:05.592Z" id="updated"> 2026-01-05</time></div></span></div></div><hr><div id="post-content"><h2 id="docker"><a href="#docker" class="headerlink" title="docker"></a>docker</h2>
+<h3 id="docker-net"><a href="#docker-net" class="headerlink" title="docker-net"></a>docker net</h3>
+<p>容器，宿主机，外网。容器之间用docker
+dns：服务名称；主机/外网-&gt;容器：端口映射；容器-&gt;主机：172.18.0.2；容器-&gt;外网：直接访问</p>
+<p>能访问外部网络，但是和主机并不直接相连，除非配置端口映射。每个network都相当于一个子网，每个容器都有自己的ip，网关是主机上的一个虚拟端口。</p>
+<p>与外部网络：</p>
+<ol type="1">
+<li><strong>NAT 转换：</strong> Docker 主机上的
+<strong>iptables</strong> 规则会自动将容器的内部 IP 地址（例如
+<code>172.18.0.2</code>）转换为 Docker 主机的外部 IP 地址。这个过程称为
+<strong>网络地址转换 (NAT)</strong>。</li>
+<li><strong>访问外部：</strong> 请求以 Docker
+主机的身份发送到外部网络。</li>
+<li><strong>返回数据：</strong> 外部服务器将响应发送回 Docker
+主机，iptables 规则再将数据包转发回正确的容器。</li>
+</ol>
+<h3 id="docker-compose"><a href="#docker-compose" class="headerlink" title="docker-compose"></a>docker compose</h3>
+<p>DockerFile
+用于声明一个容器的镜像。RUN会嵌套一层镜像，用于镜像构建阶段，配置环境。CMD用于设置每次run容器的时候的默认命令。</p>
+<p>docker compose
+用于创建一系列容器。配置：容器名字，端口映射，存储卷，网络……</p>
+<p>用 docker compose up的时候会检查dockerfile，docker
+compose是否改动来判断是否重新拉取镜像，构建镜像，启动容器。</p>
+<p><code># 确保使用最新配置、最新镜像并重新创建容器 docker compose up -d --build --force-recreate</code></p>
+<div id="paginator"></div></div><div id="post-footer"><div id="pages"><div class="footer-link" style="width: 50%;text-align:right;border-right:1px #fe2 solid"><a href="/2026/01/05/%E5%90%8E%E7%AB%AF/%E6%9C%AA%E5%91%BD%E5%90%8D/">← 下一篇 </a></div><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/2026/01/04/%E5%90%8E%E7%AB%AF/linux%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">linux 学习笔记 上一篇 →</a></div></div></div></div><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="回到顶部" style="opacity: 0; display: none;">∧ </a><a class="i-index" id="to-index" href="#toc-div" title="文章目录">≡</a><a class="i-color" id="color-mode" onClick="colorMode.change()" title="切换主题"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="https://cdn.luogu.com.cn/upload/image_hosting/8cc2fgam.png" alt="Logo" style="margin:0;border-radius:0;"></a><h1 id="Dr"><a href="/">lyx12138</a></h1><div id="description"><p></p></div></div><div id="aside-block"><div id="toc-div"><h1>目录</h1><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#docker"><span class="toc-number">1.</span> <span class="toc-text">docker</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#docker-net"><span class="toc-number">1.1.</span> <span class="toc-text">docker net</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#docker-compose"><span class="toc-number">1.2.</span> <span class="toc-text">docker compose</span></a></li></ol></li></ol></div></div><footer><nobr>构建自 <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> 使用主题 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr> 主题作者 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside></main><canvas id="canvas-dust"></canvas></body></html>
