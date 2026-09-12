@@ -94,7 +94,7 @@ lightGallery(document.getElementById('post-bg'), {
    }
  }
 });
-document.addEventListener("pjax:complete", reset);reset()})</script><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><nav><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup" tabindex="0"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">Home</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">Archives</span></a></li><li class="navItem"><a class="navBlock" href="/Proverb/"><span class="navItemTitle">Proverb</span></a></li><li class="navItem"><a class="navBlock" href="/demo/Arrangement/"><span class="navItemTitle">Arrangement</span></a></li></ol></nav></header><article><div id="post-bg"><div id="post-title"><h1>linux 学习笔记</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2026-01-04T14:13:09.922Z" id="date"> 2026-01-04</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2026-01-10T15:44:21.680Z" id="updated"> 2026-01-10</time></div></span></div></div><hr><div id="post-content"><p>https://github.com/0voice/linux_kernel_wiki/tree/main?tab=readme-ov-file#5</p>
+document.addEventListener("pjax:complete", reset);reset()})</script><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><nav><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup" tabindex="0"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">Home</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">Archives</span></a></li><li class="navItem"><a class="navBlock" href="/Proverb/"><span class="navItemTitle">Proverb</span></a></li><li class="navItem"><a class="navBlock" href="/demo/Arrangement/"><span class="navItemTitle">Arrangement</span></a></li></ol></nav></header><article><div id="post-bg"><div id="post-title"><h1>linux 学习笔记</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2026-01-04T14:13:09.922Z" id="date"> 2026-01-04</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2026-09-12T08:15:38.403Z" id="updated"> 2026-09-12</time></div></span></div></div><hr><div id="post-content"><p>https://github.com/0voice/linux_kernel_wiki/tree/main?tab=readme-ov-file#5</p>
 <h2 id="boot"><a href="#boot" class="headerlink" title="boot"></a>boot</h2>
 <p>进入实模式（直接访问物理内存），执行BIOS执行程序存储在ROM中。 BIOS
 -》 bootloader (协议为 GRUB 2 or ……) -》保护模式 -》操作系统</p>
@@ -120,10 +120,10 @@ dma：cpu下达指令（告诉它想读取多少数据，读完的数据放在�
 <p> linux 应用程序与io设备交换：内核将输入事件写入
 /dev/input/eventX； 内核通过 <code>/dev/fb0</code>（或其他编号）设备文件将显存映射到文件系统
 ## I/O设备数据传输 从disk读到网卡 一般方式： <img
-src="asset/Pasted%20image%2020260105130031.png" /></p>
+src="/asset/Pasted%20image%2020260105130031.png" /></p>
 <p>sendfile+DMA收集 只能用于<strong>文件描述符到 Socket
 描述符</strong>的传输 <img
-src="asset/Pasted%20image%2020260105130105.png" /></p>
+src="/asset/Pasted%20image%2020260105130105.png" /></p>
 <p>splice <code>splice()</code>
 更通用，允许在<strong>任意两个文件描述符</strong>之间移动数据，但它要求其中一个描述符必须是
 <strong>Pipe（管道）</strong>。  数据页的所有权（页的指针）从
@@ -199,7 +199,7 @@ sched_latency_ns 预期延迟时间</p>
 <h3 id="磁盘调度算法"><a href="#磁盘调度算法" class="headerlink" title="磁盘调度算法"></a>磁盘调度算法</h3>
 <p>fifo，Deadline（截止时间调度，适用于对延迟敏感的应用），scan（每次消费磁头移动方向上最近的，磁头到最后的磁道才调转方向）</p>
 <h2 id="内存访问流程图-mmu"><a href="#内存访问流程图-mmu" class="headerlink" title="内存访问流程图-mmu"></a>内存访问流程图 MMU</h2>
-<p class='item-img' data-src='asset/Pasted%20image%2020251220165619.png'><img src="asset/Pasted%20image%2020251220165619.png" /> TLB：VPN
+<p class='item-img' data-src='/asset/Pasted%20image%2020251220165619.png'><img src="/asset/Pasted%20image%2020251220165619.png" /> TLB：VPN
 (Virtual Page Number) PFN (Page Frame Number) ## 进程同步</p>
 <p><strong>定义：</strong>
 协调多个进程或线程的执行顺序，确保它们按照预定的顺序或条件进行操作</p>

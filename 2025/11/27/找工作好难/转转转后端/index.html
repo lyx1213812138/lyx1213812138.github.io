@@ -94,7 +94,7 @@ lightGallery(document.getElementById('post-bg'), {
    }
  }
 });
-document.addEventListener("pjax:complete", reset);reset()})</script><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><nav><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup" tabindex="0"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">Home</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">Archives</span></a></li><li class="navItem"><a class="navBlock" href="/Proverb/"><span class="navItemTitle">Proverb</span></a></li><li class="navItem"><a class="navBlock" href="/demo/Arrangement/"><span class="navItemTitle">Arrangement</span></a></li></ol></nav></header><article><div id="post-bg"><div id="post-title"><h1>转转转后端</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2025-11-27T06:12:06.793Z" id="date"> 2025-11-27</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2026-01-29T14:37:37.168Z" id="updated"> 2026-01-29</time></div></span></div></div><hr><div id="post-content"><h2 id="自我介绍介绍项目"><a href="#自我介绍介绍项目" class="headerlink" title="自我介绍介绍项目"></a>自我介绍，介绍项目</h2>
+document.addEventListener("pjax:complete", reset);reset()})</script><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><nav><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup" tabindex="0"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">Home</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">Archives</span></a></li><li class="navItem"><a class="navBlock" href="/Proverb/"><span class="navItemTitle">Proverb</span></a></li><li class="navItem"><a class="navBlock" href="/demo/Arrangement/"><span class="navItemTitle">Arrangement</span></a></li></ol></nav></header><article><div id="post-bg"><div id="post-title"><h1>转转转后端</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2025-11-27T06:12:06.793Z" id="date"> 2025-11-27</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2026-09-12T08:15:31.951Z" id="updated"> 2026-09-12</time></div></span></div></div><hr><div id="post-content"><h2 id="自我介绍介绍项目"><a href="#自我介绍介绍项目" class="headerlink" title="自我介绍介绍项目"></a>自我介绍，介绍项目</h2>
 <p>8年代码经验
 算法（noip）,全栈,团队沟通,基础（成绩，os，db，计网，组原都有认真手写lab或黑皮书）,
 AI （llm推理引擎，Yolov8，RL） 实习 项目:创业,招新(2年，近万人)
@@ -146,6 +146,8 @@ TCP的源ip+端口 &amp; 目标ip+端口
 select/poll只能知道有fd就绪，不能知道是哪些fd就绪，<span
 class="math inline">\(O(所有监听节点)\)</span> 用于轮询查找，epoll <span
 class="math inline">\(O(就绪节点)\)</span> for I/O 多路复用</p>
+<p>LT 是“只要有数据就一直提醒”，而 ET
+是“只有新数据到来时才提醒一次”。*</p>
 <h2 id="缓存"><a href="#缓存" class="headerlink" title="缓存"></a>缓存</h2>
 <h3 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h3>
 <ol type="1">
@@ -167,26 +169,26 @@ id="如何避免缓存雪崩缓存击穿缓存穿透">如何避免缓存雪崩�
 击穿：热点数据过期。提前更新缓存
 穿透：数据库没有该值（可能是攻击）。布隆过滤器，手动判断</p>
 <h2 id="docker"><a href="#docker" class="headerlink" title="docker"></a>docker</h2>
-<p>详见 后端/linux学习笔记</p>
+<p>详见 <a href="后端/docker%20&amp;%20k8s.md">docker &amp; k8s</a></p>
 <h2 id="mysql"><a href="#mysql" class="headerlink" title="mysql"></a>MYSQL</h2>
 <p>解析器 -&gt; 语法树 -&gt; 优化器 -&gt; plan -&gt; 执行器 -&gt;
 存储引擎 InnoDB： - B+树 - 表空间 ：段，（索引段，数据段，回滚段）
 区（数据量大，让页之间连续） ，页 ，行 -
 行格式：变长列长度(len[]）,是否null位图,头,rowid 主键(若无定义),事务id,
-roll id(mvcc),每列值 - 页目录shot 分组,存储每组最大row的偏移</p>
+roll id(mvcc),每列值 - 页目录slot 分组,存储每组最大row的偏移</p>
 <h2 id="redis"><a href="#redis" class="headerlink" title="redis"></a>Redis</h2>
 <p>高性能高开发、高可用（集群） string.hash.set.zset.list bitmap, geo，
 stream(消息队列) 内部实现： - listpack: (类型、长度、数据、总长度)[]
 用于对小的list.hash.zset - 小Set 处整数;intset int16[] 排序 主逻辑单线程
-后台线程:chose file.ADP盘、free对象 快的原因：内存、无竞争、I/O多路复用
+后台线程:close file.AOF盘、free对象 快的原因：内存、无竞争、I/O多路复用
 集群：主从(读写分离)、哨兵(故障、转移)</p>
 <h2 id="golang"><a href="#golang" class="headerlink" title="golang"></a>Golang</h2>
 <p>面向对象:封装（struct，大小写）、继承（struct嵌套，匿名，自动提升），多态
 js：弱类型 大多数值在堆上,变量本身为指针 优势:1协程
 2编译速度快、开发效率 2自由 make &amp;
-new:1类型new(string、int,数组),make(切片、map, Channel) 2返回指针or值
-for range 每次循环一个临时变量 string 长度不能用len():字节长度 len ([ ]
-rune ( str ) 类似char</p>
+new:1类型new(string、int,数组),make(只：切片、map, Channel)
+2返回指针or值 for range 每次循环一个临时变量 string
+长度不能用len():字节长度 len ([ ] rune ( str ) 类似char</p>
 <p>反射 - Typeof:Struct的元数据:可以找到Tag - ValueOf : 接口值
 map.slice.chan为引用类型(值本身类似指针)
 select:I/O多路复用（每个case为in/out）
@@ -201,4 +203,228 @@ src) &amp; reflect.DeepEqual 程序初始化:最深包 init开始</p>
 灰-&gt;白 混合写屏障（对应上面两个条件）1.当创建
 黑-》白时白边灰，2.当删除 灰-》白
 时检查白没有其他灰指向，就变灰（STW:无能并行 stop the world</p>
-<div id="paginator"></div></div><div id="post-footer"><div id="pages"><div class="footer-link" style="width: 50%;text-align:right;border-right:1px #fe2 solid"><a href="/2026/01/04/%E5%90%8E%E7%AB%AF/linux%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">← 下一篇 linux 学习笔记</a></div><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/2025/11/21/%E6%89%BE%E5%B7%A5%E4%BD%9C%E5%A5%BD%E9%9A%BE/hot100/">hot100 上一篇 →</a></div></div></div></div><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="回到顶部" style="opacity: 0; display: none;">∧ </a><a class="i-index" id="to-index" href="#toc-div" title="文章目录">≡</a><a class="i-color" id="color-mode" onClick="colorMode.change()" title="切换主题"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="https://cdn.luogu.com.cn/upload/image_hosting/8cc2fgam.png" alt="Logo" style="margin:0;border-radius:0;"></a><h1 id="Dr"><a href="/">lyx12138</a></h1><div id="description"><p></p></div></div><div id="aside-block"><div id="toc-div"><h1>目录</h1><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%87%AA%E6%88%91%E4%BB%8B%E7%BB%8D%E4%BB%8B%E7%BB%8D%E9%A1%B9%E7%9B%AE"><span class="toc-number">1.</span> <span class="toc-text">自我介绍，介绍项目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ai%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8"><span class="toc-number">2.</span> <span class="toc-text">! ai工具使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%BA%E5%88%B6%E7%BC%93%E5%AD%98%E5%92%8C%E5%8D%8F%E5%95%86%E7%BC%93%E5%AD%98"><span class="toc-number">3.</span> <span class="toc-text">强制缓存和协商缓存</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#https-ssltls"><span class="toc-number">4.</span> <span class="toc-text">HTTPS (SSL&#x2F;TLS)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#http2"><span class="toc-number">5.</span> <span class="toc-text">HTTP&#x2F;2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#http3-quic"><span class="toc-number">6.</span> <span class="toc-text">HTTP&#x2F;3 QUIC</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#epoll"><span class="toc-number">7.</span> <span class="toc-text">epoll</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%93%E5%AD%98"><span class="toc-number">8.</span> <span class="toc-text">缓存</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F"><span class="toc-number">8.1.</span> <span class="toc-text">设计模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%87%8F%E5%8C%96%E6%8C%87%E6%A0%87"><span class="toc-number">8.2.</span> <span class="toc-text">量化指标</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E9%81%BF%E5%85%8D%E7%BC%93%E5%AD%98%E9%9B%AA%E5%B4%A9%E7%BC%93%E5%AD%98%E5%87%BB%E7%A9%BF%E7%BC%93%E5%AD%98%E7%A9%BF%E9%80%8F"><span class="toc-number">8.3.</span> <span class="toc-text">如何避免缓存雪崩、缓存击穿、缓存穿透</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#docker"><span class="toc-number">9.</span> <span class="toc-text">docker</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#mysql"><span class="toc-number">10.</span> <span class="toc-text">MYSQL</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#redis"><span class="toc-number">11.</span> <span class="toc-text">Redis</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#golang"><span class="toc-number">12.</span> <span class="toc-text">Golang</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#gc"><span class="toc-number">12.1.</span> <span class="toc-text">GC</span></a></li></ol></li></ol></div></div><footer><nobr>构建自 <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> 使用主题 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr> 主题作者 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside></main><canvas id="canvas-dust"></canvas></body></html>
+<h2 id="微服务"><a href="#微服务" class="headerlink" title="微服务"></a>微服务</h2>
+<p>https://juejin.cn/post/7052143950085226510</p>
+<p>apollo架构 <img src="/asset/Pasted%20image%2020260323185926.png" />
+https://mp.weixin.qq.com/s/-hUaQPzfsl9Lm3IqQW3VDQ ## K8S <img
+src="/asset/Pasted%20image%2020260323181737.png" />https://mp.weixin.qq.com/s/wOMzZw-CImSgDoQasy2iHg</p>
+<h2 id="一微服务基础组件"><a href="#一微服务基础组件" class="headerlink" title="一微服务基础组件"></a>一、微服务基础组件</h2>
+<h3 id="服务治理kitex-spring-cloud-体系">1. 服务治理（Kitex / Spring
+Cloud 体系）</h3>
+<p>核心能力：<br />
+1. <strong>服务注册与发现</strong><br />
+* 常见组件：Nacos、Eureka<br />
+2. <strong>健康检查 / 服务追踪</strong><br />
+3. <strong>配置管理（动态配置）</strong><br />
+4. <strong>网关（统一入口）</strong><br />
+5. <strong>负载均衡</strong></p>
+<hr />
+<h3 id="服务注册与发现"><a href="#服务注册与发现" class="headerlink" title="服务注册与发现"></a>2. 服务注册与发现</h3>
+<ul>
+<li>注册中心：
+<ul>
+<li>Nacos<br />
+</li>
+<li>Eureka（AP 优先）</li>
+</ul></li>
+<li>客户端调用流程：</li>
+</ul>
+<p>服务注册 → 服务发现 → 客户端负载均衡 → 调用</p>
+<hr />
+<h3 id="dns-vs-注册中心"><a href="#dns-vs-注册中心" class="headerlink" title="dns-vs-注册中心"></a>3. DNS vs 注册中心</h3>
+<ul>
+<li>DNS：
+<ul>
+<li>简单解析 IP<br />
+</li>
+<li>不适合动态服务<br />
+</li>
+</ul></li>
+<li>注册中心：
+<ul>
+<li>支持动态上下线<br />
+</li>
+<li>健康检查<br />
+</li>
+<li>更适合微服务</li>
+</ul></li>
+</ul>
+<hr />
+<h3 id="负载均衡策略"><a href="#负载均衡策略" class="headerlink" title="负载均衡策略"></a>4. 负载均衡策略</h3>
+<ul>
+<li>Random（随机）<br />
+</li>
+<li>Round Robin（轮询）<br />
+</li>
+<li>Pick First（优先选一个）<br />
+</li>
+<li>一致性 Hash（部分场景）</li>
+</ul>
+<hr />
+<h3 id="rpc-框架dubbo-grpc-kitex">5. RPC 框架（Dubbo / gRPC /
+Kitex）</h3>
+<ul>
+<li>核心：
+<ul>
+<li>服务调用（远程）<br />
+</li>
+<li>序列化协议<br />
+</li>
+<li>服务治理<br />
+</li>
+</ul></li>
+<li>长连接 + KeepAlive<br />
+</li>
+<li>Watch 机制（监听服务变化）</li>
+</ul>
+<hr />
+<h2 id="二kubernetesk8s"><a href="#二kubernetesk8s" class="headerlink" title="二kubernetesk8s"></a>二、Kubernetes（K8s）</h2>
+<h3 id="核心概念"><a href="#核心概念" class="headerlink" title="核心概念"></a>核心概念</h3>
+<ul>
+<li>Master：
+<ul>
+<li>etcd（存储）<br />
+</li>
+<li>调度器（scheduler）<br />
+</li>
+</ul></li>
+<li>Node：
+<ul>
+<li>运行 Pod</li>
+</ul></li>
+</ul>
+<hr />
+<h3 id="核心对象"><a href="#核心对象" class="headerlink" title="核心对象"></a>核心对象</h3>
+<ul>
+<li>Pod：最小部署单元<br />
+</li>
+<li>Deployment：管理副本<br />
+</li>
+<li>Service：服务暴露</li>
+</ul>
+<hr />
+<h3 id="service-类型"><a href="#service-类型" class="headerlink" title="service-类型"></a>Service 类型</h3>
+<ul>
+<li>ClusterIP（集群内访问）<br />
+</li>
+<li>NodePort（节点端口）<br />
+</li>
+<li>LoadBalancer（外部负载均衡）</li>
+</ul>
+<h2 id="配置中心"><a href="#配置中心" class="headerlink" title="配置中心"></a>配置中心</h2>
+<p>配置实时生效（.env），灰度发布（容器的镜像id？） ##
+三、网关（Gateway）<br />
+### 作用<br />
+* 所有外部请求入口<br />
+* 做统一处理：<br />
+* 路由<br />
+* 负载均衡<br />
+* 限流<br />
+* 鉴权<br />
+* 灰度发布<br />
+常见网关 Nginx Traefik<br />
+traefik<br />
+* Provider：<br />
+* Docker<br />
+* Kubernetes<br />
+* 注册中心<br />
+鉴权流程：先转到authservice -&gt; 成功 -&gt; 给后端并附加一个header 失败
+-&gt; 302/401 给前端<br />
+### 熔断 &amp; 降级<br />
+* 熔断：<br />
+* 下游错误率高 → 直接不请求下游<br />
+* 限流：<br />
+* 控制 QPS 令牌桶 * 重试 ### 3. CAP 理论</p>
+<ul>
+<li>C（一致性）<br />
+</li>
+<li>A（可用性）<br />
+</li>
+<li>P（分区容错）</li>
+</ul>
+<h2 id="五高并发-秒杀系统"><a href="#五高并发-秒杀系统" class="headerlink" title="五高并发-秒杀系统"></a>五、高并发 &amp; 秒杀系统</h2>
+<h3 id="典型流程"><a href="#典型流程" class="headerlink" title="典型流程"></a>典型流程</h3>
+<p>前端限流or验证码 → 网关限流 → Redis 预扣库存（原子lua get&amp;desc
+防超卖） → 消息队列削峰 → DB 最终写入（乐观锁&amp;唯一id）-&gt;
+最终一致性 ## 六、分布式事务</p>
+<h3 id="tcc-模式"><a href="#tcc-模式" class="headerlink" title="tcc-模式"></a>1. TCC 模式</h3>
+<ul>
+<li>Try（预处理）<br />
+</li>
+<li>Confirm（提交）<br />
+</li>
+<li>Cancel（回滚）</li>
+</ul>
+<h3 id="saga-模式"><a href="#saga-模式" class="headerlink" title="saga-模式"></a>2. SAGA 模式</h3>
+<ul>
+<li>长事务拆分<br />
+</li>
+<li>每一步都有补偿操作<br />
+### 3. Seata<br />
+</li>
+<li>AT 模式（自动回滚 undo log）<br />
+## 七、分布式锁<br />
+### Redis 实现<br />
+</li>
+<li>SET NX EX<br />
+</li>
+<li>防止死锁：设置过期时间<br />
+</li>
+<li>解锁： lua ### Redlock（多节点锁）<br />
+直接在多个节点上锁，多数都有才算获取锁 ### Zookeeper<br />
+</li>
+<li>临时节点<br />
+</li>
+<li>Watch 机制<br />
+## 八、分布式 ID<br />
+### 方案<br />
+</li>
+<li>UUID（简单但无序）<br />
+</li>
+<li>redis</li>
+<li>号段，类ip子网</li>
+<li>雪花算法（Snowflake）<br />
+## 十、乐观锁 ### SQL 示例</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">update</span> <span class="hljs-keyword">table</span>   <br><span class="hljs-keyword">set</span> count <span class="hljs-operator">=</span> count <span class="hljs-operator">-</span> <span class="hljs-number">1</span>   <br><span class="hljs-keyword">where</span> id <span class="hljs-operator">=</span> ? <span class="hljs-keyword">and</span> version <span class="hljs-operator">=</span> ?<br></code></pre></td></tr></table></figure>
+<h2 id="十一限流"><a href="#十一限流" class="headerlink" title="十一限流"></a>十一、限流</h2>
+<ol type="1">
+<li>计数器</li>
+<li>滑动窗口</li>
+<li>令牌桶 *</li>
+<li>漏桶</li>
+</ol>
+<h2 id="c"><a href="#c" class="headerlink" title="c"></a>C++</h2>
+<h3 id="虚函数"><a href="#虚函数" class="headerlink" title="虚函数"></a>虚函数</h3>
+<p>实现运行时多态，调用时动态判断时调用哪个版本的函数 基类像是interfere
+如果析构函数是虚函数：先调用派生类析构函数 ,
+再调用基类析构函数。（正常是覆盖）</p>
+<ol type="1">
+<li>分配内存。</li>
+<li>调用 A 构造函数：<code>vptr</code> 指向 A 虚表 -&gt; 执行 A
+构造体（输出 A）。</li>
+<li>调用 B 构造函数：<code>vptr</code> 改指向 B 虚表 -&gt; 执行 B
+构造体。</li>
+</ol>
+<h2 id="查端口"><a href="#查端口" class="headerlink" title="查端口"></a>查端口</h2>
+<p>netstate 查询网络状况，最新用ss sudo ss -ltnp sport = :80 lsof -i :80
+（list open file）</p>
+<h2
+id="timewait是什么服务器有大量timewait是为什么如何缓解">TIMEWAIT是什么，服务器有大量timewait是为什么，如何缓解</h2>
+<p>是四次挥手过程中，主动方收到被动方的FIN然后发送ACK之后进入状态，持续两个MSL，大概60s；为了确认ACK被收到（被动方关闭），2msl是ack丢失+被动方重发。
+服务器主动关闭：1. 没有长连接 2. 长连接超时 3. 连接数量太多 →
+高并发且持续的短连接
+过多的timewait会导致无法连接更多，需要手动减少。tcp_tw_reuse
+快速回收或增加nginx连接数大小</p>
+<h3 id="三次握手"><a href="#三次握手" class="headerlink" title="三次握手"></a>三次握手</h3>
+<p class='item-img' data-src='/asset/Pasted%20image%2020260403163501.png'><img src="/asset/Pasted%20image%2020260403163501.png" /></p>
+<h3 id="四次挥手"><a href="#四次挥手" class="headerlink" title="四次挥手"></a>四次挥手</h3>
+<p class='item-img' data-src='/asset/Pasted%20image%2020260403163451.png'><img src="/asset/Pasted%20image%2020260403163451.png" /></p>
+<h2 id="js-this"><a href="#js-this" class="headerlink" title="js-this"></a>js this</h2>
+<p>function 是调用时指定，箭头函数是定义时指定 但是
+<code>setInterval</code> 里的 <code>function() &#123;&#125;</code>
+<strong>不是你调用的</strong>，是<strong>浏览器/Node.js
+在定时器触发时调用的</strong>，相当于： <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">// 定时器触发时，浏览器内部大概这样调用： <br>callback() // 普通函数调用，没有指定 this<br></code></pre></td></tr></table></figure></p>
+<div id="paginator"></div></div><div id="post-footer"><div id="pages"><div class="footer-link" style="width: 50%;text-align:right;border-right:1px #fe2 solid"><a href="/2026/01/04/%E5%90%8E%E7%AB%AF/linux%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">← 下一篇 linux 学习笔记</a></div><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/2025/11/21/%E6%89%BE%E5%B7%A5%E4%BD%9C%E5%A5%BD%E9%9A%BE/hot100/">hot100 上一篇 →</a></div></div></div></div><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="回到顶部" style="opacity: 0; display: none;">∧ </a><a class="i-index" id="to-index" href="#toc-div" title="文章目录">≡</a><a class="i-color" id="color-mode" onClick="colorMode.change()" title="切换主题"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="https://cdn.luogu.com.cn/upload/image_hosting/8cc2fgam.png" alt="Logo" style="margin:0;border-radius:0;"></a><h1 id="Dr"><a href="/">lyx12138</a></h1><div id="description"><p></p></div></div><div id="aside-block"><div id="toc-div"><h1>目录</h1><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%87%AA%E6%88%91%E4%BB%8B%E7%BB%8D%E4%BB%8B%E7%BB%8D%E9%A1%B9%E7%9B%AE"><span class="toc-number">1.</span> <span class="toc-text">自我介绍，介绍项目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ai%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8"><span class="toc-number">2.</span> <span class="toc-text">! ai工具使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%BA%E5%88%B6%E7%BC%93%E5%AD%98%E5%92%8C%E5%8D%8F%E5%95%86%E7%BC%93%E5%AD%98"><span class="toc-number">3.</span> <span class="toc-text">强制缓存和协商缓存</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#https-ssltls"><span class="toc-number">4.</span> <span class="toc-text">HTTPS (SSL&#x2F;TLS)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#http2"><span class="toc-number">5.</span> <span class="toc-text">HTTP&#x2F;2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#http3-quic"><span class="toc-number">6.</span> <span class="toc-text">HTTP&#x2F;3 QUIC</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#epoll"><span class="toc-number">7.</span> <span class="toc-text">epoll</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%93%E5%AD%98"><span class="toc-number">8.</span> <span class="toc-text">缓存</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F"><span class="toc-number">8.1.</span> <span class="toc-text">设计模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%87%8F%E5%8C%96%E6%8C%87%E6%A0%87"><span class="toc-number">8.2.</span> <span class="toc-text">量化指标</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E9%81%BF%E5%85%8D%E7%BC%93%E5%AD%98%E9%9B%AA%E5%B4%A9%E7%BC%93%E5%AD%98%E5%87%BB%E7%A9%BF%E7%BC%93%E5%AD%98%E7%A9%BF%E9%80%8F"><span class="toc-number">8.3.</span> <span class="toc-text">如何避免缓存雪崩、缓存击穿、缓存穿透</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#docker"><span class="toc-number">9.</span> <span class="toc-text">docker</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#mysql"><span class="toc-number">10.</span> <span class="toc-text">MYSQL</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#redis"><span class="toc-number">11.</span> <span class="toc-text">Redis</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#golang"><span class="toc-number">12.</span> <span class="toc-text">Golang</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#gc"><span class="toc-number">12.1.</span> <span class="toc-text">GC</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BE%AE%E6%9C%8D%E5%8A%A1"><span class="toc-number">13.</span> <span class="toc-text">微服务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%9F%BA%E7%A1%80%E7%BB%84%E4%BB%B6"><span class="toc-number">14.</span> <span class="toc-text">一、微服务基础组件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E6%B2%BB%E7%90%86kitex-spring-cloud-%E4%BD%93%E7%B3%BB"><span class="toc-number">14.1.</span> <span class="toc-text">1. 服务治理（Kitex &#x2F; Spring
+Cloud 体系）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E4%B8%8E%E5%8F%91%E7%8E%B0"><span class="toc-number">14.2.</span> <span class="toc-text">2. 服务注册与发现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#dns-vs-%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83"><span class="toc-number">14.3.</span> <span class="toc-text">3. DNS vs 注册中心</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E7%AD%96%E7%95%A5"><span class="toc-number">14.4.</span> <span class="toc-text">4. 负载均衡策略</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#rpc-%E6%A1%86%E6%9E%B6dubbo-grpc-kitex"><span class="toc-number">14.5.</span> <span class="toc-text">5. RPC 框架（Dubbo &#x2F; gRPC &#x2F;
+Kitex）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8Ckubernetesk8s"><span class="toc-number">15.</span> <span class="toc-text">二、Kubernetes（K8s）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5"><span class="toc-number">15.1.</span> <span class="toc-text">核心概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E5%AF%B9%E8%B1%A1"><span class="toc-number">15.2.</span> <span class="toc-text">核心对象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#service-%E7%B1%BB%E5%9E%8B"><span class="toc-number">15.3.</span> <span class="toc-text">Service 类型</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E4%B8%AD%E5%BF%83"><span class="toc-number">16.</span> <span class="toc-text">配置中心</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E9%AB%98%E5%B9%B6%E5%8F%91-%E7%A7%92%E6%9D%80%E7%B3%BB%E7%BB%9F"><span class="toc-number">17.</span> <span class="toc-text">五、高并发 &amp; 秒杀系统</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B8%E5%9E%8B%E6%B5%81%E7%A8%8B"><span class="toc-number">17.1.</span> <span class="toc-text">典型流程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#tcc-%E6%A8%A1%E5%BC%8F"><span class="toc-number">17.2.</span> <span class="toc-text">1. TCC 模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#saga-%E6%A8%A1%E5%BC%8F"><span class="toc-number">17.3.</span> <span class="toc-text">2. SAGA 模式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%81%E4%B8%80%E9%99%90%E6%B5%81"><span class="toc-number">18.</span> <span class="toc-text">十一、限流</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#c"><span class="toc-number">19.</span> <span class="toc-text">C++</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%99%9A%E5%87%BD%E6%95%B0"><span class="toc-number">19.1.</span> <span class="toc-text">虚函数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E7%AB%AF%E5%8F%A3"><span class="toc-number">20.</span> <span class="toc-text">查端口</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#timewait%E6%98%AF%E4%BB%80%E4%B9%88%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%9C%89%E5%A4%A7%E9%87%8Ftimewait%E6%98%AF%E4%B8%BA%E4%BB%80%E4%B9%88%E5%A6%82%E4%BD%95%E7%BC%93%E8%A7%A3"><span class="toc-number">21.</span> <span class="toc-text">TIMEWAIT是什么，服务器有大量timewait是为什么，如何缓解</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B"><span class="toc-number">21.1.</span> <span class="toc-text">三次握手</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B"><span class="toc-number">21.2.</span> <span class="toc-text">四次挥手</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#js-this"><span class="toc-number">22.</span> <span class="toc-text">js this</span></a></li></ol></div></div><footer><nobr>构建自 <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> 使用主题 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr> 主题作者 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside></main><canvas id="canvas-dust"></canvas></body></html>
